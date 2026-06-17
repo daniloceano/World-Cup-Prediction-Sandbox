@@ -1,0 +1,49 @@
+{
+  "_comment": "DEMO match schedule. Clearly fake fixtures so the app runs out of the box. Replace with the real World Cup schedule. 'is_demo' must be true for fabricated fixtures.",
+  "matches": [
+    {
+      "match_id": "demo-2026-06-14-GER-JPN",
+      "date": "2026-06-14",
+      "kickoff": "16:00",
+      "venue": "Demo Arena, Sample City",
+      "phase": "group",
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "JPN",
+      "is_demo": true
+    },
+    {
+      "match_id": "demo-2026-06-17-ARG-KSA",
+      "date": "2026-06-17",
+      "kickoff": "13:00",
+      "venue": "Demo Stadium, Sample City",
+      "phase": "group",
+      "group": "C",
+      "home_team": "ARG",
+      "away_team": "KSA",
+      "is_demo": true
+    },
+    {
+      "match_id": "demo-2026-06-17-FRA-AUS",
+      "date": "2026-06-17",
+      "kickoff": "19:00",
+      "venue": "Demo Park, Sample City",
+      "phase": "group",
+      "group": "D",
+      "home_team": "FRA",
+      "away_team": "AUS",
+      "is_demo": true
+    },
+    {
+      "match_id": "demo-2026-06-18-BRA-SRB",
+      "date": "2026-06-18",
+      "kickoff": "19:00",
+      "venue": "Demo Coliseum, Sample City",
+      "phase": "group",
+      "group": "G",
+      "home_team": "BRA",
+      "away_team": "SRB",
+      "is_demo": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_comment": "Team metadata. 'code' is the FIFA/ISO-style 3-letter key used everywhere. DEMO dataset.",
+  "teams": [
+    {"code": "ARG", "name": "Argentina", "confederation": "CONMEBOL", "is_demo": true},
+    {"code": "KSA", "name": "Saudi Arabia", "confederation": "AFC", "is_demo": true},
+    {"code": "FRA", "name": "France", "confederation": "UEFA", "is_demo": true},
+    {"code": "AUS", "name": "Australia", "confederation": "AFC", "is_demo": true},
+    {"code": "BRA", "name": "Brazil", "confederation": "CONMEBOL", "is_demo": true},
+    {"code": "SRB", "name": "Serbia", "confederation": "UEFA", "is_demo": true},
+    {"code": "GER", "name": "Germany", "confederation": "UEFA", "is_demo": true},
+    {"code": "JPN", "name": "Japan", "confederation": "AFC", "is_demo": true}
+  ]
+}

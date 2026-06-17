@@ -1,0 +1,27 @@
+# --- Generated prediction outputs (regeneratable from context) -------------
+data/predictions/*.json
+data/processed/
+
+# --- Keep sample/demo inputs and results tracked ---------------------------
+# (data/raw, data/context and data/results sample files ARE committed)
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.env
+.venv/
+env/
+.pytest_cache/
+*.egg-info/
+
+# --- Streamlit -------------------------------------------------------------
+.streamlit/secrets.toml
+
+# --- Jupyter ---------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- OS / IDE --------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

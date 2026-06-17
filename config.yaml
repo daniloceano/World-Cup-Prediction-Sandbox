@@ -1,0 +1,89 @@
+# =============================================================================
+# WCPS — World Cup Prediction Sandbox
+# Central configuration file.
+#
+# This is the single place to adjust the basic behaviour of the simulator.
+# Editing this file does NOT require touching the source code.
+#
+# This is a RECREATIONAL probabilistic simulation sandbox — not betting,
+# odds optimization, or financial advice.
+# =============================================================================
+
+# --- Monte Carlo simulation -------------------------------------------------
+simulation:
+  n_simulations: 20000      # number of Monte Carlo match simulations per model
+  random_seed: 42           # base seed for reproducible runs (per-match offset applied)
+  store_samples: false      # if true, raw sample arrays are summarised but not persisted
+  max_goals: 12             # safety cap on simulated goals per team
+
+# --- Quantile levels (configurable lower/upper bounds) ----------------------
+quantiles:
+  lower: 0.05               # lower quantile (e.g. 0.05 = 5th percentile)
+  upper: 0.95               # upper quantile (e.g. 0.95 = 95th percentile)
+
+# --- Model v1: static relative-strength + Poisson + Monte Carlo -------------
+model_v1:
+  active: true
+  lambda_0: 1.35            # baseline expected goals per team
+  alpha: 1.10               # sensitivity of expected goals to relative strength D
+  lambda_min: 0.15          # floor for expected goals (avoid degenerate rates)
+  lambda_max: 4.00          # ceiling for expected goals (keep realistic)
+  # Heuristic raw weights for the seven v1 criteria (from methodology doc).
+  weights:
+    fifa_ranking: 1.5
+    short_form: 2.5
+    long_form: 1.0
+    injuries: 1.5
+    weather_adaptation: 1.0
+    off_field: 1.0
+    tactical_similarity: 2.5
+
+# --- Model v2: v1 + strategic World Cup adjustments -------------------------
+model_v2:
+  active: true
+  # v2 inherits the v1 strength engine; these control the strategic layer.
+  debut_factor: 0.92            # F_estreia: dampens favourite in group-stage debuts
+  low_block_max_compression: 0.30  # max reduction of favourite lambda from a strong low block
+  cagey_draw_compression: 0.85     # extra lambda compression in the "no early goal" state
+  space_boost_max: 0.60        # F_espacos: max extra favourite lambda once they score first
+  collapse_boost_max: 0.80     # additional favourite boost scaled by opponent collapse risk
+  chase_boost_max: 0.35        # F_risco: extra lambda for the team that just conceded (chasing)
+  draw_value_max_weight: 0.10  # max importance weight added to draw scorelines (ΔE cap)
+
+# --- Ensemble ---------------------------------------------------------------
+ensemble:
+  # Strategy options (only "equal" and "weighted" implemented in v1; others
+  # are documented placeholders that fall back to equal weighting).
+  #   equal              -> simple average of active models
+  #   weighted           -> use the explicit weights below
+  #   performance        -> (future) weight by historical accuracy
+  #   phase_weighted     -> (future) weights per tournament phase
+  #   matchup_weighted   -> (future) weights per matchup type
+  strategy: equal
+  weights:
+    v1: 1.0
+    v2: 1.0
+
+# --- Display / UX -----------------------------------------------------------
+display:
+  app_title: "WCPS — World Cup Prediction Sandbox"
+  # default_date: how the dashboard picks an initial date when first opened.
+  #   latest_with_data -> most recent date that has matches
+  #   today            -> system date
+  #   earliest         -> first scheduled date
+  default_date: latest_with_data
+  show_demo_banner: true     # show a banner whenever demo/fake data is displayed
+  use_flags: true            # render country flag emojis when a mapping exists
+  top_scorelines_n: 5        # how many scorelines to list in detail views
+
+# --- File paths (relative to project root; keep portable) -------------------
+paths:
+  data_dir: data
+  raw_dir: data/raw
+  context_dir: data/context
+  predictions_dir: data/predictions
+  results_dir: data/results
+  processed_dir: data/processed
+  teams_file: data/raw/teams.json
+  matches_file: data/raw/matches.json
+  actual_results_file: data/results/actual_results.json

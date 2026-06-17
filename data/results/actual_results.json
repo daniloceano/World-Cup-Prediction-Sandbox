@@ -1,0 +1,13 @@
+{
+  "_comment": "Actual match results, used for historical evaluation. DEMO data. Add real results here (or via the app / CLI) as matches finish.",
+  "results": [
+    {
+      "match_id": "demo-2026-06-14-GER-JPN",
+      "home_goals": 1,
+      "away_goals": 2,
+      "status": "final",
+      "is_demo": true,
+      "notes": "DEMO result for evaluation example."
+    }
+  ]
+}
