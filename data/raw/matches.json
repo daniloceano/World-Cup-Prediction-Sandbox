@@ -208,6 +208,54 @@
       "away_team": "COL",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-18-CAN-QAT",
+      "date": "2026-06-18",
+      "kickoff": "22:00 UTC",
+      "venue": "BC Place Vancouver",
+      "phase": "group",
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "QAT",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-18-CZE-RSA",
+      "date": "2026-06-18",
+      "kickoff": "16:00 UTC",
+      "venue": "Atlanta Stadium",
+      "phase": "group",
+      "group": "A",
+      "home_team": "CZE",
+      "away_team": "RSA",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-18-MEX-KOR",
+      "date": "2026-06-18",
+      "kickoff": "03:00 UTC",
+      "venue": "Estadio Guadalajara",
+      "phase": "group",
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "KOR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-18-SUI-BIH",
+      "date": "2026-06-18",
+      "kickoff": "19:00 UTC",
+      "venue": "Los Angeles Stadium",
+      "phase": "group",
+      "group": "B",
+      "home_team": "SUI",
+      "away_team": "BIH",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

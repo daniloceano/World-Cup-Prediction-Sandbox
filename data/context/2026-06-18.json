@@ -1,0 +1,247 @@
+{
+  "date": "2026-06-18",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-18-CZE-RSA",
+      "date": "2026-06-18",
+      "kickoff_utc": "2026-06-18T16:00:00Z",
+      "venue": "Atlanta Stadium",
+      "group": "A",
+      "home_team": "CZE",
+      "away_team": "RSA",
+      "home_name": "Czechia",
+      "away_name": "South Africa",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "short_form": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "long_form": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "tactical_similarity": {
+          "home": 0.05,
+          "away": -0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.7,
+        "need_to_win": {
+          "home": 0.7,
+          "away": 0.75
+        },
+        "first_goal_prob": {
+          "home": 0.44,
+          "away": 0.31,
+          "none": 0.25
+        },
+        "collapse_risk_weaker": 0.38,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.4,
+        "notes": "Czechia rate slightly stronger overall, but South Africa can keep the match compact if it stays level."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-18-SUI-BIH",
+      "date": "2026-06-18",
+      "kickoff_utc": "2026-06-18T19:00:00Z",
+      "venue": "Los Angeles Stadium",
+      "group": "B",
+      "home_team": "SUI",
+      "away_team": "BIH",
+      "home_name": "Switzerland",
+      "away_name": "Bosnia and Herzegovina",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "long_form": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": -0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.58,
+        "draw_value_weaker": 0.8,
+        "need_to_win": {
+          "home": 0.65,
+          "away": 0.55
+        },
+        "first_goal_prob": {
+          "home": 0.55,
+          "away": 0.23,
+          "none": 0.22
+        },
+        "collapse_risk_weaker": 0.46,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.42,
+        "set_piece_threat_weaker": 0.52,
+        "notes": "Switzerland look the clearer favorite, while Bosnia and Herzegovina's best path is a disciplined block and set pieces."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-18-CAN-QAT",
+      "date": "2026-06-18",
+      "kickoff_utc": "2026-06-18T22:00:00Z",
+      "venue": "BC Place Vancouver",
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "QAT",
+      "home_name": "Canada",
+      "away_name": "Qatar",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "short_form": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "long_form": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "off_field": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "tactical_similarity": {
+          "home": 0.15,
+          "away": -0.15
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.6,
+        "draw_value_weaker": 0.7,
+        "need_to_win": {
+          "home": 0.65,
+          "away": 0.55
+        },
+        "first_goal_prob": {
+          "home": 0.5,
+          "away": 0.28,
+          "none": 0.22
+        },
+        "collapse_risk_weaker": 0.4,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.35,
+        "set_piece_threat_weaker": 0.42,
+        "notes": "Canada's home setting and athletic profile give them the edge, though Qatar can slow the rhythm if allowed possession."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-18-MEX-KOR",
+      "date": "2026-06-18",
+      "kickoff_utc": "2026-06-19T03:00:00Z",
+      "venue": "Estadio Guadalajara",
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "KOR",
+      "home_name": "Mexico",
+      "away_name": "Korea Republic",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "short_form": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "long_form": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "off_field": {
+          "home": 0.5,
+          "away": -0.5
+        },
+        "tactical_similarity": {
+          "home": 0.05,
+          "away": -0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.65,
+        "need_to_win": {
+          "home": 0.7,
+          "away": 0.55
+        },
+        "first_goal_prob": {
+          "home": 0.49,
+          "away": 0.31,
+          "none": 0.2
+        },
+        "collapse_risk_weaker": 0.32,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.58,
+        "set_piece_threat_weaker": 0.44,
+        "notes": "Mexico's venue and crowd advantages are meaningful, but Korea Republic carry enough transition threat to punish overextension."
+      }
+    }
+  ]
+}

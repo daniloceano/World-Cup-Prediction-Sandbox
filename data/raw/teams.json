@@ -23,7 +23,8 @@
     },
     {
       "code": "BIH",
-      "name": "Bosnia and Herzegovina"
+      "name": "Bosnia and Herzegovina",
+      "is_demo": false
     },
     {
       "code": "BRA",
@@ -31,7 +32,8 @@
     },
     {
       "code": "CAN",
-      "name": "Canada"
+      "name": "Canada",
+      "is_demo": false
     },
     {
       "code": "CIV",
@@ -62,7 +64,8 @@
     },
     {
       "code": "CZE",
-      "name": "Czechia"
+      "name": "Czechia",
+      "is_demo": false
     },
     {
       "code": "ECU",
@@ -116,7 +119,8 @@
     },
     {
       "code": "KOR",
-      "name": "South Korea"
+      "name": "Korea Republic",
+      "is_demo": false
     },
     {
       "code": "KSA",
@@ -128,7 +132,8 @@
     },
     {
       "code": "MEX",
-      "name": "Mexico"
+      "name": "Mexico",
+      "is_demo": false
     },
     {
       "code": "NED",
@@ -158,11 +163,13 @@
     },
     {
       "code": "QAT",
-      "name": "Qatar"
+      "name": "Qatar",
+      "is_demo": false
     },
     {
       "code": "RSA",
-      "name": "South Africa"
+      "name": "South Africa",
+      "is_demo": false
     },
     {
       "code": "SCO",
@@ -174,7 +181,8 @@
     },
     {
       "code": "SUI",
-      "name": "Switzerland"
+      "name": "Switzerland",
+      "is_demo": false
     },
     {
       "code": "SWE",

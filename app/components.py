@@ -11,7 +11,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from wcps import data_io
+from wcps import data_io, evaluation
 from wcps.flags import label_for
 from wcps.schemas import OUTCOME_AWAY, OUTCOME_DRAW, OUTCOME_HOME
 
@@ -164,7 +164,7 @@ def match_card(
     h_lab = team_label(home, teams, use_flags)
     a_lab = team_label(away, teams, use_flags)
 
-    actual = data_io.get_actual_result(match["match_id"])
+    actual = evaluation.result_for_match(match)
 
     with st.container(border=True):
         top = st.columns([3, 1])
@@ -215,7 +215,7 @@ def result_only_card(
     home, away = match["home_team"], match["away_team"]
     h_lab = team_label(home, teams, use_flags)
     a_lab = team_label(away, teams, use_flags)
-    actual = data_io.get_actual_result(match["match_id"])
+    actual = evaluation.result_for_match(match)
     with st.container(border=True):
         st.markdown(f"### {h_lab}  vs  {a_lab}")
         meta = []

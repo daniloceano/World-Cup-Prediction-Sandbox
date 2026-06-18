@@ -1,5 +1,4 @@
 {
-  "_comment": "Actual match results, used for historical evaluation. Real results collected up to 2026-06-17 morning. Match IDs use the format wc-YYYY-MM-DD-TEAM_A-TEAM_B, where TEAM_A/TEAM_B follow the listed fixture order.",
   "results": [
     {
       "match_id": "wc-2026-06-11-MEX-RSA",
@@ -160,6 +159,34 @@
       "status": "final",
       "is_demo": false,
       "notes": "Austria 3-1 Jordan."
+    },
+    {
+      "match_id": "wc-2026-06-17-POR-COD",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-17-ENG-CRO",
+      "home_goals": 4,
+      "away_goals": 2,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-17-GHA-PAN",
+      "home_goals": 1,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-17-UZB-COL",
+      "home_goals": 1,
+      "away_goals": 3,
+      "status": "final",
+      "notes": ""
     }
   ]
 }

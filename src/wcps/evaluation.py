@@ -156,6 +156,24 @@ def _match_actual(
     return {"home_goals": cand["away_goals"], "away_goals": cand["home_goals"]}
 
 
+def result_for_match(
+    match: dict[str, Any], actuals: dict[str, dict[str, Any]] | None = None
+) -> dict[str, Any] | None:
+    """Find the actual result for a scheduled match, oriented to its home/away.
+
+    Same robust join used by :func:`build_history` (exact ``match_id`` first,
+    then team pair + nearest date, re-orienting the goals). Use this in the UI so
+    final scores show even when the result's ``match_id`` convention differs from
+    the match/prediction one.
+    """
+    actuals = actuals if actuals is not None else data_io.load_actual_results()
+    index = _index_actuals(actuals)
+    return _match_actual(
+        match.get("home_team"), match.get("away_team"), match.get("date"),
+        actuals, index, match.get("match_id", ""),
+    )
+
+
 def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     """Join every stored prediction with its actual result (if available).
 

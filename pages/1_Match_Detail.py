@@ -11,6 +11,7 @@ import streamlit as st
 from app import components as ui
 from wcps import data_io, pipeline
 from wcps.config import load_config
+from wcps import evaluation
 from wcps.evaluation import actual_outcome
 
 st.set_page_config(page_title="WCPS · Match Detail", page_icon="🔍", layout="wide")
@@ -157,7 +158,7 @@ if note:
     st.warning(note)
 
 # --- actual result + comparison --------------------------------------------
-actual = data_io.get_actual_result(match_id)
+actual = evaluation.result_for_match(match)
 if actual:
     real_out = actual_outcome(actual["home_goals"], actual["away_goals"])
     st.success(
