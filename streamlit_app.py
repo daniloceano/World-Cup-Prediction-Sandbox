@@ -87,7 +87,7 @@ for i in range(0, len(matches), cols_per_row):
         mp = predictions.get(match["match_id"])
         with row[j]:
             if not mp:
-                st.warning(f"No prediction for {match['match_id']}.")
+                ui.result_only_card(match, teams, display.get("use_flags", True))
                 continue
             ui.match_card(match, mp, teams, display.get("use_flags", True),
                           on_select_key=f"sel_{match['match_id']}")

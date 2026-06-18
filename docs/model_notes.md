@@ -8,23 +8,54 @@ decisions** and **future work** — keep it short and dated.
 
 ---
 
+## Model naming
+
+The three regimes were renamed (the old ids are gone from the code):
+
+| Current id | Old id | File |
+|---|---|---|
+| `standard` | `v1` | `src/wcps/models/model_standard.py` |
+| `conservative` | `v2` | `src/wcps/models/model_conservative.py` |
+| `aggressive` | — (new) | `src/wcps/models/model_aggressive.py` |
+
+The daily-context block is still named `v2_strategic` for backward
+compatibility (all three models read from it).
+
 ## Implemented models
 
-### v1 — static relative strength (`src/wcps/models/model_v1.py`)
+### standard — static relative strength (`model_standard.py`)
 - Seven weighted criteria → aggregate strength `D` → `λ = λ₀ ± αD` (clipped) →
-  independent Poisson → Monte Carlo.
-- Parameters in `config.yaml › model_v1`: `lambda_0=1.35`, `alpha=1.10`,
+  independent Poisson → Monte Carlo. The neutral / central regime.
+- Parameters in `config.yaml › model_standard`: `lambda_0=1.35`, `alpha=1.10`,
   `lambda_min=0.15`, `lambda_max=4.0`, plus the heuristic `weights`.
 - Known behaviour (per methodology §3): tends to over-rate favourites and
-  under-weight draws — this is exactly what v2 corrects.
+  under-weight draws — which `conservative` corrects and `aggressive` leans into.
 
-### v2 — strategic World Cup model (`src/wcps/models/model_v2.py`)
-- Reuses the v1 strength core, then adds a **first-goal state mixture**
+### conservative — strategic World Cup model (`model_conservative.py`)
+- Reuses the standard strength core, then adds a **first-goal state mixture**
   (S₀ / S_fav / S_und) simulated explicitly per trial, a low-block compression of
   the favourite, a post-goal space/collapse boost, and a **draw-value
   importance re-weighting** of drawn scorelines (`P(draw)* ≈ P(draw)+Δ_E`).
 - Factor → context mappings are documented inline in the model and in
   `docs/data_schema.md` §3.2. They are heuristic (not fitted) — see Caveats.
+
+### aggressive — amplified favourite (`model_aggressive.py`)
+- Implements `docs/materiais_metodos_modelo_agressivo_wcps.md`. Standard core +
+  favourite amplification `F_sup = 1 + β·A_F`, a three-state mixture
+  S₀ / S_F (favourite scores, keeps pressing) / S_C (underdog collapses), and a
+  **goleada tail**: scorelines with margin `M ≥ 3` get importance weight
+  `1 + γ·T_G` (then renormalised).
+- The six aggressive variables (A_F, D_U, G_E, I_P, E_U, T_G) come from an
+  optional `aggressive` block in the daily context, otherwise are **derived**
+  from `v1_scores` / `v2_strategic` (so it runs on today's context format). See
+  `docs/data_schema.md` §3.3.
+- Emits extra `metrics`: `p_favourite_win_by_2plus`, `p_favourite_win_by_3plus`,
+  `goleada_tail_index`, `offensive_superiority` (methodology §10).
+- Parameters in `config.yaml › model_aggressive`: `beta`, `pressure_boost_max`,
+  `collapse_boost_max`, `block_compression`, `chase_boost_max`,
+  `early_goal_base`, `goleada_gamma`.
+- Caveat: by design it can over-rate dominant favourites (e.g. ~90% home win in
+  strongly asymmetric matchups). Tune `beta` / `goleada_gamma` down to soften.
 
 ---
 

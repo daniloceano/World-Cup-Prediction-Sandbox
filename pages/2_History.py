@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+
 import app.bootstrap  # noqa: F401  # isort:skip
 import pandas as pd
 import streamlit as st
@@ -18,6 +20,30 @@ st.caption(
     "Accuracy and probabilistic scores for each model and the ensemble, computed over "
     "matches that already have an actual result recorded."
 )
+
+# --- add results (paste Prompt B output) -----------------------------------
+with st.expander("➕ Add actual results (paste Prompt B output)"):
+    st.caption(
+        "Paste the JSON returned by **Prompt B** (`docs/prompt_b.txt`). It is saved "
+        "to `data/results/actual_results.json` and scored below immediately."
+    )
+    results_text = st.text_area(
+        "Results JSON", height=200,
+        placeholder='{ "results": [ {"match_id": "...", "home_goals": 1, "away_goals": 2} ] }',
+    )
+    if st.button("💾 Save results", type="primary"):
+        try:
+            payload = json.loads(results_text)
+        except json.JSONDecodeError as exc:
+            st.error(f"Invalid JSON: {exc}")
+        else:
+            saved, errors = data_io.ingest_results(payload)
+            if saved:
+                st.success(f"Saved {saved} result(s).")
+            for err in errors:
+                st.warning(err)
+            if saved:
+                st.rerun()
 
 rows = evaluation.build_history(cfg)
 if not rows:

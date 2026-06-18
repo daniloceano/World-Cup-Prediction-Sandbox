@@ -14,12 +14,17 @@ The output is structured so it can also feed calibration plots later.
 from __future__ import annotations
 
 import math
+import re
+from datetime import date as _date
 from typing import Any
 
 from . import data_io
 from .schemas import OUTCOME_AWAY, OUTCOME_DRAW, OUTCOME_HOME
 
 _EPS = 1e-12
+
+_DATE_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
+_CODE_RE = re.compile(r"^[A-Z]{2,4}$")
 
 
 def actual_outcome(home_goals: int, away_goals: int) -> str:
@@ -68,14 +73,100 @@ def evaluate_prediction(pred: dict[str, Any], actual: dict[str, Any]) -> dict[st
     }
 
 
+def _result_team_codes(match_id: str, result: dict[str, Any]) -> tuple[str, str] | None:
+    """Best-effort (home_code, away_code) for a result: explicit fields or id parse.
+
+    Parsing splits the id on non-alphanumerics and takes the two trailing
+    all-caps team codes, so it works for ``wc-2026-06-13-QAT-SUI`` regardless of
+    the separators or prefix used.
+    """
+    h, a = result.get("home_team"), result.get("away_team")
+    if h and a:
+        return (str(h).upper(), str(a).upper())
+    codes = [t for t in re.split(r"[^A-Za-z0-9]+", match_id) if _CODE_RE.match(t)]
+    return (codes[-2], codes[-1]) if len(codes) >= 2 else None
+
+
+def _parse_date(s: str | None) -> _date | None:
+    """Extract a YYYY-MM-DD date from anywhere in a string (e.g. inside a match_id)."""
+    if not s:
+        return None
+    m = _DATE_RE.search(str(s))
+    if not m:
+        return None
+    try:
+        return _date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    except ValueError:
+        return None
+
+
+def _index_actuals(actuals: dict[str, dict[str, Any]]) -> dict[frozenset, list[dict[str, Any]]]:
+    """Index results by the unordered pair of team codes for orientation-agnostic joins."""
+    index: dict[frozenset, list[dict[str, Any]]] = {}
+    for mid, r in actuals.items():
+        codes = _result_team_codes(mid, r)
+        if not codes:
+            continue
+        rec = {
+            "home_code": codes[0],
+            "away_code": codes[1],
+            "home_goals": r["home_goals"],
+            "away_goals": r["away_goals"],
+            "date": _parse_date(r.get("date")) or _parse_date(mid),
+            "match_id": mid,
+        }
+        index.setdefault(frozenset(codes), []).append(rec)
+    return index
+
+
+def _match_actual(
+    pred_home: str | None,
+    pred_away: str | None,
+    pred_date: str | None,
+    actuals: dict[str, dict[str, Any]],
+    actual_index: dict[frozenset, list[dict[str, Any]]],
+    match_id: str,
+) -> dict[str, Any] | None:
+    """Find the actual result for a prediction, oriented to the prediction's home/away.
+
+    Tries an exact ``match_id`` hit first; otherwise joins on the unordered pair
+    of team codes (picking the nearest date when a pair recurs) and re-orients
+    the goals so ``home_goals``/``away_goals`` always refer to the prediction's
+    home/away — making the join robust to differing ``match_id`` conventions,
+    reversed fixture order, and the madrugada date shift.
+    """
+    if match_id in actuals:
+        r = actuals[match_id]
+        return {"home_goals": r["home_goals"], "away_goals": r["away_goals"]}
+
+    if not (pred_home and pred_away):
+        return None
+    candidates = actual_index.get(frozenset({pred_home.upper(), pred_away.upper()}))
+    if not candidates:
+        return None
+
+    pd = _parse_date(pred_date)
+    def _dist(c: dict[str, Any]) -> int:
+        return abs((c["date"] - pd).days) if (pd and c["date"]) else 0
+    cand = min(candidates, key=_dist)
+
+    if cand["home_code"] == pred_home.upper():
+        return {"home_goals": cand["home_goals"], "away_goals": cand["away_goals"]}
+    # reversed fixture order -> swap goals into the prediction's orientation
+    return {"home_goals": cand["away_goals"], "away_goals": cand["home_goals"]}
+
+
 def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     """Join every stored prediction with its actual result (if available).
 
     Returns a flat list of rows, one per (match, source) where source is each
-    model id and ``ensemble``. Rows without an actual result are still returned
+    model id and ``ensemble``. The result join is tolerant of differing
+    ``match_id`` conventions, reversed home/away order, and a +/-1 day shift
+    (see :func:`_match_actual`). Rows without an actual result are still returned
     (with ``evaluated=False``) so the UI can show pending matches.
     """
     actuals = data_io.load_actual_results()
+    actual_index = _index_actuals(actuals)
     rows: list[dict[str, Any]] = []
 
     for date in data_io.available_dates():
@@ -84,7 +175,10 @@ def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
             continue
         for match_id, mp in payload.get("predictions", {}).items():
             match = data_io.get_match(match_id) or {}
-            actual = actuals.get(match_id)
+            actual = _match_actual(
+                match.get("home_team"), match.get("away_team"), match.get("date") or date,
+                actuals, actual_index, match_id,
+            )
             sources = dict(mp.get("models", {}))
             sources["ensemble"] = mp.get("ensemble", {})
             for source, pred in sources.items():

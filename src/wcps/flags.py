@@ -24,6 +24,8 @@ FIFA_TO_ISO2: dict[str, str] = {
     "BOL": "BO", "CRC": "CR", "PAN": "PA", "HON": "HN", "JAM": "JM",
     "RSA": "ZA", "NZL": "NZ", "IRQ": "IQ", "UAE": "AE", "JOR": "JO",
     "IND": "IN", "CHN": "CN", "THA": "TH", "VIE": "VN", "IDN": "ID",
+    "HAI": "HT", "CUW": "CW", "CPV": "CV", "PAN": "PA", "HON": "HN",
+    "BIH": "BA", "PAR": "PY",
 }
 
 # Three-letter ISO alpha-3 that differ from the FIFA code (best-effort).

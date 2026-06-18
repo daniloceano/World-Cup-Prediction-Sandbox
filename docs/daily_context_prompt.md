@@ -1,104 +1,82 @@
-# Daily Context Prompt
+# Daily Prompts (today's context + yesterday's results)
 
-This file stores the prompt used to ask ChatGPT each morning for updated
-contextual information about the day's matches, returned as JSON that WCPS can
-ingest directly.
+Two copy-paste prompts you send to ChatGPT every day. **Neither requires you to
+type a date** — ChatGPT resolves "today" and "yesterday" on its own.
+
+The ready-to-paste prompt text lives in standalone files (kept here as the
+single source of truth so they never drift from this doc):
+
+- **Prompt A — today's match context** → [`docs/prompt_a.txt`](prompt_a.txt).
+  Returns the daily context JSON for *all* of today's World Cup matches. Save it
+  to `data/context/YYYY-MM-DD.json` (or paste it in the app's **Daily Context**
+  page) and generate predictions. Saving also auto-registers today's fixtures
+  into the schedule.
+- **Prompt B — yesterday's results** → [`docs/prompt_b.txt`](prompt_b.txt).
+  Returns the final scores of *all* of yesterday's World Cup matches, in the
+  app's results schema. Merge it into `data/results/actual_results.json` so the
+  **History** page can score every model and the ensemble.
 
 > **Reminder:** WCPS is a recreational simulation sandbox. Ask only for football
-> context (form, injuries, tactical profile, etc.). Do **not** request betting
-> odds, bookmaker lines, or wagering advice.
+> context and results (form, injuries, tactical profile, final scores). Do **not**
+> request betting odds, bookmaker lines, or wagering advice.
 
 ---
 
-## How to use it
+## Conventions both prompts follow
 
-1. Edit the **Inputs** at the top of the prompt below (date + the day's fixtures).
-2. Paste the whole prompt into ChatGPT.
-3. Copy the JSON it returns.
-4. In the app, open **Daily Context** → paste → **Validate** → **Save & generate
-   predictions**. (Or save it yourself to `data/context/YYYY-MM-DD.json`.)
+- **Date resolution & "match day" window:** ChatGPT uses the *actual current
+  date* (it has it — do not ask for it). A **match day runs from 06:00 to 06:00
+  the next day** in the **America/Sao_Paulo (UTC−3)** timezone, so late-night /
+  after-midnight ("madrugada") kickoffs are grouped into the day they *belong*
+  to, not the calendar date they spill into. "Today" = `[today 06:00, tomorrow
+  06:00)`; "yesterday" = `[yesterday 06:00, today 06:00)`. The **match-day
+  (slate) date** is the calendar date on which the window *starts*, and it is
+  echoed back in the `date` field so the file is auditable.
+- **`match_id` format (identical in both prompts):**
+  `wc-YYYY-MM-DD-<HOME>-<AWAY>`, where `HOME`/`AWAY` are the **uppercase**
+  3-letter FIFA codes and `YYYY-MM-DD` is the **match-day (slate) date** above —
+  the window-start date, *not* necessarily the kickoff's calendar date (a 01:00
+  kickoff uses the previous calendar day). The match's `date` field uses this
+  same slate date. This is what makes Prompt B's result `match_id` line up with
+  the `match_id` Prompt A produced that morning.
+  Examples: `wc-2026-06-15-BEL-EGY`, `wc-2026-06-15-KSA-URU`,
+  `wc-2026-06-14-CIV-ECU`.
+  (The History evaluation is also tolerant of older/different id conventions,
+  reversed home/away order, and a ±1-day shift — it joins results to predictions
+  by team pair + date — but using this format keeps the join exact.)
+- **Home/away orientation:** "home" = the team listed **first** in the official
+  FIFA schedule for that match. Keep the same orientation in both prompts so
+  results line up with predictions.
+- **If unsure of the schedule/scores:** browse for the official FIFA World Cup
+  2026 fixtures/results if you can; otherwise use best knowledge and flag the
+  uncertainty in `notes`. Never invent a final score for a match that has not
+  finished — omit it instead.
 
-The exact field meanings and allowed ranges are in
-[`docs/data_schema.md`](data_schema.md) §3.
-
----
-
-## ✂️ Prompt template (edit the Inputs, then copy everything below)
-
-````text
-You are assisting a RECREATIONAL football match-simulation hobby project (no
-betting, no gambling, no odds). I need pre-match CONTEXT for the fixtures below,
-expressed as scores I will feed into a Monte Carlo simulator.
-
-INPUTS
-- date: 2026-06-17
-- fixtures (home vs away, with a stable match_id):
-  - match_id: demo-2026-06-17-ARG-KSA | home: ARG (Argentina) | away: KSA (Saudi Arabia)
-  - match_id: demo-2026-06-17-FRA-AUS | home: FRA (France)    | away: AUS (Australia)
-
-For EACH fixture, assess these and return STRICT JSON only (no prose).
-
-A) v1_scores — seven criteria, each with a "home" and "away" value in [-1.0, 1.0]
-   where +1.0 = strong advantage to that team, 0.0 = neutral:
-   - fifa_ranking, short_form (last ~5), long_form (last ~15), injuries,
-     weather_adaptation, off_field, tactical_similarity
-
-B) v2_strategic — strategic context:
-   - favorite: "home" | "away"
-   - low_block_capacity: 0..1   (underdog's ability to hold a low block)
-   - draw_value_weaker: 0..1     (how valuable a draw is for the weaker side)
-   - need_to_win: {home: 0..1, away: 0..1}
-   - first_goal_prob: {home: p, away: p, none: p}  (should sum to ~1)
-   - collapse_risk_weaker: 0..1  (underdog disorganization after conceding)
-   - is_group_debut: true | false
-   - transition_threat_weaker: 0..1   (underdog counter-attack threat)
-   - set_piece_threat_weaker: 0..1    (underdog set-piece threat)
-   - notes: one short sentence of justification
-
-OUTPUT FORMAT — return EXACTLY this JSON shape and nothing else:
-{
-  "date": "2026-06-17",
-  "generated_by": "ChatGPT daily context prompt v1",
-  "matches": [
-    {
-      "match_id": "demo-2026-06-17-ARG-KSA",
-      "home_team": "ARG",
-      "away_team": "KSA",
-      "v1_scores": {
-        "fifa_ranking":        {"home": 0.0, "away": 0.0},
-        "short_form":          {"home": 0.0, "away": 0.0},
-        "long_form":           {"home": 0.0, "away": 0.0},
-        "injuries":            {"home": 0.0, "away": 0.0},
-        "weather_adaptation":  {"home": 0.0, "away": 0.0},
-        "off_field":           {"home": 0.0, "away": 0.0},
-        "tactical_similarity": {"home": 0.0, "away": 0.0}
-      },
-      "v2_strategic": {
-        "favorite": "home",
-        "low_block_capacity": 0.0,
-        "draw_value_weaker": 0.0,
-        "need_to_win": {"home": 0.0, "away": 0.0},
-        "first_goal_prob": {"home": 0.0, "away": 0.0, "none": 0.0},
-        "collapse_risk_weaker": 0.0,
-        "is_group_debut": false,
-        "transition_threat_weaker": 0.0,
-        "set_piece_threat_weaker": 0.0,
-        "notes": ""
-      }
-    }
-  ]
-}
-
-RULES
-- Output JSON only, valid and parseable, no markdown fences, no commentary.
-- Use your best football judgement; if unsure, use values near 0 and say so in notes.
-- Keep all scores within the stated ranges.
-````
+Field meanings and allowed ranges: see [`docs/data_schema.md`](data_schema.md)
+(§3 for context, §5 for results).
 
 ---
 
-## Notes / changelog for this prompt
+## Applying the outputs
 
-- *2026-06-17* — Initial template (v1) covering the seven v1 criteria and the v2
-  strategic block. Update this section when you change the prompt so past
-  context files stay interpretable.
+- **Prompt A:** paste the JSON into the app's **Daily Context** page → Validate →
+  Save & generate predictions (or save it yourself to
+  `data/context/YYYY-MM-DD.json`, using the slate date in the filename).
+- **Prompt B:** paste the objects from the `"results"` array into the `"results"`
+  array of [`data/results/actual_results.json`](../data/results/actual_results.json)
+  (replacing or adding by `match_id`). The History page picks them up immediately.
+
+---
+
+## Notes / changelog for these prompts
+
+- *2026-06-17* — Match day redefined as a **06:00→06:00 window** (America/Sao_Paulo)
+  so after-midnight kickoffs are grouped into the correct slate; `match_id` and
+  the `date` field now use the **match-day (slate) date** (window-start),
+  not the kickoff's calendar date. Prompt bodies moved to `prompt_a.txt` /
+  `prompt_b.txt`.
+- *2026-06-17* — Prompts self-resolve "today"/"yesterday" (no manual date),
+  cover **all** of the day's matches, emit the canonical `match_id` convention,
+  and carry match metadata. Added the separate Prompt B for yesterday's results.
+- *2026-06-17* — v1 (replaced): original single template that required pasting
+  the date and fixtures by hand.

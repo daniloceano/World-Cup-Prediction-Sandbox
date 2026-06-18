@@ -54,6 +54,99 @@ def get_match(match_id: str) -> dict[str, Any] | None:
     return None
 
 
+def upsert_team_records(records: list[dict[str, Any]]) -> int:
+    """Insert/merge team records (keyed by ``code``). Returns number added."""
+    p = config.path("teams_file")
+    raw = _read_json(p, {"teams": []})
+    by_code = {t["code"]: t for t in raw.get("teams", [])}
+    added = 0
+    for rec in records:
+        code = rec.get("code")
+        if not code:
+            continue
+        if code not in by_code:
+            added += 1
+        by_code[code] = {**by_code.get(code, {}), **rec}
+    raw["teams"] = sorted(by_code.values(), key=lambda t: t["code"])
+    _write_json(p, raw)
+    return added
+
+
+def upsert_match_records(records: list[dict[str, Any]]) -> int:
+    """Insert/merge match records (keyed by ``match_id``). Returns number added."""
+    p = config.path("matches_file")
+    raw = _read_json(p, {"matches": []})
+    by_id = {m["match_id"]: m for m in raw.get("matches", [])}
+    added = 0
+    for rec in records:
+        mid = rec.get("match_id")
+        if not mid:
+            continue
+        if mid not in by_id:
+            added += 1
+        by_id[mid] = {**by_id.get(mid, {}), **rec}
+    raw["matches"] = sorted(
+        by_id.values(), key=lambda m: (m.get("date") or "", m["match_id"])
+    )
+    _write_json(p, raw)
+    return added
+
+
+def schedule_records_from_context(
+    ctx: dict[str, Any] | None,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Build (team_records, match_records) from a daily context. Pure, no I/O.
+
+    Entries missing ``match_id`` or team codes are skipped, keeping older
+    minimal context files backward-compatible.
+    """
+    if not ctx:
+        return ([], [])
+    top_date = ctx.get("date")
+    matches: list[dict[str, Any]] = []
+    teams: list[dict[str, Any]] = []
+    for e in ctx.get("matches", []):
+        mid = e.get("match_id")
+        home, away = e.get("home_team"), e.get("away_team")
+        if not (mid and home and away):
+            continue
+        kickoff = ""
+        kt = e.get("kickoff_utc") or ""
+        if "T" in kt:
+            kickoff = kt.split("T")[1][:5] + " UTC"
+        matches.append({
+            "match_id": mid,
+            "date": e.get("date") or top_date,
+            "kickoff": kickoff,
+            "venue": e.get("venue"),
+            "phase": e.get("phase") or "group",
+            "group": e.get("group"),
+            "home_team": home,
+            "away_team": away,
+            "is_demo": False,
+            "source": "daily_context",
+        })
+        if e.get("home_name"):
+            teams.append({"code": home, "name": e["home_name"], "is_demo": False})
+        if e.get("away_name"):
+            teams.append({"code": away, "name": e["away_name"], "is_demo": False})
+    return (teams, matches)
+
+
+def sync_schedule_from_context(ctx: dict[str, Any] | None) -> tuple[int, int]:
+    """Register fixtures/teams described in a daily context into the schedule.
+
+    The daily context (Prompt A) carries per-match metadata (teams, kickoff,
+    venue, group). This upserts them into ``matches.json`` / ``teams.json`` so
+    predictions can run for a date without manually editing the schedule.
+    Returns (teams_added, matches_added).
+    """
+    teams, matches = schedule_records_from_context(ctx)
+    n_teams = upsert_team_records(teams) if teams else 0
+    n_matches = upsert_match_records(matches) if matches else 0
+    return (n_teams, n_matches)
+
+
 def available_dates() -> list[str]:
     """Sorted unique dates that have at least one scheduled match."""
     return sorted({m["date"] for m in load_matches() if m.get("date")})
@@ -125,3 +218,32 @@ def save_actual_result(
 
 def get_actual_result(match_id: str) -> dict[str, Any] | None:
     return load_actual_results().get(match_id)
+
+
+def ingest_results(payload: Any) -> tuple[int, list[str]]:
+    """Ingest a Prompt B results payload (or bare list) into actual_results.json.
+
+    Accepts either ``{"results": [...]}`` or a plain list of result objects, each
+    with ``match_id``, ``home_goals``, ``away_goals`` (plus optional
+    ``status``/``notes``). Upserts by ``match_id``. Returns (count_saved, errors).
+    """
+    if isinstance(payload, dict):
+        items = payload.get("results", [])
+    elif isinstance(payload, list):
+        items = payload
+    else:
+        return (0, ["Top-level JSON must be an object with 'results' or a list."])
+
+    saved = 0
+    errors: list[str] = []
+    for i, r in enumerate(items):
+        try:
+            mid = r["match_id"]
+            hg, ag = int(r["home_goals"]), int(r["away_goals"])
+        except (KeyError, TypeError, ValueError) as exc:
+            errors.append(f"Result #{i + 1}: {exc}")
+            continue
+        extra = {k: r[k] for k in ("status", "notes") if k in r}
+        save_actual_result(mid, hg, ag, **extra)
+        saved += 1
+    return (saved, errors)

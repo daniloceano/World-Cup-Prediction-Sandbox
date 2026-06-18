@@ -17,6 +17,19 @@ from wcps.schemas import OUTCOME_AWAY, OUTCOME_DRAW, OUTCOME_HOME
 
 OUTCOME_COLORS = {OUTCOME_HOME: "#2563eb", OUTCOME_DRAW: "#9ca3af", OUTCOME_AWAY: "#dc2626"}
 
+# Friendly labels for prediction sources (model ids + ensemble + legacy).
+SOURCE_LABELS = {
+    "standard": "Standard",
+    "conservative": "Conservative",
+    "aggressive": "Aggressive",
+    "ensemble": "Ensemble",
+    "chatgpt_legacy": "ChatGPT (legacy)",
+}
+
+
+def source_label(source: str) -> str:
+    return SOURCE_LABELS.get(source, source)
+
 
 # --- formatting -------------------------------------------------------------
 def team_label(code: str, teams: dict[str, Any], use_flags: bool = True) -> str:
@@ -43,7 +56,7 @@ def confidence_badge(conf: float) -> str:
 def quality_note(quality: str) -> str | None:
     return {
         "missing_context": "⚠️ Generated without daily context (neutral assumptions).",
-        "degraded": "⚠️ Generated with partial/missing strategic context.",
+        "degraded": "⚠️ Partial/approximate prediction — see the model's warnings.",
     }.get(quality)
 
 
@@ -193,3 +206,25 @@ def match_card(
             st.session_state["selected_match"] = match["match_id"]
             st.session_state["selected_date"] = match["date"]
             st.switch_page("pages/1_Match_Detail.py")
+
+
+def result_only_card(
+    match: dict[str, Any], teams: dict[str, Any], use_flags: bool
+) -> None:
+    """Compact card for a scheduled match that has a real result but no prediction."""
+    home, away = match["home_team"], match["away_team"]
+    h_lab = team_label(home, teams, use_flags)
+    a_lab = team_label(away, teams, use_flags)
+    actual = data_io.get_actual_result(match["match_id"])
+    with st.container(border=True):
+        st.markdown(f"### {h_lab}  vs  {a_lab}")
+        meta = []
+        if match.get("kickoff"):
+            meta.append(f"🕒 {match['kickoff']}")
+        if match.get("group"):
+            meta.append(f"🏆 {match.get('phase','')} {match['group']}".strip())
+        if meta:
+            st.caption("  ·  ".join(meta))
+        if actual:
+            st.success(f"Final {actual['home_goals']}–{actual['away_goals']}")
+        st.caption("No model prediction for this match (no daily context was provided).")

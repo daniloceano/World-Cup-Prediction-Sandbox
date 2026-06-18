@@ -42,7 +42,7 @@ class Prediction:
     """
 
     # --- identity ----------------------------------------------------------
-    model_id: str                       # e.g. "v1", "v2", "ensemble"
+    model_id: str                       # e.g. "standard", "conservative", "aggressive", "ensemble"
     model_version: str                  # e.g. "1.0.0"
     match_id: str
     run_datetime: str                   # ISO-8601 UTC timestamp
@@ -73,6 +73,9 @@ class Prediction:
     confidence: float = 0.0             # 0..1, margin of the preferred outcome
     quality: str = "ok"                # "ok" | "degraded" | "missing_context"
     warnings: list[str] = field(default_factory=list)
+    # Optional model-specific scalar metrics (e.g. aggressive model's blowout
+    # probabilities). Empty for models that don't emit any.
+    metrics: dict[str, float] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

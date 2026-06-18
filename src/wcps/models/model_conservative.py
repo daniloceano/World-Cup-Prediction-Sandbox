@@ -1,21 +1,17 @@
-"""Model v2 — v1 strength engine + strategic World Cup adjustments.
+"""Model conservative (formerly v2) — standard core + strategic World Cup layer.
 
-Implements the methodology of §4 of the methods document. v2 keeps v1's
-relative-strength → expected-goals core, then layers a strategic state-mixture
-on top:
+Implements §4 of the methods document. Keeps the standard relative-strength →
+expected-goals core, then layers a strategic state-mixture on top:
 
 * a likely *game plan* (low-block compression of the favourite, §4.3);
 * a *first-goal* state split S0 / S_A / S_B (§4.4–§4.5);
 * a *space / collapse* boost for the favourite once it scores first (§4.5–§4.6);
 * a *draw value* re-weighting of drawn scorelines (§4.2).
 
-The first-goal split is simulated explicitly: each Monte Carlo trial first draws
-which state occurs, then samples goals under that state's adjusted intensities.
-Drawn scorelines are then importance-weighted by the strategic value of the
-draw, mirroring ``P(draw)* = P(draw) + Δ_E``.
-
-All factor → context mappings are documented inline and in
-``docs/data_schema.md`` so the strategic layer stays auditable.
+This is the "what if the underdog manages to lock the game down?" regime: it
+raises the draw probability and shifts mass toward low scorelines. The strategic
+context still lives in the ``v2_strategic`` block of the daily context (the
+field name is kept for backward compatibility).
 """
 
 from __future__ import annotations
@@ -27,11 +23,11 @@ import numpy as np
 from ..schemas import Prediction
 from ..simulation import make_rng, summarize_simulation
 from .base import REGISTRY, BaseModel
-from .model_v1 import base_lambdas, relative_strength
+from .model_standard import base_lambdas, relative_strength
 
 
 def _strategic(context: dict[str, Any] | None) -> dict[str, Any]:
-    """Extract the v2 strategic block with neutral defaults for missing fields."""
+    """Extract the strategic block with neutral defaults for missing fields."""
     s = (context or {}).get("v2_strategic", {}) or {}
     fg = s.get("first_goal_prob") or {}
     ntw = s.get("need_to_win") or {}
@@ -57,13 +53,13 @@ def _strategic(context: dict[str, Any] | None) -> dict[str, Any]:
 
 
 @REGISTRY.register
-class ModelV2(BaseModel):
-    model_id = "v2"
+class ModelConservative(BaseModel):
+    model_id = "conservative"
     model_version = "1.0.0"
-    display_name = "v2 · Strategic (World Cup)"
+    display_name = "Conservative · Strategic (World Cup)"
     description = (
-        "v1 strength core + strategic layer: low-block plan, first-goal state "
-        "mixture, post-goal space/collapse, and draw value re-weighting."
+        "Standard strength core + strategic layer: low-block plan, first-goal "
+        "state mixture, post-goal space/collapse, and draw value re-weighting."
     )
     required_inputs = ("v1_scores", "v2_strategic")
 
@@ -73,26 +69,26 @@ class ModelV2(BaseModel):
         context: dict[str, Any] | None,
         context_ref: str | None = None,
     ) -> Prediction:
-        cfg = self.config["model_v2"]
-        v1_cfg = self.config["model_v1"]
+        cfg = self.config["model_conservative"]
+        std_cfg = self.config["model_standard"]
         sim_cfg = self.config["simulation"]
         q = self.config["quantiles"]
 
         warnings: list[str] = []
         quality = "ok"
 
-        # --- v1 strength core ---------------------------------------------
+        # --- standard strength core ---------------------------------------
         from ..context import V1_CRITERIA, coerce_v1_scores
 
         if context is None:
-            warnings.append("No daily context; v2 falls back to a neutral toss-up.")
+            warnings.append("No daily context; conservative falls back to a neutral toss-up.")
             quality = "missing_context"
             scores = {c: {"home": 0.0, "away": 0.0} for c in V1_CRITERIA}
         else:
             scores = coerce_v1_scores(context)
 
-        d = relative_strength(scores, v1_cfg["weights"])
-        lam_home, lam_away = base_lambdas(d, v1_cfg)
+        d = relative_strength(scores, std_cfg["weights"])
+        lam_home, lam_away = base_lambdas(d, std_cfg)
 
         strat = _strategic(context)
         if not strat["_has_block"]:
@@ -131,7 +127,7 @@ class ModelV2(BaseModel):
         )
 
         # --- Monte Carlo state mixture ------------------------------------
-        rng = make_rng(sim_cfg["random_seed"], match["match_id"] + "v2")
+        rng = make_rng(sim_cfg["random_seed"], match["match_id"] + "conservative")
         n = sim_cfg["n_simulations"]
         cap = sim_cfg["max_goals"]
 

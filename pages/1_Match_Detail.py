@@ -62,6 +62,16 @@ def _render_model_block(p: dict[str, Any], home: str, away: str) -> None:
         for w in p["warnings"]:
             st.caption(f"⚠️ {w}")
 
+    metrics = p.get("metrics") or {}
+    if metrics:
+        m = st.columns(3)
+        if "p_favourite_win_by_2plus" in metrics:
+            m[0].metric("Wide win P(≥2)", f"{metrics['p_favourite_win_by_2plus']:.0%}")
+        if "p_favourite_win_by_3plus" in metrics:
+            m[1].metric("Blowout P(≥3)", f"{metrics['p_favourite_win_by_3plus']:.0%}")
+        if "goleada_tail_index" in metrics:
+            m[2].metric("Goleada tail", f"{metrics['goleada_tail_index']:.2f}")
+
     a, b = st.columns(2)
     with a:
         st.markdown("**Outcome probabilities**")
@@ -89,9 +99,20 @@ if not all_matches:
     st.stop()
 
 match_ids = [m["match_id"] for m in all_matches]
-default_id = st.session_state.get("selected_match", match_ids[0])
+def _predicted_ids() -> set[str]:
+    out: set[str] = set()
+    for d in data_io.available_dates():
+        p = data_io.load_predictions(d)
+        if p:
+            out.update(p.get("predictions", {}))
+    return out
+
+
+predicted = _predicted_ids()
+default_id = st.session_state.get("selected_match")
 if default_id not in match_ids:
-    default_id = match_ids[0]
+    # prefer a match that actually has a prediction over a result-only fixture
+    default_id = next((m for m in match_ids if m in predicted), match_ids[0])
 
 
 def _fmt(mid: str) -> str:
@@ -200,7 +221,7 @@ st.dataframe(
 # --- per-model detail tabs --------------------------------------------------
 st.subheader("Per-model & ensemble detail")
 order = list(models) + ["ensemble"]
-tabs = st.tabs(order)
+tabs = st.tabs([ui.source_label(s) for s in order])
 for tab, src in zip(tabs, order):
     with tab:
         _render_model_block(sources[src], home, away)

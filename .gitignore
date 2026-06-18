@@ -1,5 +1,7 @@
 # --- Generated prediction outputs (regeneratable from context) -------------
 data/predictions/*.json
+# ...but keep the legacy ChatGPT export (an original audit record, not regeneratable)
+!data/predictions/legacy_chat_predictions.json
 data/processed/
 
 # --- Keep sample/demo inputs and results tracked ---------------------------

@@ -1,13 +1,205 @@
 {
-  "_comment": "Team metadata. 'code' is the FIFA/ISO-style 3-letter key used everywhere. DEMO dataset.",
+  "_comment": "Official team metadata. 'code' is the 3-letter FIFA key used everywhere. No demo data.",
   "teams": [
-    {"code": "ARG", "name": "Argentina", "confederation": "CONMEBOL", "is_demo": true},
-    {"code": "KSA", "name": "Saudi Arabia", "confederation": "AFC", "is_demo": true},
-    {"code": "FRA", "name": "France", "confederation": "UEFA", "is_demo": true},
-    {"code": "AUS", "name": "Australia", "confederation": "AFC", "is_demo": true},
-    {"code": "BRA", "name": "Brazil", "confederation": "CONMEBOL", "is_demo": true},
-    {"code": "SRB", "name": "Serbia", "confederation": "UEFA", "is_demo": true},
-    {"code": "GER", "name": "Germany", "confederation": "UEFA", "is_demo": true},
-    {"code": "JPN", "name": "Japan", "confederation": "AFC", "is_demo": true}
+    {
+      "code": "ALG",
+      "name": "Algeria"
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina"
+    },
+    {
+      "code": "AUS",
+      "name": "Australia"
+    },
+    {
+      "code": "AUT",
+      "name": "Austria"
+    },
+    {
+      "code": "BEL",
+      "name": "Belgium"
+    },
+    {
+      "code": "BIH",
+      "name": "Bosnia and Herzegovina"
+    },
+    {
+      "code": "BRA",
+      "name": "Brazil"
+    },
+    {
+      "code": "CAN",
+      "name": "Canada"
+    },
+    {
+      "code": "CIV",
+      "name": "Côte d'Ivoire"
+    },
+    {
+      "code": "COD",
+      "name": "Congo DR",
+      "is_demo": false
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "is_demo": false
+    },
+    {
+      "code": "CPV",
+      "name": "Cape Verde"
+    },
+    {
+      "code": "CRO",
+      "name": "Croatia",
+      "is_demo": false
+    },
+    {
+      "code": "CUW",
+      "name": "Curaçao"
+    },
+    {
+      "code": "CZE",
+      "name": "Czechia"
+    },
+    {
+      "code": "ECU",
+      "name": "Ecuador"
+    },
+    {
+      "code": "EGY",
+      "name": "Egypt"
+    },
+    {
+      "code": "ENG",
+      "name": "England",
+      "is_demo": false
+    },
+    {
+      "code": "ESP",
+      "name": "Spain"
+    },
+    {
+      "code": "FRA",
+      "name": "France"
+    },
+    {
+      "code": "GER",
+      "name": "Germany"
+    },
+    {
+      "code": "GHA",
+      "name": "Ghana",
+      "is_demo": false
+    },
+    {
+      "code": "HAI",
+      "name": "Haiti"
+    },
+    {
+      "code": "IRN",
+      "name": "Iran"
+    },
+    {
+      "code": "IRQ",
+      "name": "Iraq"
+    },
+    {
+      "code": "JOR",
+      "name": "Jordan"
+    },
+    {
+      "code": "JPN",
+      "name": "Japan"
+    },
+    {
+      "code": "KOR",
+      "name": "South Korea"
+    },
+    {
+      "code": "KSA",
+      "name": "Saudi Arabia"
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco"
+    },
+    {
+      "code": "MEX",
+      "name": "Mexico"
+    },
+    {
+      "code": "NED",
+      "name": "Netherlands"
+    },
+    {
+      "code": "NOR",
+      "name": "Norway"
+    },
+    {
+      "code": "NZL",
+      "name": "New Zealand"
+    },
+    {
+      "code": "PAN",
+      "name": "Panama",
+      "is_demo": false
+    },
+    {
+      "code": "PAR",
+      "name": "Paraguay"
+    },
+    {
+      "code": "POR",
+      "name": "Portugal",
+      "is_demo": false
+    },
+    {
+      "code": "QAT",
+      "name": "Qatar"
+    },
+    {
+      "code": "RSA",
+      "name": "South Africa"
+    },
+    {
+      "code": "SCO",
+      "name": "Scotland"
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal"
+    },
+    {
+      "code": "SUI",
+      "name": "Switzerland"
+    },
+    {
+      "code": "SWE",
+      "name": "Sweden"
+    },
+    {
+      "code": "TUN",
+      "name": "Tunisia"
+    },
+    {
+      "code": "TUR",
+      "name": "Türkiye"
+    },
+    {
+      "code": "URU",
+      "name": "Uruguay"
+    },
+    {
+      "code": "USA",
+      "name": "United States"
+    },
+    {
+      "code": "UZB",
+      "name": "Uzbekistan",
+      "is_demo": false
+    }
   ]
 }

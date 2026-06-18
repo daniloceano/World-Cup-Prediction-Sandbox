@@ -22,10 +22,13 @@ cfg = load_config()
 
 st.title("📝 Daily context")
 st.markdown(
-    "Paste the daily JSON (generated via the ChatGPT prompt in "
-    "`docs/daily_context_prompt.md`), validate it, save it to "
-    "`data/context/YYYY-MM-DD.json`, then generate predictions. "
-    "Original context files are preserved as an audit trail."
+    "Paste the daily JSON from **Prompt A** in `docs/daily_context_prompt.md` "
+    "(ChatGPT auto-detects today's date and lists today's matches). Validate it, "
+    "save it to `data/context/YYYY-MM-DD.json`, then generate predictions — "
+    "saving also registers today's fixtures into the schedule automatically. "
+    "Original context files are preserved as an audit trail. "
+    "For yesterday's final scores, use **Prompt B** and add them on the History side "
+    "(`data/results/actual_results.json`)."
 )
 
 dates = data_io.available_dates()
@@ -81,6 +84,12 @@ def _save(ctx) -> None:
     with path.open("w", encoding="utf-8") as fh:
         json.dump(ctx, fh, indent=2, ensure_ascii=False)
     st.success(f"Saved to `{path}`.")
+    # Register fixtures/teams the context describes (Prompt A metadata), so the
+    # date shows up in the dashboard even before predictions are generated.
+    n_teams, n_matches = data_io.sync_schedule_from_context(ctx)
+    if n_matches or n_teams:
+        st.info(f"Registered {n_matches} new fixture(s) and {n_teams} new team(s) "
+                "into the schedule.")
 
 
 if validate_clicked or save_clicked or gen_clicked:

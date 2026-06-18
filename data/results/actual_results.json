@@ -1,13 +1,165 @@
 {
-  "_comment": "Actual match results, used for historical evaluation. DEMO data. Add real results here (or via the app / CLI) as matches finish.",
+  "_comment": "Actual match results, used for historical evaluation. Real results collected up to 2026-06-17 morning. Match IDs use the format wc-YYYY-MM-DD-TEAM_A-TEAM_B, where TEAM_A/TEAM_B follow the listed fixture order.",
   "results": [
     {
-      "match_id": "demo-2026-06-14-GER-JPN",
+      "match_id": "wc-2026-06-11-MEX-RSA",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Mexico 2-0 South Africa."
+    },
+    {
+      "match_id": "wc-2026-06-11-KOR-CZE",
+      "home_goals": 2,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "South Korea 2-1 Czechia."
+    },
+    {
+      "match_id": "wc-2026-06-12-CAN-BIH",
       "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Canada 1-1 Bosnia and Herzegovina."
+    },
+    {
+      "match_id": "wc-2026-06-12-USA-PAR",
+      "home_goals": 4,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "United States 4-1 Paraguay."
+    },
+    {
+      "match_id": "wc-2026-06-13-HAI-SCO",
+      "home_goals": 0,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Haiti 0-1 Scotland."
+    },
+    {
+      "match_id": "wc-2026-06-13-BRA-MAR",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Brazil 1-1 Morocco."
+    },
+    {
+      "match_id": "wc-2026-06-13-QAT-SUI",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Qatar 1-1 Switzerland."
+    },
+    {
+      "match_id": "wc-2026-06-13-AUS-TUR",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Australia 2-0 Türkiye."
+    },
+    {
+      "match_id": "wc-2026-06-14-GER-CUW",
+      "home_goals": 7,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Germany 7-1 Curaçao."
+    },
+    {
+      "match_id": "wc-2026-06-14-CIV-ECU",
+      "home_goals": 1,
+      "away_goals": 0,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Côte d'Ivoire 1-0 Ecuador."
+    },
+    {
+      "match_id": "wc-2026-06-14-NED-JPN",
+      "home_goals": 2,
       "away_goals": 2,
       "status": "final",
-      "is_demo": true,
-      "notes": "DEMO result for evaluation example."
+      "is_demo": false,
+      "notes": "Netherlands 2-2 Japan."
+    },
+    {
+      "match_id": "wc-2026-06-14-SWE-TUN",
+      "home_goals": 5,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Sweden 5-1 Tunisia."
+    },
+    {
+      "match_id": "wc-2026-06-15-ESP-CPV",
+      "home_goals": 0,
+      "away_goals": 0,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Spain 0-0 Cape Verde."
+    },
+    {
+      "match_id": "wc-2026-06-15-BEL-EGY",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Belgium 1-1 Egypt."
+    },
+    {
+      "match_id": "wc-2026-06-15-KSA-URU",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Saudi Arabia 1-1 Uruguay."
+    },
+    {
+      "match_id": "wc-2026-06-15-IRN-NZL",
+      "home_goals": 2,
+      "away_goals": 2,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Iran 2-2 New Zealand."
+    },
+    {
+      "match_id": "wc-2026-06-16-FRA-SEN",
+      "home_goals": 3,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "France 3-1 Senegal."
+    },
+    {
+      "match_id": "wc-2026-06-16-IRQ-NOR",
+      "home_goals": 1,
+      "away_goals": 4,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Iraq 1-4 Norway."
+    },
+    {
+      "match_id": "wc-2026-06-16-ARG-ALG",
+      "home_goals": 3,
+      "away_goals": 0,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Argentina 3-0 Algeria."
+    },
+    {
+      "match_id": "wc-2026-06-16-AUT-JOR",
+      "home_goals": 3,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Austria 3-1 Jordan."
     }
   ]
 }

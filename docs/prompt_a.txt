@@ -1,0 +1,95 @@
+You are assisting a RECREATIONAL football match-simulation hobby project (no
+betting, no gambling, no odds). WITHOUT asking me for the date, do this:
+
+1. Define the "match day" as a window in the America/Sao_Paulo (UTC-3) timezone
+   running from 06:00 TODAY to 06:00 TOMORROW, i.e. [today 06:00, tomorrow
+   06:00). This deliberately groups late-night / after-midnight ("madrugada")
+   kickoffs into the SAME match day. The MATCH-DAY (slate) date is the calendar
+   date on which the window STARTS (today's date). Echo it back in the JSON
+   "date" field. Determine the current date yourself; do not ask me for it.
+2. List EVERY FIFA World Cup 2026 match whose LOCAL kickoff falls inside that
+   window (>= 06:00 today and < 06:00 tomorrow). A match kicking off at, say,
+   01:00 tomorrow local time belongs to TODAY'S match day. If you can browse,
+   use the official schedule; otherwise use best knowledge and note any
+   uncertainty.
+3. For EACH match, assess pre-match CONTEXT as scores I will feed into a Monte
+   Carlo simulator, and return STRICT JSON ONLY (no prose, no markdown fences).
+
+match_id format: "wc-YYYY-MM-DD-<HOME>-<AWAY>", where HOME/AWAY are the UPPERCASE
+3-letter FIFA codes (e.g. wc-2026-06-15-BEL-EGY). YYYY-MM-DD is the MATCH-DAY
+(slate) date defined above — the window-START date — NOT necessarily the
+kickoff's calendar date. So a 01:00 after-midnight kickoff uses the PREVIOUS
+calendar day (the day the window started). Use this same slate date in every
+match's "date" field too. "home" = team listed first in the official FIFA
+schedule.
+
+For each match provide:
+
+A) Match metadata: match_id, date (the MATCH-DAY/slate date = top-level "date"),
+   kickoff_utc (ISO-8601, e.g. "2026-06-15T19:00:00Z"), venue, group,
+   home_team / away_team = the 3-letter FIFA codes (e.g. ARG, KSA), and
+   home_name / away_name = full names.
+
+B) v1_scores — seven criteria, each with "home" and "away" in [-1.0, 1.0],
+   where +1.0 = strong advantage to that team, 0.0 = neutral:
+   fifa_ranking, short_form (last ~5), long_form (last ~15), injuries,
+   weather_adaptation, off_field, tactical_similarity.
+
+C) v2_strategic:
+   - favorite: "home" | "away"
+   - low_block_capacity: 0..1
+   - draw_value_weaker: 0..1
+   - need_to_win: {home: 0..1, away: 0..1}
+   - first_goal_prob: {home: p, away: p, none: p}   (should sum to ~1)
+   - collapse_risk_weaker: 0..1
+   - is_group_debut: true | false
+   - transition_threat_weaker: 0..1
+   - set_piece_threat_weaker: 0..1
+   - notes: one short sentence of justification
+
+OUTPUT EXACTLY this JSON shape (one object per match in "matches"):
+{
+  "date": "<resolved today's date YYYY-MM-DD>",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-15-BEL-EGY",
+      "date": "2026-06-15",
+      "kickoff_utc": "2026-06-15T19:00:00Z",
+      "venue": "Seattle",
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "EGY",
+      "home_name": "Belgium",
+      "away_name": "Egypt",
+      "v1_scores": {
+        "fifa_ranking":        {"home": 0.0, "away": 0.0},
+        "short_form":          {"home": 0.0, "away": 0.0},
+        "long_form":           {"home": 0.0, "away": 0.0},
+        "injuries":            {"home": 0.0, "away": 0.0},
+        "weather_adaptation":  {"home": 0.0, "away": 0.0},
+        "off_field":           {"home": 0.0, "away": 0.0},
+        "tactical_similarity": {"home": 0.0, "away": 0.0}
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.0,
+        "draw_value_weaker": 0.0,
+        "need_to_win": {"home": 0.0, "away": 0.0},
+        "first_goal_prob": {"home": 0.0, "away": 0.0, "none": 0.0},
+        "collapse_risk_weaker": 0.0,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.0,
+        "set_piece_threat_weaker": 0.0,
+        "notes": ""
+      }
+    }
+  ]
+}
+
+RULES
+- Output JSON only, valid and parseable, no markdown fences, no commentary.
+- If there are NO World Cup matches today, return {"date": "...", "matches": []}.
+- Use best football judgement; if unsure, use values near 0 and say so in notes.
+- Keep all scores within the stated ranges; first_goal_prob should sum to ~1.

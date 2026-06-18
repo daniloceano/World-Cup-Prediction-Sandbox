@@ -10,15 +10,17 @@ accuracy once real results are in.
 > a probabilistic *simulation sandbox* — **not** betting, gambling, odds
 > optimization, or financial advice. It uses **no** bookmaker or betting data.
 
-It ships with two models from the methodology in
-[`docs/`](docs/materiais_metodos_modelos_v1_v2_previsao_futebol.md):
+It ships with three model regimes (see `docs/` methodology files):
 
-- **v1** — static relative-strength → expected goals → independent Poisson → Monte Carlo.
-- **v2** — v1 plus strategic World Cup adjustments (draw value, low block, first-goal
-  state, post-goal collapse).
+- **standard** (ex-v1) — static relative-strength → expected goals → independent
+  Poisson → Monte Carlo. The neutral / central regime.
+- **conservative** (ex-v2) — standard plus strategic World Cup adjustments (draw
+  value, low block, first-goal state, post-goal collapse). Draw-friendly.
+- **aggressive** (new) — standard plus favourite amplification, accumulated
+  pressure after an early goal, and a goleada tail (lifts 2-0/3-0/3-1/4-0).
 
-The model layer is a plugin registry, so **v3 / Elo / xG / ML models can be added
-without touching the app**.
+The model layer is a plugin registry, so **more models (Elo / xG / ML) can be
+added without touching the app**.
 
 ---
 
@@ -43,12 +45,12 @@ without touching the app**.
 # 1. (optional) create an environment, then install deps
 pip install -r requirements.txt
 
-# 2. run the app  (demo data is included, so it works immediately)
+# 2. run the app
 streamlit run streamlit_app.py
 ```
 
 Open the URL Streamlit prints (default <http://localhost:8501>). The app loads
-with demo fixtures clearly marked as demo data.
+with the real fixtures, imported legacy ChatGPT predictions and recorded results.
 
 > Tested with Python 3.11–3.13, Streamlit ≥ 1.30.
 
@@ -70,6 +72,9 @@ Full reference: [`docs/architecture.md`](docs/architecture.md) and
 ---
 
 ## Daily workflow
+
+> **One-page routine:** [`docs/rotina_diaria.md`](docs/rotina_diaria.md) — two
+> ChatGPT prompts + two pastes in the app, ~3 min/day, no file editing.
 
 ### Add daily context
 Each morning, ask ChatGPT for the day's match context using the template in
@@ -93,24 +98,47 @@ python scripts/generate_predictions.py --date 2026-06-17 --dry-run  # validate o
 ```
 
 ### Add actual results
-Edit [`data/results/actual_results.json`](data/results/actual_results.json):
+Easiest: on the **History** page open **➕ Add actual results** and paste the
+JSON from **Prompt B** (`docs/prompt_b.txt`). Or edit
+[`data/results/actual_results.json`](data/results/actual_results.json) directly:
 
 ```json
 {"results": [
-  {"match_id": "demo-2026-06-14-GER-JPN", "home_goals": 1, "away_goals": 2, "status": "final"}
+  {"match_id": "wc-2026-06-14-GER-CUW", "home_goals": 7, "away_goals": 1, "status": "final"}
 ]}
 ```
 
 The **History** page and each match's **detail** page then show whether every
-model/ensemble got the outcome and exact score right, plus Brier/log-loss.
+model/ensemble got the outcome and exact score right, plus Brier/log-loss. The
+join tolerates differing `match_id` conventions, reversed home/away order, and a
+±1-day (madrugada) shift — it pairs results to predictions by team set + date.
 
 ---
 
+## Legacy ChatGPT predictions
+
+Predictions from a previous ChatGPT conversation can be imported as a read-only
+`chatgpt_legacy` source that shows up next to the live models and on the History
+page (evaluable once actual results are added):
+
+```bash
+python scripts/import_legacy_predictions.py
+```
+
+It reads `data/predictions/legacy_chat_predictions.json` (the original export is
+**never modified** — it stays as the audit record) and **maps each prediction
+onto the official schedule** in `data/raw/matches.json` by team pair: the
+schedule drives the canonical `match_id`, the slate date and the home/away
+orientation (reversed fixtures are mirrored automatically). The importer is
+idempotent — re-run it anytime, e.g. after editing the schedule. Imported
+predictions are flagged *partial/approximate* because the export only contained
+the top scorelines, not a full distribution or quantiles.
+
 ## Adding a new model
 
-The app is **not** hard-coded to v1/v2. To add, say, `v3`:
+The app is **not** hard-coded to the built-in models. To add, say, `elo`:
 
-1. Create `src/wcps/models/model_v3.py`:
+1. Create `src/wcps/models/model_elo.py`:
 
    ```python
    from ..schemas import Prediction
@@ -118,15 +146,15 @@ The app is **not** hard-coded to v1/v2. To add, say, `v3`:
    from .base import REGISTRY, BaseModel
 
    @REGISTRY.register
-   class ModelV3(BaseModel):
-       model_id = "v3"
+   class ModelElo(BaseModel):
+       model_id = "elo"
        model_version = "1.0.0"
-       display_name = "v3 · My new model"
+       display_name = "Elo · My new model"
        required_inputs = ("v1_scores",)
 
        def predict(self, match, context, context_ref=None):
            # ... compute λ_home, λ_away however you like ...
-           rng = make_rng(self.config["simulation"]["random_seed"], match["match_id"] + "v3")
+           rng = make_rng(self.config["simulation"]["random_seed"], match["match_id"] + "elo")
            n = self.config["simulation"]["n_simulations"]
            gh = rng.poisson(lam_home, n); ga = rng.poisson(lam_away, n)
            q = self.config["quantiles"]
@@ -137,7 +165,7 @@ The app is **not** hard-coded to v1/v2. To add, say, `v3`:
    ```
 
 2. Import it in [`src/wcps/models/__init__.py`](src/wcps/models/__init__.py).
-3. Add a `model_v3:` section (with `active: true`) to `config.yaml`, and a weight
+3. Add a `model_elo:` section (with `active: true`) to `config.yaml`, and a weight
    under `ensemble.weights` if you use the weighted strategy.
 
 That's it — the dashboard, detail page, ensemble and evaluation pick it up
@@ -172,7 +200,7 @@ metrics.
 1. Push this repo to GitHub.
 2. Go to <https://share.streamlit.io>, "New app", point it at `streamlit_app.py`.
 3. `requirements.txt` is detected automatically; no secrets required.
-4. Demo data is committed, so the app works right after deploy.
+4. Real fixtures, legacy predictions and results are committed, so the app works right after deploy.
 
 Notes & alternatives (Vercel/Next.js trade-offs, persistence): see
 [`docs/architecture.md`](docs/architecture.md) §7.
@@ -203,7 +231,7 @@ tests/                 # pytest suite
   correction yet.
 - Quality depends on the daily context; the app flags incomplete context but
   cannot detect wrong-but-plausible inputs.
-- Demo fixtures are fabricated and labelled as such — replace `data/raw/` with
-  the real schedule before drawing any conclusions.
+- Match days use a 06:00→06:00 (America/São_Paulo) window, so after-midnight
+  kickoffs are grouped into the day they belong to (`data/raw/matches.json`).
 
 Recreational and analytical. Not for betting.

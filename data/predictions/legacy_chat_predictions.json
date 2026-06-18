@@ -1,0 +1,2348 @@
+{
+"export_metadata": {
+"project": "WCPS — World Cup Prediction Sandbox",
+"source": "chatgpt_legacy_conversation",
+"export_date": "2026-06-17",
+"description": "Predictions extracted from a previous ChatGPT conversation.",
+"contains_actual_results": false,
+"notes": [
+"Actual results were mentioned later in the conversation for some matches, but are intentionally not populated because this export is configured as predicted-history only.",
+"Probabilities written as percentages in the conversation were converted to decimals.",
+"No new predictions or recalculations were generated; only values explicitly present in the conversation were extracted.",
+"Some early model_v1 forecasts did not include the later-required top 5 scorelines overall; those arrays are left empty with extraction_notes.",
+"For matches later reformatted with reversed team order, both versions are preserved as separate prediction_version entries."
+]
+},
+"predictions": [
+{
+"match_id": "2026-06-13_qatar_switzerland",
+"prediction_version": "model_v1_initial",
+"prediction_date": "2026-06-13",
+"match_date": "2026-06-13",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "B",
+"team_a": "Qatar",
+"team_b": "Switzerland",
+"venue": "San Francisco Bay Area Stadium / Levi's Stadium, Santa Clara",
+"kickoff_time": "2026-06-13T19:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.167,
+"draw": 0.235,
+"team_b_win": 0.598
+},
+"recommended_outcome": "team_b_win",
+"recommended_score": "0-1",
+"modal_score": "0-1",
+"top_scorelines_overall": [
+{
+"score": "0-1",
+"probability": 0.134,
+"simulations": 134,
+"outcome": "team_b_win"
+},
+{
+"score": "0-2",
+"probability": 0.128,
+"simulations": 128,
+"outcome": "team_b_win"
+},
+{
+"score": "1-1",
+"probability": 0.115,
+"simulations": 115,
+"outcome": "draw"
+},
+{
+"score": "1-2",
+"probability": 0.09,
+"simulations": 90,
+"outcome": "team_b_win"
+},
+{
+"score": "0-0",
+"probability": 0.078,
+"simulations": 78,
+"outcome": "draw"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "0-1",
+"probability": 0.134,
+"simulations": 134,
+"outcome": "team_b_win"
+},
+{
+"score": "0-2",
+"probability": 0.128,
+"simulations": 128,
+"outcome": "team_b_win"
+},
+{
+"score": "1-2",
+"probability": 0.09,
+"simulations": 90,
+"outcome": "team_b_win"
+},
+{
+"score": "0-3",
+"probability": 0.075,
+"simulations": 75,
+"outcome": "team_b_win"
+}
+],
+"summary": "Switzerland was projected as the clear favorite, with mean simulated score Qatar 0.77 x 1.72 Switzerland.",
+"extraction_notes": [
+"Only four scorelines clearly belonging to the most likely outcome were available in the conversation; conditional probabilities were not provided."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Modelo v1 apontou vitória da Suíça; placar mais provável 0-1, alternativa 0-2.",
+"source_trace": {
+"conversation_turn_reference": "early World Cup predictions",
+"nearby_user_prompt": "Previsão para Qatar x Suíça",
+"nearby_assistant_response_summary": "Assistant reported a 1000-game Monte Carlo simulation with Switzerland win probability of 59.8%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-13_brazil_morocco",
+"prediction_version": "model_v1_initial",
+"prediction_date": "2026-06-13",
+"match_date": "2026-06-13",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "C",
+"team_a": "Brazil",
+"team_b": "Morocco",
+"venue": "New York New Jersey Stadium / MetLife Stadium, East Rutherford",
+"kickoff_time": "2026-06-13T22:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.462,
+"draw": 0.244,
+"team_b_win": 0.294
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "2-1",
+"modal_score": "1-1",
+"top_scorelines_overall": [
+{
+"score": "1-1",
+"probability": 0.115,
+"simulations": 115,
+"outcome": "draw"
+},
+{
+"score": "1-0",
+"probability": 0.111,
+"simulations": 111,
+"outcome": "team_a_win"
+},
+{
+"score": "2-1",
+"probability": 0.093,
+"simulations": 93,
+"outcome": "team_a_win"
+},
+{
+"score": "0-1",
+"probability": 0.071,
+"simulations": 71,
+"outcome": "team_b_win"
+},
+{
+"score": "2-0",
+"probability": 0.071,
+"simulations": 71,
+"outcome": "team_a_win"
+},
+{
+"score": "0-0",
+"probability": 0.071,
+"simulations": 71,
+"outcome": "draw"
+},
+{
+"score": "1-2",
+"probability": 0.071,
+"simulations": 71,
+"outcome": "team_b_win"
+},
+{
+"score": "3-1",
+"probability": 0.053,
+"simulations": 53,
+"outcome": "team_a_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.111,
+"simulations": 111,
+"outcome": "team_a_win"
+},
+{
+"score": "2-1",
+"probability": 0.093,
+"simulations": 93,
+"outcome": "team_a_win"
+},
+{
+"score": "2-0",
+"probability": 0.071,
+"simulations": 71,
+"outcome": "team_a_win"
+},
+{
+"score": "3-1",
+"probability": 0.053,
+"simulations": 53,
+"outcome": "team_a_win"
+},
+{
+"score": "3-0",
+"probability": 0.041,
+"simulations": 41,
+"outcome": "team_a_win"
+}
+],
+"summary": "Brazil had the highest aggregate outcome probability, but the individual modal score was 1-1; final recommended score was Brazil 2-1 Morocco.",
+"extraction_notes": []
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Modelo v1 favoreceu Brasil, mas com alerta de empate modal.",
+"source_trace": {
+"conversation_turn_reference": "early World Cup predictions and later formatted answer",
+"nearby_user_prompt": "Brasil x Marrocos do jeito que pedi",
+"nearby_assistant_response_summary": "Assistant repeated the earlier simulation and emphasized Brazil win as most likely aggregate outcome while 1-1 was the modal scoreline."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-14_haiti_scotland",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-14",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "C",
+"team_a": "Haiti",
+"team_b": "Scotland",
+"venue": "Boston/Foxborough",
+"kickoff_time": "2026-06-14T01:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.199,
+"draw": 0.249,
+"team_b_win": 0.552
+},
+"recommended_outcome": "team_b_win",
+"recommended_score": "1-2",
+"modal_score": "0-1",
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "0-1",
+"probability": 0.145,
+"simulations": 145,
+"outcome": "team_b_win",
+"conditional_probability": 0.263
+},
+{
+"score": "1-2",
+"probability": 0.096,
+"simulations": 96,
+"outcome": "team_b_win",
+"conditional_probability": 0.174
+},
+{
+"score": "0-2",
+"probability": 0.092,
+"simulations": 92,
+"outcome": "team_b_win",
+"conditional_probability": 0.167
+},
+{
+"score": "1-3",
+"probability": 0.066,
+"simulations": 66,
+"outcome": "team_b_win",
+"conditional_probability": 0.12
+},
+{
+"score": "0-3",
+"probability": 0.049,
+"simulations": 49,
+"outcome": "team_b_win",
+"conditional_probability": 0.089
+}
+],
+"summary": "Scotland was projected as favorite, with the model recommending Haiti 1-2 Scotland despite 0-1 being the modal general score.",
+"extraction_notes": [
+"Top overall scorelines were not separately listed in the conversation."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Escócia favorita; Haiti com chance relevante de segurar empate, mas outcome mais provável era vitória escocesa.",
+"source_trace": {
+"conversation_turn_reference": "Haiti and Scotland forecast",
+"nearby_user_prompt": "Agora para Haiti e Escócia",
+"nearby_assistant_response_summary": "Assistant used model v1 and reported Scotland win probability of 55.2%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-14_germany_curacao",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-14",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "E",
+"team_a": "Germany",
+"team_b": "Curacao",
+"venue": "Houston",
+"kickoff_time": "2026-06-14T17:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.857,
+"draw": 0.102,
+"team_b_win": 0.041
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "3-0",
+"modal_score": "2-0",
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "2-0",
+"probability": 0.138,
+"simulations": 138,
+"outcome": "team_a_win",
+"conditional_probability": 0.161
+},
+{
+"score": "3-0",
+"probability": 0.137,
+"simulations": 137,
+"outcome": "team_a_win",
+"conditional_probability": 0.16
+},
+{
+"score": "4-0",
+"probability": 0.092,
+"simulations": 92,
+"outcome": "team_a_win",
+"conditional_probability": 0.107
+},
+{
+"score": "1-0",
+"probability": 0.091,
+"simulations": 91,
+"outcome": "team_a_win",
+"conditional_probability": 0.106
+},
+{
+"score": "2-1",
+"probability": 0.088,
+"simulations": 88,
+"outcome": "team_a_win",
+"conditional_probability": 0.103
+}
+],
+"summary": "Germany was projected as a very strong favorite; recommended score was 3-0 despite 2-0 being the modal score.",
+"extraction_notes": [
+"Top overall scorelines were not separately listed in the conversation."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Favoritismo forte da Alemanha; clima não foi considerado decisivo.",
+"source_trace": {
+"conversation_turn_reference": "Germany and Curacao forecast",
+"nearby_user_prompt": "Alemanha x Curacau",
+"nearby_assistant_response_summary": "Assistant reported Germany win probability of 85.7% and recommended 3-0."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-14_netherlands_japan",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-14",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "F",
+"team_a": "Netherlands",
+"team_b": "Japan",
+"venue": "Dallas/Arlington, AT&T Stadium",
+"kickoff_time": "2026-06-14T20:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.541,
+"draw": 0.246,
+"team_b_win": 0.213
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "2-1",
+"modal_score": "1-0",
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.111,
+"simulations": 111,
+"outcome": "team_a_win",
+"conditional_probability": 0.205
+},
+{
+"score": "2-1",
+"probability": 0.102,
+"simulations": 102,
+"outcome": "team_a_win",
+"conditional_probability": 0.189
+},
+{
+"score": "2-0",
+"probability": 0.096,
+"simulations": 96,
+"outcome": "team_a_win",
+"conditional_probability": 0.177
+},
+{
+"score": "3-1",
+"probability": 0.064,
+"simulations": 64,
+"outcome": "team_a_win",
+"conditional_probability": 0.118
+},
+{
+"score": "3-0",
+"probability": 0.055,
+"simulations": 55,
+"outcome": "team_a_win",
+"conditional_probability": 0.102
+}
+],
+"summary": "Netherlands was projected as moderate favorite over Japan, with 1-0 as modal score and 2-1 as recommended score.",
+"extraction_notes": [
+"Top overall scorelines were not separately listed in the conversation."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Países Baixos favoritos, mas Japão avaliado como adversário organizado e competitivo.",
+"source_trace": {
+"conversation_turn_reference": "Netherlands and Japan forecast",
+"nearby_user_prompt": "holanda e japao",
+"nearby_assistant_response_summary": "Assistant reported Netherlands win probability of 54.1%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-14_ivory-coast_ecuador",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-14",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "E",
+"team_a": "Ivory Coast",
+"team_b": "Ecuador",
+"venue": "Philadelphia, Lincoln Financial Field",
+"kickoff_time": "2026-06-14T23:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.343,
+"draw": 0.268,
+"team_b_win": 0.389
+},
+"recommended_outcome": "team_b_win",
+"recommended_score": "1-1",
+"modal_score": "1-1",
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "0-1",
+"probability": 0.122,
+"simulations": 122,
+"outcome": "team_b_win",
+"conditional_probability": 0.314
+},
+{
+"score": "1-2",
+"probability": 0.073,
+"simulations": 73,
+"outcome": "team_b_win",
+"conditional_probability": 0.188
+},
+{
+"score": "0-2",
+"probability": 0.067,
+"simulations": 67,
+"outcome": "team_b_win",
+"conditional_probability": 0.172
+},
+{
+"score": "0-3",
+"probability": 0.043,
+"simulations": 43,
+"outcome": "team_b_win",
+"conditional_probability": 0.111
+},
+{
+"score": "2-3",
+"probability": 0.026,
+"simulations": 26,
+"outcome": "team_b_win",
+"conditional_probability": 0.067
+}
+],
+"summary": "Ecuador was projected as a slight favorite, but the recommended score was 1-1 because the modal score was a draw and the edge was small.",
+"extraction_notes": [
+"Top overall scorelines were not separately listed in the initial forecast; a later update reversed team order and added top overall scorelines."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Jogo equilibrado; Equador levemente à frente, mas empate foi a escolha recomendada.",
+"source_trace": {
+"conversation_turn_reference": "Ivory Coast and Ecuador initial forecast",
+"nearby_user_prompt": "Costa do marfim x equador",
+"nearby_assistant_response_summary": "Assistant reported Ecuador win probability of 38.9% with 1-1 as final recommendation."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-14_ecuador_ivory-coast",
+"prediction_version": "model_v1_updated_format",
+"prediction_date": null,
+"match_date": "2026-06-14",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "E",
+"team_a": "Ecuador",
+"team_b": "Ivory Coast",
+"venue": "Philadelphia, Lincoln Financial Field",
+"kickoff_time": "2026-06-14T23:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.389,
+"draw": 0.268,
+"team_b_win": 0.343
+},
+"recommended_outcome": "draw",
+"recommended_score": "1-1",
+"modal_score": "1-1",
+"top_scorelines_overall": [
+{
+"score": "1-1",
+"probability": 0.129,
+"simulations": 129,
+"outcome": "draw"
+},
+{
+"score": "1-0",
+"probability": 0.109,
+"simulations": 109,
+"outcome": "team_a_win"
+},
+{
+"score": "0-1",
+"probability": 0.101,
+"simulations": 101,
+"outcome": "team_b_win"
+},
+{
+"score": "0-0",
+"probability": 0.085,
+"simulations": 85,
+"outcome": "draw"
+},
+{
+"score": "2-1",
+"probability": 0.083,
+"simulations": 83,
+"outcome": "team_a_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.109,
+"simulations": 109,
+"outcome": "team_a_win",
+"conditional_probability": 0.282
+},
+{
+"score": "2-1",
+"probability": 0.083,
+"simulations": 83,
+"outcome": "team_a_win",
+"conditional_probability": 0.213
+},
+{
+"score": "2-0",
+"probability": 0.07,
+"simulations": 70,
+"outcome": "team_a_win",
+"conditional_probability": 0.18
+},
+{
+"score": "3-1",
+"probability": 0.035,
+"simulations": 35,
+"outcome": "team_a_win",
+"conditional_probability": 0.091
+},
+{
+"score": "3-0",
+"probability": 0.03,
+"simulations": 30,
+"outcome": "team_a_win",
+"conditional_probability": 0.077
+}
+],
+"summary": "Updated-format extraction with Ecuador listed first; the model still showed Ecuador as slight aggregate favorite but recommended 1-1.",
+"extraction_notes": [
+"This was a later formatting update requested by the user; probabilities differ slightly from the initial team-order table and are preserved as a separate prediction version."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Versão atualizada incluiu top 5 geral e reforçou que o placar modal era empate.",
+"source_trace": {
+"conversation_turn_reference": "Updated format for Ecuador x Ivory Coast",
+"nearby_user_prompt": "Já aproveite e mande para Equador x Costa do Marfim",
+"nearby_assistant_response_summary": "Assistant added the new requirement: top scorelines within most likely outcome plus top 5 scorelines overall."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-15_sweden_tunisia",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-15",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "F",
+"team_a": "Sweden",
+"team_b": "Tunisia",
+"venue": "Monterrey",
+"kickoff_time": "2026-06-15T02:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.457,
+"draw": 0.278,
+"team_b_win": 0.265
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "1-0",
+"modal_score": "1-0",
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.128,
+"simulations": 128,
+"outcome": "team_a_win",
+"conditional_probability": 0.28
+},
+{
+"score": "2-1",
+"probability": 0.082,
+"simulations": 82,
+"outcome": "team_a_win",
+"conditional_probability": 0.179
+},
+{
+"score": "2-0",
+"probability": 0.079,
+"simulations": 79,
+"outcome": "team_a_win",
+"conditional_probability": 0.173
+},
+{
+"score": "3-1",
+"probability": 0.048,
+"simulations": 48,
+"outcome": "team_a_win",
+"conditional_probability": 0.105
+},
+{
+"score": "3-0",
+"probability": 0.039,
+"simulations": 39,
+"outcome": "team_a_win",
+"conditional_probability": 0.085
+}
+],
+"summary": "Sweden was projected as a moderate favorite; recommended score was Sweden 1-0 Tunisia.",
+"extraction_notes": [
+"Top overall scorelines were not separately listed in the initial forecast; a later update reversed team order and added top overall scorelines."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Suécia favorita moderada; Tunísia vista como equipe defensivamente sólida.",
+"source_trace": {
+"conversation_turn_reference": "Sweden and Tunisia initial forecast",
+"nearby_user_prompt": "suécia e tunisia",
+"nearby_assistant_response_summary": "Assistant reported Sweden win probability of 45.7% and recommended 1-0."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-15_tunisia_sweden",
+"prediction_version": "model_v1_updated_format",
+"prediction_date": null,
+"match_date": "2026-06-15",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "F",
+"team_a": "Tunisia",
+"team_b": "Sweden",
+"venue": "Monterrey",
+"kickoff_time": "2026-06-15T02:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.265,
+"draw": 0.278,
+"team_b_win": 0.457
+},
+"recommended_outcome": "team_b_win",
+"recommended_score": "0-1",
+"modal_score": "1-1",
+"top_scorelines_overall": [
+{
+"score": "1-1",
+"probability": 0.125,
+"simulations": 125,
+"outcome": "draw"
+},
+{
+"score": "0-1",
+"probability": 0.12,
+"simulations": 120,
+"outcome": "team_b_win"
+},
+{
+"score": "1-2",
+"probability": 0.091,
+"simulations": 91,
+"outcome": "team_b_win"
+},
+{
+"score": "0-2",
+"probability": 0.087,
+"simulations": 87,
+"outcome": "team_b_win"
+},
+{
+"score": "1-0",
+"probability": 0.085,
+"simulations": 85,
+"outcome": "team_a_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "0-1",
+"probability": 0.12,
+"simulations": 120,
+"outcome": "team_b_win",
+"conditional_probability": 0.256
+},
+{
+"score": "1-2",
+"probability": 0.091,
+"simulations": 91,
+"outcome": "team_b_win",
+"conditional_probability": 0.194
+},
+{
+"score": "0-2",
+"probability": 0.087,
+"simulations": 87,
+"outcome": "team_b_win",
+"conditional_probability": 0.187
+},
+{
+"score": "1-3",
+"probability": 0.044,
+"simulations": 44,
+"outcome": "team_b_win",
+"conditional_probability": 0.095
+},
+{
+"score": "0-3",
+"probability": 0.043,
+"simulations": 43,
+"outcome": "team_b_win",
+"conditional_probability": 0.091
+}
+],
+"summary": "Updated-format extraction with Tunisia listed first; Sweden remained the most likely winner, but the modal overall score was 1-1.",
+"extraction_notes": [
+"This was a later formatting update requested by the user; it is preserved separately because top overall scorelines were added and counts differ from the initial table."
+]
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Suécia ainda era favorita agregada, mas empate 1-1 virou placar modal geral.",
+"source_trace": {
+"conversation_turn_reference": "Updated format for Tunisia x Sweden",
+"nearby_user_prompt": "Já aproveite e mande para Tunísia X Suécia",
+"nearby_assistant_response_summary": "Assistant added top 5 overall scorelines and kept Sweden as most likely outcome."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-15_spain_cape-verde",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-15",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "H",
+"team_a": "Spain",
+"team_b": "Cape Verde",
+"venue": "Atlanta",
+"kickoff_time": "2026-06-15T16:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.837,
+"draw": 0.123,
+"team_b_win": 0.04
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "3-0",
+"modal_score": "2-0",
+"top_scorelines_overall": [
+{
+"score": "2-0",
+"probability": 0.146,
+"simulations": 146,
+"outcome": "team_a_win"
+},
+{
+"score": "3-0",
+"probability": 0.145,
+"simulations": 145,
+"outcome": "team_a_win"
+},
+{
+"score": "1-0",
+"probability": 0.098,
+"simulations": 98,
+"outcome": "team_a_win"
+},
+{
+"score": "4-0",
+"probability": 0.088,
+"simulations": 88,
+"outcome": "team_a_win"
+},
+{
+"score": "2-1",
+"probability": 0.076,
+"simulations": 76,
+"outcome": "team_a_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "2-0",
+"probability": 0.146,
+"simulations": 146,
+"outcome": "team_a_win",
+"conditional_probability": 0.174
+},
+{
+"score": "3-0",
+"probability": 0.145,
+"simulations": 145,
+"outcome": "team_a_win",
+"conditional_probability": 0.173
+},
+{
+"score": "1-0",
+"probability": 0.098,
+"simulations": 98,
+"outcome": "team_a_win",
+"conditional_probability": 0.117
+},
+{
+"score": "4-0",
+"probability": 0.088,
+"simulations": 88,
+"outcome": "team_a_win",
+"conditional_probability": 0.105
+},
+{
+"score": "2-1",
+"probability": 0.076,
+"simulations": 76,
+"outcome": "team_a_win",
+"conditional_probability": 0.091
+}
+],
+"summary": "Spain was projected as a very strong favorite; the model recommended 3-0 while 2-0 was modal.",
+"extraction_notes": []
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Modelo v1 superestimou superioridade ofensiva da favorita, fato discutido posteriormente na recalibração.",
+"source_trace": {
+"conversation_turn_reference": "Predictions for 15/06",
+"nearby_user_prompt": "Agora quero o resultado das partidas de amanhã (15/06)",
+"nearby_assistant_response_summary": "Assistant listed Spain x Cape Verde as one of four games and gave Spain win probability of 83.7%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-15_belgium_egypt",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-15",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "G",
+"team_a": "Belgium",
+"team_b": "Egypt",
+"venue": "Seattle",
+"kickoff_time": "2026-06-15T19:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.495,
+"draw": 0.247,
+"team_b_win": 0.258
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "2-1",
+"modal_score": "1-1",
+"top_scorelines_overall": [
+{
+"score": "1-1",
+"probability": 0.103,
+"simulations": 103,
+"outcome": "draw"
+},
+{
+"score": "2-1",
+"probability": 0.095,
+"simulations": 95,
+"outcome": "team_a_win"
+},
+{
+"score": "1-0",
+"probability": 0.092,
+"simulations": 92,
+"outcome": "team_a_win"
+},
+{
+"score": "2-0",
+"probability": 0.085,
+"simulations": 85,
+"outcome": "team_a_win"
+},
+{
+"score": "0-0",
+"probability": 0.071,
+"simulations": 71,
+"outcome": "draw"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "2-1",
+"probability": 0.095,
+"simulations": 95,
+"outcome": "team_a_win",
+"conditional_probability": 0.192
+},
+{
+"score": "1-0",
+"probability": 0.092,
+"simulations": 92,
+"outcome": "team_a_win",
+"conditional_probability": 0.186
+},
+{
+"score": "2-0",
+"probability": 0.085,
+"simulations": 85,
+"outcome": "team_a_win",
+"conditional_probability": 0.172
+},
+{
+"score": "3-1",
+"probability": 0.054,
+"simulations": 54,
+"outcome": "team_a_win",
+"conditional_probability": 0.109
+},
+{
+"score": "3-0",
+"probability": 0.037,
+"simulations": 37,
+"outcome": "team_a_win",
+"conditional_probability": 0.075
+}
+],
+"summary": "Belgium was a slight aggregate favorite, but 1-1 was the modal overall score; recommended score was 2-1 Belgium.",
+"extraction_notes": []
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Jogo com risco real de empate; posteriormente foi apontado como a previsão mais próxima da rodada.",
+"source_trace": {
+"conversation_turn_reference": "Predictions for 15/06",
+"nearby_user_prompt": "Agora quero o resultado das partidas de amanhã (15/06)",
+"nearby_assistant_response_summary": "Assistant gave Belgium win probability of 49.5%, draw 24.7%, Egypt win 25.8%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-15_saudi-arabia_uruguay",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-15",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "H",
+"team_a": "Saudi Arabia",
+"team_b": "Uruguay",
+"venue": "Miami",
+"kickoff_time": "2026-06-15T22:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.153,
+"draw": 0.233,
+"team_b_win": 0.614
+},
+"recommended_outcome": "team_b_win",
+"recommended_score": "0-2",
+"modal_score": "0-2",
+"top_scorelines_overall": [
+{
+"score": "0-2",
+"probability": 0.133,
+"simulations": 133,
+"outcome": "team_b_win"
+},
+{
+"score": "0-1",
+"probability": 0.124,
+"simulations": 124,
+"outcome": "team_b_win"
+},
+{
+"score": "1-1",
+"probability": 0.11,
+"simulations": 110,
+"outcome": "draw"
+},
+{
+"score": "1-2",
+"probability": 0.087,
+"simulations": 87,
+"outcome": "team_b_win"
+},
+{
+"score": "0-0",
+"probability": 0.076,
+"simulations": 76,
+"outcome": "draw"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "0-2",
+"probability": 0.133,
+"simulations": 133,
+"outcome": "team_b_win",
+"conditional_probability": 0.217
+},
+{
+"score": "0-1",
+"probability": 0.124,
+"simulations": 124,
+"outcome": "team_b_win",
+"conditional_probability": 0.202
+},
+{
+"score": "1-2",
+"probability": 0.087,
+"simulations": 87,
+"outcome": "team_b_win",
+"conditional_probability": 0.142
+},
+{
+"score": "1-3",
+"probability": 0.075,
+"simulations": 75,
+"outcome": "team_b_win",
+"conditional_probability": 0.122
+},
+{
+"score": "0-3",
+"probability": 0.058,
+"simulations": 58,
+"outcome": "team_b_win",
+"conditional_probability": 0.094
+}
+],
+"summary": "Uruguay was projected as clear favorite; recommended and modal score was Saudi Arabia 0-2 Uruguay.",
+"extraction_notes": []
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Uruguai favorito, com clima quente/úmido considerado fator de redução de ritmo.",
+"source_trace": {
+"conversation_turn_reference": "Predictions for 15/06",
+"nearby_user_prompt": "Agora quero o resultado das partidas de amanhã (15/06)",
+"nearby_assistant_response_summary": "Assistant gave Uruguay win probability of 61.4%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-16_iran_new-zealand",
+"prediction_version": "model_v1_initial",
+"prediction_date": null,
+"match_date": "2026-06-16",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "G",
+"team_a": "Iran",
+"team_b": "New Zealand",
+"venue": "Los Angeles",
+"kickoff_time": "2026-06-16T01:00:00Z",
+"models": {
+"model_v1": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.571,
+"draw": 0.252,
+"team_b_win": 0.177
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "1-0",
+"modal_score": "1-0",
+"top_scorelines_overall": [
+{
+"score": "1-0",
+"probability": 0.147,
+"simulations": 147,
+"outcome": "team_a_win"
+},
+{
+"score": "2-0",
+"probability": 0.129,
+"simulations": 129,
+"outcome": "team_a_win"
+},
+{
+"score": "1-1",
+"probability": 0.115,
+"simulations": 115,
+"outcome": "draw"
+},
+{
+"score": "2-1",
+"probability": 0.11,
+"simulations": 110,
+"outcome": "team_a_win"
+},
+{
+"score": "0-0",
+"probability": 0.098,
+"simulations": 98,
+"outcome": "draw"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.147,
+"simulations": 147,
+"outcome": "team_a_win",
+"conditional_probability": 0.257
+},
+{
+"score": "2-0",
+"probability": 0.129,
+"simulations": 129,
+"outcome": "team_a_win",
+"conditional_probability": 0.226
+},
+{
+"score": "2-1",
+"probability": 0.11,
+"simulations": 110,
+"outcome": "team_a_win",
+"conditional_probability": 0.193
+},
+{
+"score": "3-0",
+"probability": 0.056,
+"simulations": 56,
+"outcome": "team_a_win",
+"conditional_probability": 0.098
+},
+{
+"score": "3-1",
+"probability": 0.049,
+"simulations": 49,
+"outcome": "team_a_win",
+"conditional_probability": 0.086
+}
+],
+"summary": "Iran was projected as favorite, with 1-0 as modal and recommended score.",
+"extraction_notes": []
+},
+"model_v2": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"strategic_context": {
+"draw_value": null,
+"low_block_capacity": null,
+"first_goal_assumption": null,
+"collapse_risk": null,
+"expected_game_script": null
+},
+"summary": null,
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Irã favorito; modelo indicou vitória curta e risco de empate.",
+"source_trace": {
+"conversation_turn_reference": "Predictions for 15/06",
+"nearby_user_prompt": "Agora quero o resultado das partidas de amanhã (15/06)",
+"nearby_assistant_response_summary": "Assistant gave Iran win probability of 57.1%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-16_france_senegal",
+"prediction_version": "model_v2_initial",
+"prediction_date": "2026-06-16",
+"match_date": "2026-06-16",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "I",
+"team_a": "France",
+"team_b": "Senegal",
+"venue": "New York/New Jersey Stadium",
+"kickoff_time": "2026-06-16T19:00:00Z",
+"models": {
+"model_v1": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"summary": null,
+"extraction_notes": []
+},
+"model_v2": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.463,
+"draw": 0.329,
+"team_b_win": 0.208
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "1-0",
+"modal_score": "1-1",
+"top_scorelines_overall": [
+{
+"score": "1-1",
+"probability": 0.16,
+"simulations": 160,
+"outcome": "draw"
+},
+{
+"score": "1-0",
+"probability": 0.122,
+"simulations": 122,
+"outcome": "team_a_win"
+},
+{
+"score": "0-0",
+"probability": 0.106,
+"simulations": 106,
+"outcome": "draw"
+},
+{
+"score": "2-0",
+"probability": 0.096,
+"simulations": 96,
+"outcome": "team_a_win"
+},
+{
+"score": "2-1",
+"probability": 0.082,
+"simulations": 82,
+"outcome": "team_a_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.122,
+"simulations": 122,
+"outcome": "team_a_win",
+"conditional_probability": 0.263
+},
+{
+"score": "2-0",
+"probability": 0.096,
+"simulations": 96,
+"outcome": "team_a_win",
+"conditional_probability": 0.207
+},
+{
+"score": "2-1",
+"probability": 0.082,
+"simulations": 82,
+"outcome": "team_a_win",
+"conditional_probability": 0.177
+},
+{
+"score": "3-1",
+"probability": 0.043,
+"simulations": 43,
+"outcome": "team_a_win",
+"conditional_probability": 0.093
+},
+{
+"score": "3-0",
+"probability": 0.041,
+"simulations": 41,
+"outcome": "team_a_win",
+"conditional_probability": 0.089
+}
+],
+"strategic_context": {
+"draw_value": "high for Senegal",
+"low_block_capacity": "medium-high",
+"first_goal_assumption": "If France scores first, 2-0 or 2-1 scenarios rise; if Senegal holds 0-0 late, draw probability increases.",
+"collapse_risk": "low-to-moderate",
+"expected_game_script": "France has the stronger aggregate outcome, but Senegal can make the match physically intense and compact; a 1-1 modal score reflects high draw risk."
+},
+"summary": "Model v2 made France the most likely winner, but with a high draw probability and 1-1 as modal overall score.",
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "França favorita, mas Senegal tem perfil para travar o jogo.",
+"source_trace": {
+"conversation_turn_reference": "Today predictions with model v2",
+"nearby_user_prompt": "Ótimo. Agora faça as previsões para os jogos de hoje então por favor",
+"nearby_assistant_response_summary": "Assistant applied model v2 and gave France win probability of 46.3%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-16_iraq_norway",
+"prediction_version": "model_v2_initial",
+"prediction_date": "2026-06-16",
+"match_date": "2026-06-16",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "I",
+"team_a": "Iraq",
+"team_b": "Norway",
+"venue": "Boston/Foxborough, Boston Stadium",
+"kickoff_time": "2026-06-16T22:00:00Z",
+"models": {
+"model_v1": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"summary": null,
+"extraction_notes": []
+},
+"model_v2": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.144,
+"draw": 0.298,
+"team_b_win": 0.558
+},
+"recommended_outcome": "team_b_win",
+"recommended_score": "0-1",
+"modal_score": "0-1 / 1-1",
+"top_scorelines_overall": [
+{
+"score": "0-1",
+"probability": 0.141,
+"simulations": 141,
+"outcome": "team_b_win"
+},
+{
+"score": "1-1",
+"probability": 0.141,
+"simulations": 141,
+"outcome": "draw"
+},
+{
+"score": "0-2",
+"probability": 0.122,
+"simulations": 122,
+"outcome": "team_b_win"
+},
+{
+"score": "0-0",
+"probability": 0.111,
+"simulations": 111,
+"outcome": "draw"
+},
+{
+"score": "1-2",
+"probability": 0.08,
+"simulations": 80,
+"outcome": "team_b_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "0-1",
+"probability": 0.141,
+"simulations": 141,
+"outcome": "team_b_win",
+"conditional_probability": 0.253
+},
+{
+"score": "0-2",
+"probability": 0.122,
+"simulations": 122,
+"outcome": "team_b_win",
+"conditional_probability": 0.219
+},
+{
+"score": "1-2",
+"probability": 0.08,
+"simulations": 80,
+"outcome": "team_b_win",
+"conditional_probability": 0.143
+},
+{
+"score": "0-3",
+"probability": 0.065,
+"simulations": 65,
+"outcome": "team_b_win",
+"conditional_probability": 0.116
+},
+{
+"score": "1-3",
+"probability": 0.046,
+"simulations": 46,
+"outcome": "team_b_win",
+"conditional_probability": 0.082
+}
+],
+"strategic_context": {
+"draw_value": "high for Iraq",
+"low_block_capacity": "medium",
+"first_goal_assumption": "Norway scoring first increases 0-2/0-3 scenarios; a long 0-0 increases draw mass.",
+"collapse_risk": "moderate",
+"expected_game_script": "Norway is favored through attacking quality, but Iraq is expected to defend compactly because a draw would be strategically valuable."
+},
+"summary": "Model v2 made Norway the most likely winner, but 0-1 and 1-1 were tied as modal general scorelines.",
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Noruega favorita; Iraque com incentivo claro para fechar o jogo.",
+"source_trace": {
+"conversation_turn_reference": "Today predictions with model v2",
+"nearby_user_prompt": "Ótimo. Agora faça as previsões para os jogos de hoje então por favor",
+"nearby_assistant_response_summary": "Assistant gave Norway win probability of 55.8%."
+},
+"extraction_notes": []
+},
+{
+"match_id": "2026-06-17_argentina_algeria",
+"prediction_version": "model_v2_initial",
+"prediction_date": "2026-06-16",
+"match_date": "2026-06-17",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "J",
+"team_a": "Argentina",
+"team_b": "Algeria",
+"venue": "Kansas City Stadium",
+"kickoff_time": "2026-06-17T01:00:00Z",
+"models": {
+"model_v1": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"summary": null,
+"extraction_notes": []
+},
+"model_v2": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.479,
+"draw": 0.331,
+"team_b_win": 0.19
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "1-0",
+"modal_score": "1-1",
+"top_scorelines_overall": [
+{
+"score": "1-1",
+"probability": 0.16,
+"simulations": 160,
+"outcome": "draw"
+},
+{
+"score": "1-0",
+"probability": 0.125,
+"simulations": 125,
+"outcome": "team_a_win"
+},
+{
+"score": "0-0",
+"probability": 0.11,
+"simulations": 110,
+"outcome": "draw"
+},
+{
+"score": "2-0",
+"probability": 0.101,
+"simulations": 101,
+"outcome": "team_a_win"
+},
+{
+"score": "2-1",
+"probability": 0.081,
+"simulations": 81,
+"outcome": "team_a_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.125,
+"simulations": 125,
+"outcome": "team_a_win",
+"conditional_probability": 0.261
+},
+{
+"score": "2-0",
+"probability": 0.101,
+"simulations": 101,
+"outcome": "team_a_win",
+"conditional_probability": 0.211
+},
+{
+"score": "2-1",
+"probability": 0.081,
+"simulations": 81,
+"outcome": "team_a_win",
+"conditional_probability": 0.169
+},
+{
+"score": "3-0",
+"probability": 0.044,
+"simulations": 44,
+"outcome": "team_a_win",
+"conditional_probability": 0.092
+},
+{
+"score": "3-1",
+"probability": 0.044,
+"simulations": 44,
+"outcome": "team_a_win",
+"conditional_probability": 0.092
+}
+],
+"strategic_context": {
+"draw_value": "high for Algeria",
+"low_block_capacity": "medium",
+"first_goal_assumption": "Argentina scoring first increases 2-0 and 2-1 paths; if Algeria survives early pressure, 1-1 becomes the modal score.",
+"collapse_risk": "low-to-moderate",
+"expected_game_script": "Argentina favored as defending champion, but Algeria expected to avoid early exposure and use transition attacks."
+},
+"summary": "Model v2 made Argentina the most likely winner while 1-1 was the most frequent individual scoreline.",
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Argentina favorita, mas empate 1-1 muito vivo no modelo recalibrado.",
+"source_trace": {
+"conversation_turn_reference": "Today predictions with model v2",
+"nearby_user_prompt": "Ótimo. Agora faça as previsões para os jogos de hoje então por favor",
+"nearby_assistant_response_summary": "Assistant gave Argentina win probability of 47.9%."
+},
+"extraction_notes": [
+"The match occurs on 2026-06-17 UTC but was presented as part of the 2026-06-16 Brazil-time slate."
+]
+},
+{
+"match_id": "2026-06-17_austria_jordan",
+"prediction_version": "model_v2_initial",
+"prediction_date": "2026-06-16",
+"match_date": "2026-06-17",
+"competition": "FIFA World Cup",
+"phase": null,
+"group": "J",
+"team_a": "Austria",
+"team_b": "Jordan",
+"venue": "San Francisco Bay Area Stadium / Levi's Stadium, Santa Clara",
+"kickoff_time": "2026-06-17T04:00:00Z",
+"models": {
+"model_v1": {
+"available": false,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"modal_score": null,
+"top_scorelines_overall": [],
+"top_scorelines_within_most_likely_outcome": [],
+"summary": null,
+"extraction_notes": []
+},
+"model_v2": {
+"available": true,
+"outcome_probabilities": {
+"team_a_win": 0.565,
+"draw": 0.291,
+"team_b_win": 0.144
+},
+"recommended_outcome": "team_a_win",
+"recommended_score": "1-0",
+"modal_score": "1-0",
+"top_scorelines_overall": [
+{
+"score": "1-0",
+"probability": 0.142,
+"simulations": 142,
+"outcome": "team_a_win"
+},
+{
+"score": "1-1",
+"probability": 0.123,
+"simulations": 123,
+"outcome": "draw"
+},
+{
+"score": "2-0",
+"probability": 0.116,
+"simulations": 116,
+"outcome": "team_a_win"
+},
+{
+"score": "0-0",
+"probability": 0.097,
+"simulations": 97,
+"outcome": "draw"
+},
+{
+"score": "2-1",
+"probability": 0.081,
+"simulations": 81,
+"outcome": "team_a_win"
+}
+],
+"top_scorelines_within_most_likely_outcome": [
+{
+"score": "1-0",
+"probability": 0.142,
+"simulations": 142,
+"outcome": "team_a_win",
+"conditional_probability": 0.251
+},
+{
+"score": "2-0",
+"probability": 0.116,
+"simulations": 116,
+"outcome": "team_a_win",
+"conditional_probability": 0.205
+},
+{
+"score": "2-1",
+"probability": 0.081,
+"simulations": 81,
+"outcome": "team_a_win",
+"conditional_probability": 0.143
+},
+{
+"score": "3-0",
+"probability": 0.061,
+"simulations": 61,
+"outcome": "team_a_win",
+"conditional_probability": 0.108
+},
+{
+"score": "3-1",
+"probability": 0.042,
+"simulations": 42,
+"outcome": "team_a_win",
+"conditional_probability": 0.074
+}
+],
+"strategic_context": {
+"draw_value": "high for Jordan",
+"low_block_capacity": "medium",
+"first_goal_assumption": "If Austria scores early, 2-0 or 3-0 scenarios rise; if Jordan holds the match at 0-0 for long, draw probability rises.",
+"collapse_risk": "moderate",
+"expected_game_script": "Austria has the stronger structure, while Jordan is expected to defend low and counterattack."
+},
+"summary": "Model v2 projected Austria as favorite, with 1-0 as both modal and recommended score.",
+"extraction_notes": []
+}
+},
+"ensemble": {
+"available": false,
+"method": null,
+"outcome_probabilities": {
+"team_a_win": null,
+"draw": null,
+"team_b_win": null
+},
+"recommended_outcome": null,
+"recommended_score": null,
+"summary": null
+},
+"actual_result": {
+"available": false,
+"score": null,
+"team_a_goals": null,
+"team_b_goals": null,
+"outcome": null
+},
+"qualitative_summary": "Áustria favorita, mas Jordânia com incentivo para travar e buscar empate.",
+"source_trace": {
+"conversation_turn_reference": "Austria and Jordan forecast",
+"nearby_user_prompt": "austria e jordania agora",
+"nearby_assistant_response_summary": "Assistant gave Austria win probability of 56.5%."
+},
+"extraction_notes": []
+}
+]
+}

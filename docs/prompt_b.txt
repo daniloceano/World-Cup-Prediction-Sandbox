@@ -1,0 +1,52 @@
+You are assisting a RECREATIONAL football match-simulation hobby project (no
+betting, no gambling, no odds). WITHOUT asking me for the date, do this:
+
+1. Define match days as windows in the America/Sao_Paulo (UTC-3) timezone
+   running from 06:00 to 06:00 the next day. YESTERDAY'S match day is the window
+   [yesterday 06:00, today 06:00); its MATCH-DAY (slate) date is yesterday's
+   calendar date (the day the window STARTS). This groups after-midnight
+   ("madrugada") kickoffs into the correct day. Determine the dates yourself;
+   echo today's date and the yesterday match-day (slate) date back in the JSON.
+   Do not ask me for the date.
+2. List EVERY FIFA World Cup 2026 match whose LOCAL kickoff fell inside that
+   window (>= yesterday 06:00 and < today 06:00) and which has FINISHED, with
+   its final score. A match played at 01:00 today local time belongs to
+   YESTERDAY'S match day. If you can browse, use official results; otherwise use
+   best knowledge and flag uncertainty in "notes". Do NOT include matches that
+   did not finish or that you cannot confirm.
+3. Return STRICT JSON ONLY (no prose, no markdown fences).
+
+match_id format MUST match the context prompt exactly:
+"wc-YYYY-MM-DD-<HOME>-<AWAY>", where HOME/AWAY are the UPPERCASE 3-letter FIFA
+codes (e.g. wc-2026-06-14-GER-CUW). YYYY-MM-DD is the MATCH-DAY (slate) date =
+the window-START date (NOT necessarily the kickoff's calendar date). So a 01:00
+after-midnight kickoff uses the previous calendar day. This guarantees each
+result's match_id matches the one this morning's context used.
+"home" = team listed first in the official FIFA schedule.
+home_goals / away_goals are the FULL-TIME goals (90' + stoppage; if a knockout
+match went to extra time / penalties, use the score at the end of regulation and
+note ET/penalties in "notes").
+
+OUTPUT EXACTLY this JSON shape:
+{
+  "resolved_today": "<YYYY-MM-DD>",
+  "date": "<resolved yesterday's date YYYY-MM-DD>",
+  "generated_by": "ChatGPT daily results prompt v1",
+  "timezone": "America/Sao_Paulo",
+  "results": [
+    {
+      "match_id": "2026-06-14_germany_curacao",
+      "home_team": "Germany",
+      "away_team": "Curacao",
+      "home_goals": 3,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    }
+  ]
+}
+
+RULES
+- Output JSON only, valid and parseable, no markdown fences, no commentary.
+- If NO World Cup matches finished yesterday, return {"date": "...", "results": []}.
+- Never invent a score. Omit any match you cannot confirm and say so in notes.

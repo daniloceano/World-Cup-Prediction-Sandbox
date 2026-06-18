@@ -53,23 +53,39 @@ def generate_for_date(
     ``data/predictions/<date>.json``.
     """
     config = config or load_config()
-    matches = data_io.matches_for_date(date)
     context = data_io.load_context(date)
+    # Register any fixtures/teams the context describes (Prompt A metadata) so a
+    # date can be predicted without hand-editing the schedule. No-op for older
+    # minimal context files.
+    data_io.sync_schedule_from_context(context)
+    matches = data_io.matches_for_date(date)
     validation = validate_context(context)
     context_ref = str(data_io.context_path(date)) if context else None
 
+    # Preserve any already-stored predictions (e.g. imported legacy sources),
+    # so regenerating live models never clobbers them.
+    existing = (data_io.load_predictions(date) or {}).get("predictions", {})
+    ctx_by_id = {e.get("match_id"): e for e in (context or {}).get("matches", [])}
+
     predictions: dict[str, Any] = {}
     for match in matches:
-        ctx_entry = None
-        if context:
-            ctx_entry = next(
-                (e for e in context.get("matches", [])
-                 if e.get("match_id") == match["match_id"]),
-                None,
-            )
-        predictions[match["match_id"]] = predict_match(
-            match, ctx_entry, config, context_ref
-        )
+        mid = match["match_id"]
+        ctx_entry = ctx_by_id.get(mid)
+        prev = existing.get(mid)
+        if ctx_entry is not None:
+            # Context available -> run live models, but keep any existing
+            # read-only source (e.g. imported chatgpt_legacy) alongside them.
+            result = predict_match(match, ctx_entry, config, context_ref)
+            live_ids = set(REGISTRY.ids())
+            for sid, sp in (prev or {}).get("models", {}).items():
+                if sid not in result["models"] and sid not in live_ids:
+                    result["models"][sid] = sp
+            predictions[mid] = result
+        elif prev is not None:
+            # No context: never fabricate neutral live predictions; keep what
+            # is already stored (imported legacy, etc.).
+            predictions[mid] = prev
+        # else: no context and nothing stored -> leave this match unpredicted.
 
     payload = {
         "date": date,
@@ -77,11 +93,11 @@ def generate_for_date(
         "context_available": context is not None,
         "context_valid": validation.ok,
         "context_warnings": validation.has_warnings,
-        "n_matches": len(matches),
+        "n_matches": len(predictions),
         "predictions": predictions,
     }
 
-    if save and matches:
+    if save and predictions:
         data_io.save_predictions(date, payload)
     return payload
 

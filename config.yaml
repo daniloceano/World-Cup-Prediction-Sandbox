@@ -21,14 +21,14 @@ quantiles:
   lower: 0.05               # lower quantile (e.g. 0.05 = 5th percentile)
   upper: 0.95               # upper quantile (e.g. 0.95 = 95th percentile)
 
-# --- Model v1: static relative-strength + Poisson + Monte Carlo -------------
-model_v1:
+# --- Model: standard (ex-v1) — static relative-strength + Poisson + MC -------
+model_standard:
   active: true
   lambda_0: 1.35            # baseline expected goals per team
   alpha: 1.10               # sensitivity of expected goals to relative strength D
   lambda_min: 0.15          # floor for expected goals (avoid degenerate rates)
   lambda_max: 4.00          # ceiling for expected goals (keep realistic)
-  # Heuristic raw weights for the seven v1 criteria (from methodology doc).
+  # Heuristic raw weights for the seven criteria (from methodology doc).
   weights:
     fifa_ranking: 1.5
     short_form: 2.5
@@ -38,10 +38,10 @@ model_v1:
     off_field: 1.0
     tactical_similarity: 2.5
 
-# --- Model v2: v1 + strategic World Cup adjustments -------------------------
-model_v2:
+# --- Model: conservative (ex-v2) — standard + strategic World Cup layer ------
+model_conservative:
   active: true
-  # v2 inherits the v1 strength engine; these control the strategic layer.
+  # Inherits the standard strength engine; these control the strategic layer.
   debut_factor: 0.92            # F_estreia: dampens favourite in group-stage debuts
   low_block_max_compression: 0.30  # max reduction of favourite lambda from a strong low block
   cagey_draw_compression: 0.85     # extra lambda compression in the "no early goal" state
@@ -50,10 +50,24 @@ model_v2:
   chase_boost_max: 0.35        # F_risco: extra lambda for the team that just conceded (chasing)
   draw_value_max_weight: 0.10  # max importance weight added to draw scorelines (ΔE cap)
 
+# --- Model: aggressive (new) — amplified favourite + goleada tail ------------
+# Represents the "favourite scores early and turns superiority into a rout"
+# regime. Amplifies the favourite's expected goals and shifts mass toward
+# elastic scorelines (2-0, 3-0, 3-1, 4-0) via a goleada-tail re-weighting.
+model_aggressive:
+  active: true
+  beta: 0.45                  # F_sup: favourite amplification per unit of offensive superiority A_F
+  block_compression: 0.15     # F_bloco: mild initial low-block compression of the underdog
+  pressure_boost_max: 0.40    # F_pressao: extra favourite lambda after scoring, scaled by intensity I_P
+  collapse_boost_max: 0.90    # F_colapso: extra favourite lambda in the collapse state, scaled by E_U
+  chase_boost_max: 0.30       # F_risco: underdog opens up after conceding (scores more, concedes more)
+  early_goal_base: 0.45       # baseline P(favourite scores early) when not given by context
+  goleada_gamma: 0.70         # gamma: strength of the goleada-tail re-weighting of margins >= 3
+
 # --- Ensemble ---------------------------------------------------------------
 ensemble:
-  # Strategy options (only "equal" and "weighted" implemented in v1; others
-  # are documented placeholders that fall back to equal weighting).
+  # Strategy options (only "equal" and "weighted" implemented; others are
+  # documented placeholders that fall back to equal weighting).
   #   equal              -> simple average of active models
   #   weighted           -> use the explicit weights below
   #   performance        -> (future) weight by historical accuracy
@@ -61,8 +75,9 @@ ensemble:
   #   matchup_weighted   -> (future) weights per matchup type
   strategy: equal
   weights:
-    v1: 1.0
-    v2: 1.0
+    standard: 1.0
+    conservative: 1.0
+    aggressive: 1.0
 
 # --- Display / UX -----------------------------------------------------------
 display:

@@ -45,8 +45,9 @@ world_cup_predictor_sandbox/
 │   ├── data_io.py           # JSON/CSV read/write
 │   ├── models/
 │   │   ├── base.py          # BaseModel interface + REGISTRY
-│   │   ├── model_v1.py      # v1 static relative strength
-│   │   └── model_v2.py      # v2 strategic World Cup model
+│   │   ├── model_standard.py     # static relative strength (ex-v1)
+│   │   ├── model_conservative.py # strategic / draw-friendly (ex-v2)
+│   │   └── model_aggressive.py   # amplified favourite / goleada (new)
 │   ├── ensemble.py          # combine models -> ensemble Prediction
 │   ├── pipeline.py          # orchestration + persistence
 │   └── evaluation.py        # historical metrics

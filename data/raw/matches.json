@@ -1,49 +1,213 @@
 {
-  "_comment": "DEMO match schedule. Clearly fake fixtures so the app runs out of the box. Replace with the real World Cup schedule. 'is_demo' must be true for fabricated fixtures.",
+  "_comment": "Official match schedule. 'date' is the MATCH-DAY (slate) date using a 06:00->06:00 America/Sao_Paulo window, so 01:00 kickoffs belong to the previous day. 'kickoff' is local Brasília time. No demo data.",
   "matches": [
     {
-      "match_id": "demo-2026-06-14-GER-JPN",
-      "date": "2026-06-14",
+      "match_id": "wc-2026-06-11-KOR-CZE",
+      "date": "2026-06-11",
+      "kickoff": "23:00",
+      "phase": "group",
+      "home_team": "KOR",
+      "away_team": "CZE"
+    },
+    {
+      "match_id": "wc-2026-06-11-MEX-RSA",
+      "date": "2026-06-11",
       "kickoff": "16:00",
-      "venue": "Demo Arena, Sample City",
       "phase": "group",
-      "group": "E",
-      "home_team": "GER",
-      "away_team": "JPN",
-      "is_demo": true
+      "home_team": "MEX",
+      "away_team": "RSA"
     },
     {
-      "match_id": "demo-2026-06-17-ARG-KSA",
-      "date": "2026-06-17",
-      "kickoff": "13:00",
-      "venue": "Demo Stadium, Sample City",
+      "match_id": "wc-2026-06-12-CAN-BIH",
+      "date": "2026-06-12",
+      "kickoff": "16:00",
       "phase": "group",
-      "group": "C",
-      "home_team": "ARG",
-      "away_team": "KSA",
-      "is_demo": true
+      "home_team": "CAN",
+      "away_team": "BIH"
     },
     {
-      "match_id": "demo-2026-06-17-FRA-AUS",
-      "date": "2026-06-17",
+      "match_id": "wc-2026-06-12-USA-PAR",
+      "date": "2026-06-12",
+      "kickoff": "22:00",
+      "phase": "group",
+      "home_team": "USA",
+      "away_team": "PAR"
+    },
+    {
+      "match_id": "wc-2026-06-13-AUS-TUR",
+      "date": "2026-06-13",
+      "kickoff": "01:00 (14/06, madrugada)",
+      "phase": "group",
+      "home_team": "AUS",
+      "away_team": "TUR"
+    },
+    {
+      "match_id": "wc-2026-06-13-BRA-MAR",
+      "date": "2026-06-13",
       "kickoff": "19:00",
-      "venue": "Demo Park, Sample City",
       "phase": "group",
-      "group": "D",
-      "home_team": "FRA",
-      "away_team": "AUS",
-      "is_demo": true
-    },
-    {
-      "match_id": "demo-2026-06-18-BRA-SRB",
-      "date": "2026-06-18",
-      "kickoff": "19:00",
-      "venue": "Demo Coliseum, Sample City",
-      "phase": "group",
-      "group": "G",
       "home_team": "BRA",
-      "away_team": "SRB",
-      "is_demo": true
+      "away_team": "MAR"
+    },
+    {
+      "match_id": "wc-2026-06-13-HAI-SCO",
+      "date": "2026-06-13",
+      "kickoff": "22:00",
+      "phase": "group",
+      "home_team": "HAI",
+      "away_team": "SCO"
+    },
+    {
+      "match_id": "wc-2026-06-13-QAT-SUI",
+      "date": "2026-06-13",
+      "kickoff": "16:00",
+      "phase": "group",
+      "home_team": "QAT",
+      "away_team": "SUI"
+    },
+    {
+      "match_id": "wc-2026-06-14-CIV-ECU",
+      "date": "2026-06-14",
+      "kickoff": "20:00",
+      "phase": "group",
+      "home_team": "CIV",
+      "away_team": "ECU"
+    },
+    {
+      "match_id": "wc-2026-06-14-GER-CUW",
+      "date": "2026-06-14",
+      "kickoff": "14:00",
+      "phase": "group",
+      "home_team": "GER",
+      "away_team": "CUW"
+    },
+    {
+      "match_id": "wc-2026-06-14-NED-JPN",
+      "date": "2026-06-14",
+      "kickoff": "17:00",
+      "phase": "group",
+      "home_team": "NED",
+      "away_team": "JPN"
+    },
+    {
+      "match_id": "wc-2026-06-14-SWE-TUN",
+      "date": "2026-06-14",
+      "kickoff": "23:00",
+      "phase": "group",
+      "home_team": "SWE",
+      "away_team": "TUN"
+    },
+    {
+      "match_id": "wc-2026-06-15-BEL-EGY",
+      "date": "2026-06-15",
+      "kickoff": "16:00",
+      "phase": "group",
+      "home_team": "BEL",
+      "away_team": "EGY"
+    },
+    {
+      "match_id": "wc-2026-06-15-ESP-CPV",
+      "date": "2026-06-15",
+      "kickoff": "13:00",
+      "phase": "group",
+      "home_team": "ESP",
+      "away_team": "CPV"
+    },
+    {
+      "match_id": "wc-2026-06-15-IRN-NZL",
+      "date": "2026-06-15",
+      "kickoff": "22:00",
+      "phase": "group",
+      "home_team": "IRN",
+      "away_team": "NZL"
+    },
+    {
+      "match_id": "wc-2026-06-15-KSA-URU",
+      "date": "2026-06-15",
+      "kickoff": "19:00",
+      "phase": "group",
+      "home_team": "KSA",
+      "away_team": "URU"
+    },
+    {
+      "match_id": "wc-2026-06-16-ARG-ALG",
+      "date": "2026-06-16",
+      "kickoff": "22:00",
+      "phase": "group",
+      "home_team": "ARG",
+      "away_team": "ALG"
+    },
+    {
+      "match_id": "wc-2026-06-16-AUT-JOR",
+      "date": "2026-06-16",
+      "kickoff": "01:00 (17/06, madrugada)",
+      "phase": "group",
+      "home_team": "AUT",
+      "away_team": "JOR"
+    },
+    {
+      "match_id": "wc-2026-06-16-FRA-SEN",
+      "date": "2026-06-16",
+      "kickoff": "16:00",
+      "phase": "group",
+      "home_team": "FRA",
+      "away_team": "SEN"
+    },
+    {
+      "match_id": "wc-2026-06-16-IRQ-NOR",
+      "date": "2026-06-16",
+      "kickoff": "19:00",
+      "phase": "group",
+      "home_team": "IRQ",
+      "away_team": "NOR"
+    },
+    {
+      "match_id": "2026-06-17_england_croatia",
+      "date": "2026-06-17",
+      "kickoff": "20:00 UTC",
+      "venue": "Dallas",
+      "phase": "group",
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "CRO",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "2026-06-17_ghana_panama",
+      "date": "2026-06-17",
+      "kickoff": "23:00 UTC",
+      "venue": "Toronto",
+      "phase": "group",
+      "group": "L",
+      "home_team": "GHA",
+      "away_team": "PAN",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "2026-06-17_portugal_congo-dr",
+      "date": "2026-06-17",
+      "kickoff": "17:00 UTC",
+      "venue": "Houston",
+      "phase": "group",
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "COD",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "2026-06-17_uzbekistan_colombia",
+      "date": "2026-06-17",
+      "kickoff": "02:00 UTC",
+      "venue": "Mexico City",
+      "phase": "group",
+      "group": "K",
+      "home_team": "UZB",
+      "away_team": "COL",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

@@ -1,12 +1,15 @@
-"""Model v1 — static relative-strength + independent Poisson + Monte Carlo.
+"""Model standard (formerly v1) — static relative strength + Poisson + Monte Carlo.
 
-Implements the methodology of §1–§2 of the methods document:
+Implements §1–§2 / §3 of the methods documents:
 
 1. Normalize the seven heuristic criteria weights.
 2. Compute the aggregate relative strength ``D = Σ w̃_i (S_A,i − S_B,i)``.
 3. Convert to expected goals ``λ_A = λ0 + αD``, ``λ_B = λ0 − αD`` (clipped).
 4. Simulate goals as independent Poisson variables.
 5. Monte Carlo to estimate outcome and scoreline probabilities.
+
+This is the central / neutral regime. The conservative and aggressive models
+reuse its strength engine (:func:`relative_strength`, :func:`base_lambdas`).
 """
 
 from __future__ import annotations
@@ -53,13 +56,13 @@ def base_lambdas(d: float, cfg: dict[str, Any]) -> tuple[float, float]:
 
 
 @REGISTRY.register
-class ModelV1(BaseModel):
-    model_id = "v1"
+class ModelStandard(BaseModel):
+    model_id = "standard"
     model_version = "1.0.0"
-    display_name = "v1 · Static relative strength"
+    display_name = "Standard · Static relative strength"
     description = (
         "Weighted multi-criteria strength → expected goals → independent "
-        "Poisson goals → Monte Carlo."
+        "Poisson goals → Monte Carlo. The neutral / central regime."
     )
     required_inputs = ("v1_scores",)
 
@@ -69,7 +72,7 @@ class ModelV1(BaseModel):
         context: dict[str, Any] | None,
         context_ref: str | None = None,
     ) -> Prediction:
-        cfg = self.config["model_v1"]
+        cfg = self.config["model_standard"]
         sim_cfg = self.config["simulation"]
         q = self.config["quantiles"]
 
@@ -85,7 +88,7 @@ class ModelV1(BaseModel):
         d = relative_strength(scores, cfg["weights"])
         lam_home, lam_away = base_lambdas(d, cfg)
 
-        rng = make_rng(sim_cfg["random_seed"], match["match_id"] + "v1")
+        rng = make_rng(sim_cfg["random_seed"], match["match_id"] + "standard")
         n = sim_cfg["n_simulations"]
         cap = sim_cfg["max_goals"]
         gh = np.clip(rng.poisson(lam_home, n), 0, cap)
