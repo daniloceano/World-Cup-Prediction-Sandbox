@@ -256,6 +256,54 @@
       "away_team": "BIH",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-19-BRA-HAI",
+      "date": "2026-06-19",
+      "kickoff": "00:30 UTC",
+      "venue": "Philadelphia Stadium",
+      "phase": "group",
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "HAI",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-19-SCO-MAR",
+      "date": "2026-06-19",
+      "kickoff": "22:00 UTC",
+      "venue": "Boston Stadium",
+      "phase": "group",
+      "group": "C",
+      "home_team": "SCO",
+      "away_team": "MAR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-19-TUR-PAR",
+      "date": "2026-06-19",
+      "kickoff": "03:00 UTC",
+      "venue": "San Francisco Bay Area Stadium",
+      "phase": "group",
+      "group": "D",
+      "home_team": "TUR",
+      "away_team": "PAR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-19-USA-AUS",
+      "date": "2026-06-19",
+      "kickoff": "19:00 UTC",
+      "venue": "Seattle Stadium",
+      "phase": "group",
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "AUS",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

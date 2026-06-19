@@ -1,0 +1,247 @@
+{
+  "date": "2026-06-19",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-19-USA-AUS",
+      "date": "2026-06-19",
+      "kickoff_utc": "2026-06-19T19:00:00Z",
+      "venue": "Seattle Stadium",
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "AUS",
+      "home_name": "United States",
+      "away_name": "Australia",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "short_form": {
+          "home": 0.55,
+          "away": 0.45
+        },
+        "long_form": {
+          "home": 0.25,
+          "away": 0.1
+        },
+        "injuries": {
+          "home": -0.2,
+          "away": 0.1
+        },
+        "weather_adaptation": {
+          "home": 0.35,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.65,
+          "away": 0.15
+        },
+        "tactical_similarity": {
+          "home": 0.15,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.72,
+        "draw_value_weaker": 0.75,
+        "need_to_win": {
+          "home": 0.45,
+          "away": 0.35
+        },
+        "first_goal_prob": {
+          "home": 0.48,
+          "away": 0.34,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.64,
+        "set_piece_threat_weaker": 0.66,
+        "notes": "Both opened with wins, but USA have host edge while Australia remain dangerous in transition."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-19-SCO-MAR",
+      "date": "2026-06-19",
+      "kickoff_utc": "2026-06-19T22:00:00Z",
+      "venue": "Boston Stadium",
+      "group": "C",
+      "home_team": "SCO",
+      "away_team": "MAR",
+      "home_name": "Scotland",
+      "away_name": "Morocco",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "short_form": {
+          "home": 0.25,
+          "away": 0.65
+        },
+        "long_form": {
+          "home": 0.1,
+          "away": 0.75
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.1,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.2,
+          "away": 0.15
+        },
+        "tactical_similarity": {
+          "home": 0.1,
+          "away": 0.45
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.68,
+        "draw_value_weaker": 0.82,
+        "need_to_win": {
+          "home": 0.25,
+          "away": 0.5
+        },
+        "first_goal_prob": {
+          "home": 0.29,
+          "away": 0.53,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.38,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.42,
+        "set_piece_threat_weaker": 0.62,
+        "notes": "Scotland have three points already, while Morocco look stronger after holding Brazil."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-19-BRA-HAI",
+      "date": "2026-06-19",
+      "kickoff_utc": "2026-06-20T00:30:00Z",
+      "venue": "Philadelphia Stadium",
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "HAI",
+      "home_name": "Brazil",
+      "away_name": "Haiti",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.9,
+          "away": -0.9
+        },
+        "short_form": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "long_form": {
+          "home": 0.75,
+          "away": -0.45
+        },
+        "injuries": {
+          "home": -0.15,
+          "away": 0.05
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.1
+        },
+        "tactical_similarity": {
+          "home": 0.45,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.9,
+        "need_to_win": {
+          "home": 0.82,
+          "away": 0.65
+        },
+        "first_goal_prob": {
+          "home": 0.72,
+          "away": 0.15,
+          "none": 0.13
+        },
+        "collapse_risk_weaker": 0.62,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.35,
+        "set_piece_threat_weaker": 0.42,
+        "notes": "Brazil have a huge quality edge but carry pressure after drawing Morocco and missing Neymar."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-19-TUR-PAR",
+      "date": "2026-06-19",
+      "kickoff_utc": "2026-06-20T03:00:00Z",
+      "venue": "San Francisco Bay Area Stadium",
+      "group": "D",
+      "home_team": "TUR",
+      "away_team": "PAR",
+      "home_name": "Türkiye",
+      "away_name": "Paraguay",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "short_form": {
+          "home": -0.25,
+          "away": -0.45
+        },
+        "long_form": {
+          "home": 0.25,
+          "away": 0.0
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": -0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.1,
+          "away": 0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.64,
+        "draw_value_weaker": 0.25,
+        "need_to_win": {
+          "home": 0.88,
+          "away": 0.9
+        },
+        "first_goal_prob": {
+          "home": 0.44,
+          "away": 0.35,
+          "none": 0.21
+        },
+        "collapse_risk_weaker": 0.48,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.53,
+        "set_piece_threat_weaker": 0.58,
+        "notes": "Both teams lost their openers, making this a high-urgency match with little draw value."
+      }
+    }
+  ]
+}

@@ -11,7 +11,8 @@
     },
     {
       "code": "AUS",
-      "name": "Australia"
+      "name": "Australia",
+      "is_demo": false
     },
     {
       "code": "AUT",
@@ -28,7 +29,8 @@
     },
     {
       "code": "BRA",
-      "name": "Brazil"
+      "name": "Brazil",
+      "is_demo": false
     },
     {
       "code": "CAN",
@@ -99,7 +101,8 @@
     },
     {
       "code": "HAI",
-      "name": "Haiti"
+      "name": "Haiti",
+      "is_demo": false
     },
     {
       "code": "IRN",
@@ -128,7 +131,8 @@
     },
     {
       "code": "MAR",
-      "name": "Morocco"
+      "name": "Morocco",
+      "is_demo": false
     },
     {
       "code": "MEX",
@@ -154,7 +158,8 @@
     },
     {
       "code": "PAR",
-      "name": "Paraguay"
+      "name": "Paraguay",
+      "is_demo": false
     },
     {
       "code": "POR",
@@ -173,7 +178,8 @@
     },
     {
       "code": "SCO",
-      "name": "Scotland"
+      "name": "Scotland",
+      "is_demo": false
     },
     {
       "code": "SEN",
@@ -194,7 +200,8 @@
     },
     {
       "code": "TUR",
-      "name": "Türkiye"
+      "name": "Türkiye",
+      "is_demo": false
     },
     {
       "code": "URU",
@@ -202,7 +209,8 @@
     },
     {
       "code": "USA",
-      "name": "United States"
+      "name": "United States",
+      "is_demo": false
     },
     {
       "code": "UZB",
