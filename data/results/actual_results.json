@@ -215,6 +215,34 @@
       "away_goals": 0,
       "status": "final",
       "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-23-POR-UZB",
+      "home_goals": 5,
+      "away_goals": 0,
+      "status": "final",
+      "notes": "Final score confirmed from published match results."
+    },
+    {
+      "match_id": "wc-2026-06-23-ENG-GHA",
+      "home_goals": 0,
+      "away_goals": 0,
+      "status": "final",
+      "notes": "Final score confirmed from published match results."
+    },
+    {
+      "match_id": "wc-2026-06-23-PAN-CRO",
+      "home_goals": 0,
+      "away_goals": 1,
+      "status": "final",
+      "notes": "Final score confirmed from published match results."
+    },
+    {
+      "match_id": "wc-2026-06-23-COL-COD",
+      "home_goals": 1,
+      "away_goals": 0,
+      "status": "final",
+      "notes": "Final score confirmed from published match results."
     }
   ]
 }

@@ -1,0 +1,367 @@
+{
+  "date": "2026-06-24",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-24-SUI-CAN",
+      "date": "2026-06-24",
+      "kickoff_utc": "2026-06-24T19:00:00Z",
+      "venue": "BC Place Vancouver",
+      "group": "B",
+      "home_team": "SUI",
+      "away_team": "CAN",
+      "home_name": "Switzerland",
+      "away_name": "Canada",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "short_form": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "long_form": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "injuries": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "weather_adaptation": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "off_field": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "tactical_similarity": {
+          "home": 0.05,
+          "away": -0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.7,
+        "draw_value_weaker": 0.75,
+        "need_to_win": {
+          "home": 0.25,
+          "away": 0.2
+        },
+        "first_goal_prob": {
+          "home": 0.37,
+          "away": 0.5,
+          "none": 0.13
+        },
+        "collapse_risk_weaker": 0.28,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.42,
+        "set_piece_threat_weaker": 0.58,
+        "notes": "Canada's venue edge and recent surge slightly outweigh Switzerland's ranking edge, with both sides able to value a draw."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-24-BIH-QAT",
+      "date": "2026-06-24",
+      "kickoff_utc": "2026-06-24T19:00:00Z",
+      "venue": "Seattle Stadium",
+      "group": "B",
+      "home_team": "BIH",
+      "away_team": "QAT",
+      "home_name": "Bosnia and Herzegovina",
+      "away_name": "Qatar",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "short_form": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "long_form": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "injuries": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "off_field": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": -0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.42,
+        "draw_value_weaker": 0.1,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.95
+        },
+        "first_goal_prob": {
+          "home": 0.54,
+          "away": 0.3,
+          "none": 0.16
+        },
+        "collapse_risk_weaker": 0.65,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.48,
+        "notes": "Qatar need a win after a heavy defeat and suspensions, while Bosnia profile as the steadier side in Seattle."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-24-SCO-BRA",
+      "date": "2026-06-24",
+      "kickoff_utc": "2026-06-24T22:00:00Z",
+      "venue": "Miami Stadium",
+      "group": "C",
+      "home_team": "SCO",
+      "away_team": "BRA",
+      "home_name": "Scotland",
+      "away_name": "Brazil",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.75,
+          "away": 0.75
+        },
+        "short_form": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "long_form": {
+          "home": -0.65,
+          "away": 0.65
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "weather_adaptation": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "off_field": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "tactical_similarity": {
+          "home": -0.45,
+          "away": 0.45
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.72,
+        "draw_value_weaker": 0.85,
+        "need_to_win": {
+          "home": 0.45,
+          "away": 0.65
+        },
+        "first_goal_prob": {
+          "home": 0.25,
+          "away": 0.58,
+          "none": 0.17
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.38,
+        "set_piece_threat_weaker": 0.7,
+        "notes": "Brazil have the stronger baseline and climate fit, but Scotland can make a draw valuable through compact defending and set pieces."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-24-MAR-HAI",
+      "date": "2026-06-24",
+      "kickoff_utc": "2026-06-24T22:00:00Z",
+      "venue": "Atlanta Stadium",
+      "group": "C",
+      "home_team": "MAR",
+      "away_team": "HAI",
+      "home_name": "Morocco",
+      "away_name": "Haiti",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.75,
+          "away": -0.75
+        },
+        "short_form": {
+          "home": 0.8,
+          "away": -0.8
+        },
+        "long_form": {
+          "home": 0.65,
+          "away": -0.65
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "weather_adaptation": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "off_field": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "tactical_similarity": {
+          "home": 0.65,
+          "away": -0.65
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.38,
+        "draw_value_weaker": 0.2,
+        "need_to_win": {
+          "home": 0.75,
+          "away": 0.1
+        },
+        "first_goal_prob": {
+          "home": 0.68,
+          "away": 0.17,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.72,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.42,
+        "set_piece_threat_weaker": 0.35,
+        "notes": "Morocco carry a large quality and motivation edge, while Haiti's main offset is comfort in humid conditions."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-24-CZE-MEX",
+      "date": "2026-06-24",
+      "kickoff_utc": "2026-06-25T01:00:00Z",
+      "venue": "Mexico City Stadium",
+      "group": "A",
+      "home_team": "CZE",
+      "away_team": "MEX",
+      "home_name": "Czechia",
+      "away_name": "Mexico",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.65,
+          "away": 0.65
+        },
+        "long_form": {
+          "home": -0.4,
+          "away": 0.4
+        },
+        "injuries": {
+          "home": 0,
+          "away": 0
+        },
+        "weather_adaptation": {
+          "home": -0.4,
+          "away": 0.4
+        },
+        "off_field": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "tactical_similarity": {
+          "home": -0.35,
+          "away": 0.35
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.05,
+        "need_to_win": {
+          "home": 0.98,
+          "away": 0.15
+        },
+        "first_goal_prob": {
+          "home": 0.3,
+          "away": 0.52,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.48,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.46,
+        "set_piece_threat_weaker": 0.58,
+        "notes": "Czechia need a win, but Mexico's ranking, form, altitude familiarity and crowd edge make them the favorite."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-24-RSA-KOR",
+      "date": "2026-06-24",
+      "kickoff_utc": "2026-06-25T01:00:00Z",
+      "venue": "Estadio Monterrey",
+      "group": "A",
+      "home_team": "RSA",
+      "away_team": "KOR",
+      "home_name": "South Africa",
+      "away_name": "Korea Republic",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "long_form": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "injuries": {
+          "home": 0,
+          "away": 0
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "tactical_similarity": {
+          "home": -0.25,
+          "away": 0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.5,
+        "draw_value_weaker": 0.05,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.35
+        },
+        "first_goal_prob": {
+          "home": 0.33,
+          "away": 0.49,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.5,
+        "set_piece_threat_weaker": 0.45,
+        "notes": "South Africa must chase the game, while Korea Republic can manage risk with a draw likely enough."
+      }
+    }
+  ]
+}

@@ -304,6 +304,78 @@
       "away_team": "AUS",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-24-BIH-QAT",
+      "date": "2026-06-24",
+      "kickoff": "19:00 UTC",
+      "venue": "Seattle Stadium",
+      "phase": "group",
+      "group": "B",
+      "home_team": "BIH",
+      "away_team": "QAT",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-24-CZE-MEX",
+      "date": "2026-06-24",
+      "kickoff": "01:00 UTC",
+      "venue": "Mexico City Stadium",
+      "phase": "group",
+      "group": "A",
+      "home_team": "CZE",
+      "away_team": "MEX",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-24-MAR-HAI",
+      "date": "2026-06-24",
+      "kickoff": "22:00 UTC",
+      "venue": "Atlanta Stadium",
+      "phase": "group",
+      "group": "C",
+      "home_team": "MAR",
+      "away_team": "HAI",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-24-RSA-KOR",
+      "date": "2026-06-24",
+      "kickoff": "01:00 UTC",
+      "venue": "Estadio Monterrey",
+      "phase": "group",
+      "group": "A",
+      "home_team": "RSA",
+      "away_team": "KOR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-24-SCO-BRA",
+      "date": "2026-06-24",
+      "kickoff": "22:00 UTC",
+      "venue": "Miami Stadium",
+      "phase": "group",
+      "group": "C",
+      "home_team": "SCO",
+      "away_team": "BRA",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-24-SUI-CAN",
+      "date": "2026-06-24",
+      "kickoff": "19:00 UTC",
+      "venue": "BC Place Vancouver",
+      "phase": "group",
+      "group": "B",
+      "home_team": "SUI",
+      "away_team": "CAN",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
