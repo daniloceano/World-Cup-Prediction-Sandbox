@@ -1,0 +1,367 @@
+{
+  "date": "2026-06-25",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-25-CUW-CIV",
+      "date": "2026-06-25",
+      "kickoff_utc": "2026-06-25T20:00:00Z",
+      "venue": "Philadelphia Stadium",
+      "group": "E",
+      "home_team": "CUW",
+      "away_team": "CIV",
+      "home_name": "Curaçao",
+      "away_name": "Côte d'Ivoire",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.15,
+          "away": 0.25
+        },
+        "long_form": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.05,
+          "away": 0.1
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": 0.15
+        },
+        "tactical_similarity": {
+          "home": -0.25,
+          "away": 0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.75,
+        "draw_value_weaker": 0.25,
+        "need_to_win": {
+          "home": 0.9,
+          "away": 0.75
+        },
+        "first_goal_prob": {
+          "home": 0.23,
+          "away": 0.59,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.4,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.42,
+        "set_piece_threat_weaker": 0.3,
+        "notes": "Côte d'Ivoire are stronger, but Curaçao's draw with Ecuador suggests they can defend for long stretches."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-25-ECU-GER",
+      "date": "2026-06-25",
+      "kickoff_utc": "2026-06-25T20:00:00Z",
+      "venue": "New York New Jersey Stadium",
+      "group": "E",
+      "home_team": "ECU",
+      "away_team": "GER",
+      "home_name": "Ecuador",
+      "away_name": "Germany",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "short_form": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "long_form": {
+          "home": 0.05,
+          "away": 0.35
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.2,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": -0.3,
+          "away": 0.3
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.05,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 0.25
+        },
+        "first_goal_prob": {
+          "home": 0.28,
+          "away": 0.58,
+          "none": 0.14
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.38,
+        "notes": "Germany are already qualified but still carry the stronger form and squad depth against an Ecuador side that needs a win."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-25-JPN-SWE",
+      "date": "2026-06-25",
+      "kickoff_utc": "2026-06-25T23:00:00Z",
+      "venue": "Dallas Stadium",
+      "group": "F",
+      "home_team": "JPN",
+      "away_team": "SWE",
+      "home_name": "Japan",
+      "away_name": "Sweden",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "short_form": {
+          "home": 0.3,
+          "away": -0.1
+        },
+        "long_form": {
+          "home": 0.25,
+          "away": -0.1
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.15,
+          "away": 0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.45,
+        "draw_value_weaker": 0.7,
+        "need_to_win": {
+          "home": 0.45,
+          "away": 0.65
+        },
+        "first_goal_prob": {
+          "home": 0.42,
+          "away": 0.39,
+          "none": 0.19
+        },
+        "collapse_risk_weaker": 0.48,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.7,
+        "set_piece_threat_weaker": 0.62,
+        "notes": "Japan have looked more balanced, while Sweden remain dangerous through direct attacks and elite forwards."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-25-TUN-NED",
+      "date": "2026-06-25",
+      "kickoff_utc": "2026-06-25T23:00:00Z",
+      "venue": "Kansas City Stadium",
+      "group": "F",
+      "home_team": "TUN",
+      "away_team": "NED",
+      "home_name": "Tunisia",
+      "away_name": "Netherlands",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "short_form": {
+          "home": -0.7,
+          "away": 0.7
+        },
+        "long_form": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": 0.1,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": -0.25,
+          "away": 0.25
+        },
+        "tactical_similarity": {
+          "home": -0.55,
+          "away": 0.55
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.35,
+        "draw_value_weaker": 0.05,
+        "need_to_win": {
+          "home": 0.15,
+          "away": 0.7
+        },
+        "first_goal_prob": {
+          "home": 0.18,
+          "away": 0.7,
+          "none": 0.12
+        },
+        "collapse_risk_weaker": 0.78,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.25,
+        "set_piece_threat_weaker": 0.35,
+        "notes": "Netherlands have a clear quality and momentum edge against an eliminated Tunisia side with major defensive issues."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-25-TUR-USA",
+      "date": "2026-06-25",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "venue": "Los Angeles Stadium",
+      "group": "D",
+      "home_team": "TUR",
+      "away_team": "USA",
+      "home_name": "Türkiye",
+      "away_name": "United States",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "short_form": {
+          "home": -0.5,
+          "away": 0.5
+        },
+        "long_form": {
+          "home": -0.2,
+          "away": 0.25
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": -0.1,
+          "away": 0.35
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": -0.2,
+          "away": 0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.5,
+        "draw_value_weaker": 0.15,
+        "need_to_win": {
+          "home": 0.2,
+          "away": 0.3
+        },
+        "first_goal_prob": {
+          "home": 0.33,
+          "away": 0.5,
+          "none": 0.17
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.55,
+        "set_piece_threat_weaker": 0.4,
+        "notes": "USA have already topped the group and may rotate, but Türkiye enter eliminated and still searching for attacking rhythm."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-25-PAR-AUS",
+      "date": "2026-06-25",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "venue": "San Francisco Bay Area Stadium",
+      "group": "D",
+      "home_team": "PAR",
+      "away_team": "AUS",
+      "home_name": "Paraguay",
+      "away_name": "Australia",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "short_form": {
+          "home": 0.0,
+          "away": 0.05
+        },
+        "long_form": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "injuries": {
+          "home": -0.25,
+          "away": 0.1
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": -0.1,
+          "away": 0.15
+        },
+        "tactical_similarity": {
+          "home": 0.05,
+          "away": 0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.05,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.45
+        },
+        "first_goal_prob": {
+          "home": 0.37,
+          "away": 0.4,
+          "none": 0.23
+        },
+        "collapse_risk_weaker": 0.3,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Australia can manage the table situation better, while Paraguay likely need to force the game without their ideal setup."
+      }
+    }
+  ]
+}

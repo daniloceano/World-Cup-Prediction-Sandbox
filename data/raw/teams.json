@@ -39,7 +39,8 @@
     },
     {
       "code": "CIV",
-      "name": "Côte d'Ivoire"
+      "name": "Côte d'Ivoire",
+      "is_demo": false
     },
     {
       "code": "COD",
@@ -62,7 +63,8 @@
     },
     {
       "code": "CUW",
-      "name": "Curaçao"
+      "name": "Curaçao",
+      "is_demo": false
     },
     {
       "code": "CZE",
@@ -71,7 +73,8 @@
     },
     {
       "code": "ECU",
-      "name": "Ecuador"
+      "name": "Ecuador",
+      "is_demo": false
     },
     {
       "code": "EGY",
@@ -92,7 +95,8 @@
     },
     {
       "code": "GER",
-      "name": "Germany"
+      "name": "Germany",
+      "is_demo": false
     },
     {
       "code": "GHA",
@@ -118,7 +122,8 @@
     },
     {
       "code": "JPN",
-      "name": "Japan"
+      "name": "Japan",
+      "is_demo": false
     },
     {
       "code": "KOR",
@@ -141,7 +146,8 @@
     },
     {
       "code": "NED",
-      "name": "Netherlands"
+      "name": "Netherlands",
+      "is_demo": false
     },
     {
       "code": "NOR",
@@ -192,11 +198,13 @@
     },
     {
       "code": "SWE",
-      "name": "Sweden"
+      "name": "Sweden",
+      "is_demo": false
     },
     {
       "code": "TUN",
-      "name": "Tunisia"
+      "name": "Tunisia",
+      "is_demo": false
     },
     {
       "code": "TUR",

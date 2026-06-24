@@ -376,6 +376,78 @@
       "away_team": "CAN",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-25-CUW-CIV",
+      "date": "2026-06-25",
+      "kickoff": "20:00 UTC",
+      "venue": "Philadelphia Stadium",
+      "phase": "group",
+      "group": "E",
+      "home_team": "CUW",
+      "away_team": "CIV",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-25-ECU-GER",
+      "date": "2026-06-25",
+      "kickoff": "20:00 UTC",
+      "venue": "New York New Jersey Stadium",
+      "phase": "group",
+      "group": "E",
+      "home_team": "ECU",
+      "away_team": "GER",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-25-JPN-SWE",
+      "date": "2026-06-25",
+      "kickoff": "23:00 UTC",
+      "venue": "Dallas Stadium",
+      "phase": "group",
+      "group": "F",
+      "home_team": "JPN",
+      "away_team": "SWE",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-25-PAR-AUS",
+      "date": "2026-06-25",
+      "kickoff": "02:00 UTC",
+      "venue": "San Francisco Bay Area Stadium",
+      "phase": "group",
+      "group": "D",
+      "home_team": "PAR",
+      "away_team": "AUS",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-25-TUN-NED",
+      "date": "2026-06-25",
+      "kickoff": "23:00 UTC",
+      "venue": "Kansas City Stadium",
+      "phase": "group",
+      "group": "F",
+      "home_team": "TUN",
+      "away_team": "NED",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-25-TUR-USA",
+      "date": "2026-06-25",
+      "kickoff": "02:00 UTC",
+      "venue": "Los Angeles Stadium",
+      "phase": "group",
+      "group": "D",
+      "home_team": "TUR",
+      "away_team": "USA",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
