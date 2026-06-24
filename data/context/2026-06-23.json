@@ -1,0 +1,247 @@
+{
+  "date": "2026-06-23",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-23-POR-UZB",
+      "date": "2026-06-23",
+      "kickoff_utc": "2026-06-23T17:00:00Z",
+      "venue": "Houston Stadium",
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "UZB",
+      "home_name": "Portugal",
+      "away_name": "Uzbekistan",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.75,
+          "away": -0.75
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": -0.2
+        },
+        "long_form": {
+          "home": 0.7,
+          "away": 0.05
+        },
+        "injuries": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": -0.1,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.52,
+        "need_to_win": {
+          "home": 0.82,
+          "away": 0.72
+        },
+        "first_goal_prob": {
+          "home": 0.61,
+          "away": 0.24,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.46,
+        "set_piece_threat_weaker": 0.44,
+        "notes": "Portugal are stronger on talent and ranking, but the opener draw adds pressure while Uzbekistan can defend deep and counter."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-23-ENG-GHA",
+      "date": "2026-06-23",
+      "kickoff_utc": "2026-06-23T20:00:00Z",
+      "venue": "Boston Stadium",
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "GHA",
+      "home_name": "England",
+      "away_name": "Ghana",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.8,
+          "away": -0.8
+        },
+        "short_form": {
+          "home": 0.55,
+          "away": 0.35
+        },
+        "long_form": {
+          "home": 0.7,
+          "away": 0.15
+        },
+        "injuries": {
+          "home": 0.15,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": 0.1
+        },
+        "tactical_similarity": {
+          "home": 0.2,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.66,
+        "draw_value_weaker": 0.78,
+        "need_to_win": {
+          "home": 0.58,
+          "away": 0.5
+        },
+        "first_goal_prob": {
+          "home": 0.58,
+          "away": 0.28,
+          "none": 0.14
+        },
+        "collapse_risk_weaker": 0.32,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.63,
+        "set_piece_threat_weaker": 0.59,
+        "notes": "England are the stronger side, but Ghana already have three points and can make a draw valuable through compact defending and counters."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-23-PAN-CRO",
+      "date": "2026-06-23",
+      "kickoff_utc": "2026-06-23T23:00:00Z",
+      "venue": "Toronto Stadium",
+      "group": "L",
+      "home_team": "PAN",
+      "away_team": "CRO",
+      "home_name": "Panama",
+      "away_name": "Croatia",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.1,
+          "away": 0.2
+        },
+        "long_form": {
+          "home": -0.25,
+          "away": 0.45
+        },
+        "injuries": {
+          "home": -0.35,
+          "away": 0.25
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": 0.1,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.68,
+        "draw_value_weaker": 0.25,
+        "need_to_win": {
+          "home": 0.93,
+          "away": 0.95
+        },
+        "first_goal_prob": {
+          "home": 0.3,
+          "away": 0.52,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.46,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.38,
+        "set_piece_threat_weaker": 0.46,
+        "notes": "Both teams need a result after opening losses, with Croatia favored but Panama likely to lean on structure and set pieces."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-23-COL-COD",
+      "date": "2026-06-23",
+      "kickoff_utc": "2026-06-24T02:00:00Z",
+      "venue": "Guadalajara Stadium",
+      "group": "K",
+      "home_team": "COL",
+      "away_team": "COD",
+      "home_name": "Colombia",
+      "away_name": "Congo DR",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "short_form": {
+          "home": 0.65,
+          "away": 0.3
+        },
+        "long_form": {
+          "home": 0.65,
+          "away": 0.15
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": 0.3,
+          "away": 0.15
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.76,
+        "draw_value_weaker": 0.75,
+        "need_to_win": {
+          "home": 0.55,
+          "away": 0.45
+        },
+        "first_goal_prob": {
+          "home": 0.54,
+          "away": 0.31,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.67,
+        "set_piece_threat_weaker": 0.58,
+        "notes": "Colombia carry the stronger profile and opening win, while Congo DR showed resilience and counter threat in their draw with Portugal."
+      }
+    }
+  ]
+}

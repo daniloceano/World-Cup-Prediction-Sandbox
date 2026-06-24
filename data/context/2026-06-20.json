@@ -1,0 +1,247 @@
+{
+  "date": "2026-06-20",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-20-NED-SWE",
+      "date": "2026-06-20",
+      "kickoff_utc": "2026-06-20T17:00:00Z",
+      "venue": "Houston Stadium",
+      "group": "F",
+      "home_team": "NED",
+      "away_team": "SWE",
+      "home_name": "Netherlands",
+      "away_name": "Sweden",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "short_form": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "long_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "injuries": {
+          "home": -0.25,
+          "away": 0.25
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.2,
+          "away": -0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.68,
+        "draw_value_weaker": 0.58,
+        "need_to_win": {
+          "home": 0.62,
+          "away": 0.4
+        },
+        "first_goal_prob": {
+          "home": 0.43,
+          "away": 0.39,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.28,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.74,
+        "set_piece_threat_weaker": 0.65,
+        "notes": "Netherlands have the higher baseline, but Sweden arrive with stronger opening momentum and direct forward threat."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-20-GER-CIV",
+      "date": "2026-06-20",
+      "kickoff_utc": "2026-06-20T20:00:00Z",
+      "venue": "Toronto Stadium",
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "CIV",
+      "home_name": "Germany",
+      "away_name": "Côte d'Ivoire",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "long_form": {
+          "home": 0.4,
+          "away": -0.4
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.2,
+          "away": -0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.7,
+        "need_to_win": {
+          "home": 0.45,
+          "away": 0.35
+        },
+        "first_goal_prob": {
+          "home": 0.52,
+          "away": 0.31,
+          "none": 0.17
+        },
+        "collapse_risk_weaker": 0.36,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.8,
+        "set_piece_threat_weaker": 0.58,
+        "notes": "Germany are favored after a dominant opener, though Côte d'Ivoire's pace and defensive resilience keep upset pressure real."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-20-ECU-CUW",
+      "date": "2026-06-20",
+      "kickoff_utc": "2026-06-21T00:00:00Z",
+      "venue": "Kansas City Stadium",
+      "group": "E",
+      "home_team": "ECU",
+      "away_team": "CUW",
+      "home_name": "Ecuador",
+      "away_name": "Curaçao",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.7,
+          "away": -0.7
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "long_form": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": -0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.52,
+        "draw_value_weaker": 0.82,
+        "need_to_win": {
+          "home": 0.86,
+          "away": 0.55
+        },
+        "first_goal_prob": {
+          "home": 0.64,
+          "away": 0.2,
+          "none": 0.16
+        },
+        "collapse_risk_weaker": 0.7,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.38,
+        "notes": "Ecuador need a rebound and have the stronger structure, while Curaçao's heavy opening loss raises collapse risk."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-20-TUN-JPN",
+      "date": "2026-06-20",
+      "kickoff_utc": "2026-06-21T04:00:00Z",
+      "venue": "Monterrey Stadium",
+      "group": "F",
+      "home_team": "TUN",
+      "away_team": "JPN",
+      "home_name": "Tunisia",
+      "away_name": "Japan",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "long_form": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "weather_adaptation": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "off_field": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "tactical_similarity": {
+          "home": -0.2,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.66,
+        "draw_value_weaker": 0.77,
+        "need_to_win": {
+          "home": 0.82,
+          "away": 0.6
+        },
+        "first_goal_prob": {
+          "home": 0.27,
+          "away": 0.55,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.6,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.44,
+        "set_piece_threat_weaker": 0.52,
+        "notes": "Japan look more settled after drawing the Netherlands, while Tunisia face urgency and disruption after a heavy opener."
+      }
+    }
+  ]
+}

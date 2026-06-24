@@ -1,20 +1,20 @@
 {
   "results": [
     {
-      "match_id": "wc-2026-06-11-MEX-RSA",
-      "home_goals": 2,
-      "away_goals": 0,
-      "status": "final",
-      "is_demo": false,
-      "notes": "Mexico 2-0 South Africa."
-    },
-    {
       "match_id": "wc-2026-06-11-KOR-CZE",
       "home_goals": 2,
       "away_goals": 1,
       "status": "final",
       "is_demo": false,
       "notes": "South Korea 2-1 Czechia."
+    },
+    {
+      "match_id": "wc-2026-06-11-MEX-RSA",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Mexico 2-0 South Africa."
     },
     {
       "match_id": "wc-2026-06-12-CAN-BIH",
@@ -33,12 +33,12 @@
       "notes": "United States 4-1 Paraguay."
     },
     {
-      "match_id": "wc-2026-06-13-HAI-SCO",
-      "home_goals": 0,
-      "away_goals": 1,
+      "match_id": "wc-2026-06-13-AUS-TUR",
+      "home_goals": 2,
+      "away_goals": 0,
       "status": "final",
       "is_demo": false,
-      "notes": "Haiti 0-1 Scotland."
+      "notes": "Australia 2-0 Türkiye."
     },
     {
       "match_id": "wc-2026-06-13-BRA-MAR",
@@ -49,6 +49,14 @@
       "notes": "Brazil 1-1 Morocco."
     },
     {
+      "match_id": "wc-2026-06-13-HAI-SCO",
+      "home_goals": 0,
+      "away_goals": 1,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Haiti 0-1 Scotland."
+    },
+    {
       "match_id": "wc-2026-06-13-QAT-SUI",
       "home_goals": 1,
       "away_goals": 1,
@@ -57,12 +65,12 @@
       "notes": "Qatar 1-1 Switzerland."
     },
     {
-      "match_id": "wc-2026-06-13-AUS-TUR",
-      "home_goals": 2,
+      "match_id": "wc-2026-06-14-CIV-ECU",
+      "home_goals": 1,
       "away_goals": 0,
       "status": "final",
       "is_demo": false,
-      "notes": "Australia 2-0 Türkiye."
+      "notes": "Côte d'Ivoire 1-0 Ecuador."
     },
     {
       "match_id": "wc-2026-06-14-GER-CUW",
@@ -71,14 +79,6 @@
       "status": "final",
       "is_demo": false,
       "notes": "Germany 7-1 Curaçao."
-    },
-    {
-      "match_id": "wc-2026-06-14-CIV-ECU",
-      "home_goals": 1,
-      "away_goals": 0,
-      "status": "final",
-      "is_demo": false,
-      "notes": "Côte d'Ivoire 1-0 Ecuador."
     },
     {
       "match_id": "wc-2026-06-14-NED-JPN",
@@ -97,14 +97,6 @@
       "notes": "Sweden 5-1 Tunisia."
     },
     {
-      "match_id": "wc-2026-06-15-ESP-CPV",
-      "home_goals": 0,
-      "away_goals": 0,
-      "status": "final",
-      "is_demo": false,
-      "notes": "Spain 0-0 Cape Verde."
-    },
-    {
       "match_id": "wc-2026-06-15-BEL-EGY",
       "home_goals": 1,
       "away_goals": 1,
@@ -113,12 +105,12 @@
       "notes": "Belgium 1-1 Egypt."
     },
     {
-      "match_id": "wc-2026-06-15-KSA-URU",
-      "home_goals": 1,
-      "away_goals": 1,
+      "match_id": "wc-2026-06-15-ESP-CPV",
+      "home_goals": 0,
+      "away_goals": 0,
       "status": "final",
       "is_demo": false,
-      "notes": "Saudi Arabia 1-1 Uruguay."
+      "notes": "Spain 0-0 Cape Verde."
     },
     {
       "match_id": "wc-2026-06-15-IRN-NZL",
@@ -129,20 +121,12 @@
       "notes": "Iran 2-2 New Zealand."
     },
     {
-      "match_id": "wc-2026-06-16-FRA-SEN",
-      "home_goals": 3,
+      "match_id": "wc-2026-06-15-KSA-URU",
+      "home_goals": 1,
       "away_goals": 1,
       "status": "final",
       "is_demo": false,
-      "notes": "France 3-1 Senegal."
-    },
-    {
-      "match_id": "wc-2026-06-16-IRQ-NOR",
-      "home_goals": 1,
-      "away_goals": 4,
-      "status": "final",
-      "is_demo": false,
-      "notes": "Iraq 1-4 Norway."
+      "notes": "Saudi Arabia 1-1 Uruguay."
     },
     {
       "match_id": "wc-2026-06-16-ARG-ALG",
@@ -161,11 +145,20 @@
       "notes": "Austria 3-1 Jordan."
     },
     {
-      "match_id": "wc-2026-06-17-POR-COD",
-      "home_goals": 1,
+      "match_id": "wc-2026-06-16-FRA-SEN",
+      "home_goals": 3,
       "away_goals": 1,
       "status": "final",
-      "notes": ""
+      "is_demo": false,
+      "notes": "France 3-1 Senegal."
+    },
+    {
+      "match_id": "wc-2026-06-16-IRQ-NOR",
+      "home_goals": 1,
+      "away_goals": 4,
+      "status": "final",
+      "is_demo": false,
+      "notes": "Iraq 1-4 Norway."
     },
     {
       "match_id": "wc-2026-06-17-ENG-CRO",
@@ -182,23 +175,16 @@
       "notes": ""
     },
     {
+      "match_id": "wc-2026-06-17-POR-COD",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
       "match_id": "wc-2026-06-17-UZB-COL",
       "home_goals": 1,
       "away_goals": 3,
-      "status": "final",
-      "notes": ""
-    },
-    {
-      "match_id": "wc-2026-06-18-CZE-RSA",
-      "home_goals": 1,
-      "away_goals": 1,
-      "status": "final",
-      "notes": ""
-    },
-    {
-      "match_id": "wc-2026-06-18-SUI-BIH",
-      "home_goals": 4,
-      "away_goals": 1,
       "status": "final",
       "notes": ""
     },
@@ -210,6 +196,13 @@
       "notes": ""
     },
     {
+      "match_id": "wc-2026-06-18-CZE-RSA",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
       "match_id": "wc-2026-06-18-MEX-KOR",
       "home_goals": 1,
       "away_goals": 0,
@@ -217,8 +210,127 @@
       "notes": ""
     },
     {
-      "match_id": "wc-2026-06-23-POR-UZB",
+      "match_id": "wc-2026-06-18-SUI-BIH",
+      "home_goals": 4,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-19-BRA-HAI",
+      "home_goals": 3,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-19-SCO-MAR",
+      "home_goals": 0,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-19-TUR-PAR",
+      "home_goals": 0,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-19-USA-AUS",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-20-ECU-CUW",
+      "home_goals": 0,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-20-GER-CIV",
+      "home_goals": 2,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-20-NED-SWE",
       "home_goals": 5,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-20-TUN-JPN",
+      "home_goals": 0,
+      "away_goals": 4,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-21-BEL-IRN",
+      "home_goals": 0,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-21-ESP-KSA",
+      "home_goals": 4,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-21-NZL-EGY",
+      "home_goals": 1,
+      "away_goals": 3,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-21-URU-CPV",
+      "home_goals": 2,
+      "away_goals": 2,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-22-ARG-AUT",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "notes": "Confirmed final score; group-stage match."
+    },
+    {
+      "match_id": "wc-2026-06-22-FRA-IRQ",
+      "home_goals": 3,
+      "away_goals": 0,
+      "status": "final",
+      "notes": "Confirmed final score; group-stage match with halftime weather delay."
+    },
+    {
+      "match_id": "wc-2026-06-22-JOR-ALG",
+      "home_goals": 1,
+      "away_goals": 2,
+      "status": "final",
+      "notes": "Confirmed final score; after-midnight BRT kickoff belongs to the 2026-06-22 slate."
+    },
+    {
+      "match_id": "wc-2026-06-22-NOR-SEN",
+      "home_goals": 3,
+      "away_goals": 2,
+      "status": "final",
+      "notes": "Confirmed final score; group-stage match."
+    },
+    {
+      "match_id": "wc-2026-06-23-COL-COD",
+      "home_goals": 1,
       "away_goals": 0,
       "status": "final",
       "notes": "Final score confirmed from published match results."
@@ -238,8 +350,8 @@
       "notes": "Final score confirmed from published match results."
     },
     {
-      "match_id": "wc-2026-06-23-COL-COD",
-      "home_goals": 1,
+      "match_id": "wc-2026-06-23-POR-UZB",
+      "home_goals": 5,
       "away_goals": 0,
       "status": "final",
       "notes": "Final score confirmed from published match results."

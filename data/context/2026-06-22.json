@@ -1,0 +1,247 @@
+{
+  "date": "2026-06-22",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-22-ARG-AUT",
+      "date": "2026-06-22",
+      "kickoff_utc": "2026-06-22T17:00:00Z",
+      "venue": "Dallas Stadium",
+      "group": "J",
+      "home_team": "ARG",
+      "away_team": "AUT",
+      "home_name": "Argentina",
+      "away_name": "Austria",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.7,
+          "away": -0.3
+        },
+        "short_form": {
+          "home": 0.55,
+          "away": 0.15
+        },
+        "long_form": {
+          "home": 0.65,
+          "away": 0.15
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.35,
+          "away": 0.1
+        },
+        "tactical_similarity": {
+          "home": 0.35,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.75,
+        "need_to_win": {
+          "home": 0.55,
+          "away": 0.35
+        },
+        "first_goal_prob": {
+          "home": 0.55,
+          "away": 0.29,
+          "none": 0.16
+        },
+        "collapse_risk_weaker": 0.34,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.5,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Argentina have the ranking, pedigree and opening-win momentum, but Austria's pressing makes the underdog threat real."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-22-FRA-IRQ",
+      "date": "2026-06-22",
+      "kickoff_utc": "2026-06-22T21:00:00Z",
+      "venue": "Philadelphia Stadium",
+      "group": "I",
+      "home_team": "FRA",
+      "away_team": "IRQ",
+      "home_name": "France",
+      "away_name": "Iraq",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.75,
+          "away": -0.75
+        },
+        "short_form": {
+          "home": 0.5,
+          "away": -0.45
+        },
+        "long_form": {
+          "home": 0.65,
+          "away": -0.35
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.05,
+          "away": 0.15
+        },
+        "off_field": {
+          "home": 0.25,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": 0.45,
+          "away": -0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.85,
+        "need_to_win": {
+          "home": 0.65,
+          "away": 0.75
+        },
+        "first_goal_prob": {
+          "home": 0.66,
+          "away": 0.19,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.58,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.36,
+        "set_piece_threat_weaker": 0.48,
+        "notes": "France are clear favorites after beating Senegal, while Iraq likely need compact defending and set pieces to stay alive."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-22-NOR-SEN",
+      "date": "2026-06-22",
+      "kickoff_utc": "2026-06-23T00:00:00Z",
+      "venue": "New York New Jersey Stadium",
+      "group": "I",
+      "home_team": "NOR",
+      "away_team": "SEN",
+      "home_name": "Norway",
+      "away_name": "Senegal",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "short_form": {
+          "home": 0.4,
+          "away": -0.2
+        },
+        "long_form": {
+          "home": 0.2,
+          "away": 0.1
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": 0.15,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.45,
+        "draw_value_weaker": 0.55,
+        "need_to_win": {
+          "home": 0.6,
+          "away": 0.8
+        },
+        "first_goal_prob": {
+          "home": 0.43,
+          "away": 0.37,
+          "none": 0.2
+        },
+        "collapse_risk_weaker": 0.32,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.72,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Norway carry stronger immediate momentum through Haaland, but Senegal's ranking and transition speed keep this close."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-22-JOR-ALG",
+      "date": "2026-06-22",
+      "kickoff_utc": "2026-06-23T03:00:00Z",
+      "venue": "San Francisco Bay Area Stadium",
+      "group": "J",
+      "home_team": "JOR",
+      "away_team": "ALG",
+      "home_name": "Jordan",
+      "away_name": "Algeria",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.65,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "long_form": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.1,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.58,
+        "draw_value_weaker": 0.35,
+        "need_to_win": {
+          "home": 0.9,
+          "away": 0.85
+        },
+        "first_goal_prob": {
+          "home": 0.32,
+          "away": 0.45,
+          "none": 0.23
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.52,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "Algeria rate higher and have more tournament experience, but Jordan showed enough attacking threat to make this tense."
+      }
+    }
+  ]
+}

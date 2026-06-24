@@ -3,11 +3,13 @@
   "teams": [
     {
       "code": "ALG",
-      "name": "Algeria"
+      "name": "Algeria",
+      "is_demo": false
     },
     {
       "code": "ARG",
-      "name": "Argentina"
+      "name": "Argentina",
+      "is_demo": false
     },
     {
       "code": "AUS",
@@ -16,11 +18,13 @@
     },
     {
       "code": "AUT",
-      "name": "Austria"
+      "name": "Austria",
+      "is_demo": false
     },
     {
       "code": "BEL",
-      "name": "Belgium"
+      "name": "Belgium",
+      "is_demo": false
     },
     {
       "code": "BIH",
@@ -54,7 +58,8 @@
     },
     {
       "code": "CPV",
-      "name": "Cape Verde"
+      "name": "Cabo Verde",
+      "is_demo": false
     },
     {
       "code": "CRO",
@@ -78,7 +83,8 @@
     },
     {
       "code": "EGY",
-      "name": "Egypt"
+      "name": "Egypt",
+      "is_demo": false
     },
     {
       "code": "ENG",
@@ -87,11 +93,13 @@
     },
     {
       "code": "ESP",
-      "name": "Spain"
+      "name": "Spain",
+      "is_demo": false
     },
     {
       "code": "FRA",
-      "name": "France"
+      "name": "France",
+      "is_demo": false
     },
     {
       "code": "GER",
@@ -110,15 +118,18 @@
     },
     {
       "code": "IRN",
-      "name": "Iran"
+      "name": "IR Iran",
+      "is_demo": false
     },
     {
       "code": "IRQ",
-      "name": "Iraq"
+      "name": "Iraq",
+      "is_demo": false
     },
     {
       "code": "JOR",
-      "name": "Jordan"
+      "name": "Jordan",
+      "is_demo": false
     },
     {
       "code": "JPN",
@@ -132,7 +143,8 @@
     },
     {
       "code": "KSA",
-      "name": "Saudi Arabia"
+      "name": "Saudi Arabia",
+      "is_demo": false
     },
     {
       "code": "MAR",
@@ -151,11 +163,13 @@
     },
     {
       "code": "NOR",
-      "name": "Norway"
+      "name": "Norway",
+      "is_demo": false
     },
     {
       "code": "NZL",
-      "name": "New Zealand"
+      "name": "New Zealand",
+      "is_demo": false
     },
     {
       "code": "PAN",
@@ -189,7 +203,8 @@
     },
     {
       "code": "SEN",
-      "name": "Senegal"
+      "name": "Senegal",
+      "is_demo": false
     },
     {
       "code": "SUI",
@@ -213,7 +228,8 @@
     },
     {
       "code": "URU",
-      "name": "Uruguay"
+      "name": "Uruguay",
+      "is_demo": false
     },
     {
       "code": "USA",

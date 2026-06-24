@@ -1,0 +1,247 @@
+{
+  "date": "2026-06-21",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-21-ESP-KSA",
+      "date": "2026-06-21",
+      "kickoff_utc": "2026-06-21T16:00:00Z",
+      "venue": "Atlanta Stadium",
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "KSA",
+      "home_name": "Spain",
+      "away_name": "Saudi Arabia",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.78,
+          "away": -0.78
+        },
+        "short_form": {
+          "home": 0.22,
+          "away": -0.22
+        },
+        "long_form": {
+          "home": 0.66,
+          "away": -0.66
+        },
+        "injuries": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": 0.24,
+          "away": -0.24
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.72,
+        "draw_value_weaker": 0.78,
+        "need_to_win": {
+          "home": 0.75,
+          "away": 0.55
+        },
+        "first_goal_prob": {
+          "home": 0.62,
+          "away": 0.22,
+          "none": 0.16
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.38,
+        "set_piece_threat_weaker": 0.45,
+        "notes": "Spain are clear favorites, but Saudi Arabia can make this awkward with a compact low block."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-21-BEL-IRN",
+      "date": "2026-06-21",
+      "kickoff_utc": "2026-06-21T19:00:00Z",
+      "venue": "Los Angeles Stadium",
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "IRN",
+      "home_name": "Belgium",
+      "away_name": "IR Iran",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.42,
+          "away": -0.42
+        },
+        "short_form": {
+          "home": 0.12,
+          "away": -0.12
+        },
+        "long_form": {
+          "home": 0.34,
+          "away": -0.34
+        },
+        "injuries": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "weather_adaptation": {
+          "home": 0.02,
+          "away": -0.02
+        },
+        "off_field": {
+          "home": 0.4,
+          "away": -0.4
+        },
+        "tactical_similarity": {
+          "home": 0.16,
+          "away": -0.16
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.68,
+        "draw_value_weaker": 0.7,
+        "need_to_win": {
+          "home": 0.66,
+          "away": 0.56
+        },
+        "first_goal_prob": {
+          "home": 0.54,
+          "away": 0.3,
+          "none": 0.16
+        },
+        "collapse_risk_weaker": 0.38,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.58,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Belgium have the stronger baseline, while Iran's counterattack is dangerous but their preparation context is unfavorable."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-21-URU-CPV",
+      "date": "2026-06-21",
+      "kickoff_utc": "2026-06-21T22:00:00Z",
+      "venue": "Miami Stadium",
+      "group": "H",
+      "home_team": "URU",
+      "away_team": "CPV",
+      "home_name": "Uruguay",
+      "away_name": "Cabo Verde",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.65,
+          "away": -0.65
+        },
+        "short_form": {
+          "home": 0.06,
+          "away": -0.06
+        },
+        "long_form": {
+          "home": 0.56,
+          "away": -0.56
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.03,
+          "away": 0.03
+        },
+        "off_field": {
+          "home": 0.02,
+          "away": -0.02
+        },
+        "tactical_similarity": {
+          "home": 0.12,
+          "away": -0.12
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.8,
+        "draw_value_weaker": 0.82,
+        "need_to_win": {
+          "home": 0.68,
+          "away": 0.5
+        },
+        "first_goal_prob": {
+          "home": 0.58,
+          "away": 0.24,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "Uruguay carry more quality, but Cabo Verde's opening draw showed strong defensive resilience."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-21-NZL-EGY",
+      "date": "2026-06-21",
+      "kickoff_utc": "2026-06-22T01:00:00Z",
+      "venue": "BC Place Vancouver",
+      "group": "G",
+      "home_team": "NZL",
+      "away_team": "EGY",
+      "home_name": "New Zealand",
+      "away_name": "Egypt",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.26,
+          "away": 0.26
+        },
+        "short_form": {
+          "home": -0.12,
+          "away": 0.12
+        },
+        "long_form": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "off_field": {
+          "home": 0.02,
+          "away": -0.02
+        },
+        "tactical_similarity": {
+          "home": -0.18,
+          "away": 0.18
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.58,
+        "draw_value_weaker": 0.6,
+        "need_to_win": {
+          "home": 0.65,
+          "away": 0.6
+        },
+        "first_goal_prob": {
+          "home": 0.31,
+          "away": 0.46,
+          "none": 0.23
+        },
+        "collapse_risk_weaker": 0.36,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.52,
+        "set_piece_threat_weaker": 0.62,
+        "notes": "Egypt are the stronger side, but New Zealand's aerial threat and Vancouver conditions keep the matchup balanced."
+      }
+    }
+  ]
+}
