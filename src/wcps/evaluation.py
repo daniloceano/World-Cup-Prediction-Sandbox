@@ -174,6 +174,50 @@ def result_for_match(
     )
 
 
+def recent_results_for_team(
+    code: str,
+    before_date: str | None = None,
+    limit: int = 5,
+    actuals: dict[str, dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
+    """Return a team's most recent finished results (newest first).
+
+    Each row is from ``code``'s perspective: ``{date, opponent, gf, ga,
+    outcome ('W'/'D'/'L'), venue ('H'/'A')}``. If ``before_date`` is given, only
+    results strictly before it are returned (the team's form *going into* a
+    match). Works across differing ``match_id`` conventions via the same parser
+    used by the evaluation join.
+    """
+    code = code.upper()
+    actuals = actuals if actuals is not None else data_io.load_actual_results()
+    cutoff = _parse_date(before_date) if before_date else None
+
+    rows: list[dict[str, Any]] = []
+    for mid, r in actuals.items():
+        codes = _result_team_codes(mid, r)
+        if not codes or code not in codes:
+            continue
+        dt = _parse_date(r.get("date")) or _parse_date(mid)
+        if cutoff and dt and dt >= cutoff:
+            continue
+        home, away = codes
+        if code == home:
+            gf, ga, opp, venue = r["home_goals"], r["away_goals"], away, "H"
+        else:
+            gf, ga, opp, venue = r["away_goals"], r["home_goals"], home, "A"
+        outcome = "W" if gf > ga else "D" if gf == ga else "L"
+        rows.append({
+            "date": dt.isoformat() if dt else "",
+            "_sort": dt or _date.min,
+            "opponent": opp, "gf": gf, "ga": ga,
+            "outcome": outcome, "venue": venue,
+        })
+    rows.sort(key=lambda x: x["_sort"], reverse=True)
+    for x in rows:
+        x.pop("_sort")
+    return rows[:limit]
+
+
 def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     """Join every stored prediction with its actual result (if available).
 

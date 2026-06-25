@@ -208,6 +208,36 @@ def match_card(
             st.switch_page("pages/1_Match_Detail.py")
 
 
+def recent_form_block(
+    home: str,
+    away: str,
+    teams: dict[str, Any],
+    use_flags: bool,
+    before_date: str | None = None,
+    limit: int = 5,
+) -> None:
+    """Render both teams' last results (newest first) side by side."""
+    badges = {"W": "🟢", "D": "🟡", "L": "🔴"}
+    cols = st.columns(2)
+    for col, code in zip(cols, (home, away)):
+        with col:
+            st.markdown(f"**{team_label(code, teams, use_flags)}** — recent results")
+            rows = evaluation.recent_results_for_team(
+                code, before_date=before_date, limit=limit
+            )
+            if not rows:
+                st.caption("No recorded results yet.")
+                continue
+            # compact form summary (W/D/L badges, newest → oldest)
+            st.markdown(" ".join(badges[r["outcome"]] for r in rows))
+            for r in rows:
+                opp = team_label(r["opponent"], teams, use_flags)
+                place = "vs" if r["venue"] == "H" else "@"
+                st.caption(
+                    f"{badges[r['outcome']]} **{r['gf']}–{r['ga']}** {place} {opp}  ·  {r['date']}"
+                )
+
+
 def result_only_card(
     match: dict[str, Any], teams: dict[str, Any], use_flags: bool
 ) -> None:

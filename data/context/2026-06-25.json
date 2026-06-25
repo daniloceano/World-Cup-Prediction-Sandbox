@@ -15,28 +15,28 @@
       "away_name": "Côte d'Ivoire",
       "v1_scores": {
         "fifa_ranking": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "short_form": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "long_form": {
           "home": -0.45,
           "away": 0.45
         },
-        "short_form": {
-          "home": -0.15,
-          "away": 0.25
-        },
-        "long_form": {
-          "home": -0.35,
-          "away": 0.35
-        },
         "injuries": {
-          "home": 0.0,
-          "away": 0.0
+          "home": 0.05,
+          "away": -0.05
         },
         "weather_adaptation": {
-          "home": -0.05,
-          "away": 0.1
+          "home": 0.05,
+          "away": 0.05
         },
         "off_field": {
           "home": 0.05,
-          "away": 0.15
+          "away": -0.05
         },
         "tactical_similarity": {
           "home": -0.25,
@@ -45,22 +45,22 @@
       },
       "v2_strategic": {
         "favorite": "away",
-        "low_block_capacity": 0.75,
-        "draw_value_weaker": 0.25,
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.35,
         "need_to_win": {
-          "home": 0.9,
-          "away": 0.75
+          "home": 0.95,
+          "away": 0.55
         },
         "first_goal_prob": {
-          "home": 0.23,
-          "away": 0.59,
-          "none": 0.18
+          "home": 0.28,
+          "away": 0.62,
+          "none": 0.1
         },
-        "collapse_risk_weaker": 0.4,
+        "collapse_risk_weaker": 0.45,
         "is_group_debut": false,
-        "transition_threat_weaker": 0.42,
-        "set_piece_threat_weaker": 0.3,
-        "notes": "Côte d'Ivoire are stronger, but Curaçao's draw with Ecuador suggests they can defend for long stretches."
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.35,
+        "notes": "Côte d'Ivoire carry the stronger profile, while Curaçao likely need an upset rather than a draw."
       }
     },
     {
@@ -75,52 +75,52 @@
       "away_name": "Germany",
       "v1_scores": {
         "fifa_ranking": {
-          "home": -0.35,
-          "away": 0.35
+          "home": -0.5,
+          "away": 0.5
         },
         "short_form": {
-          "home": -0.45,
-          "away": 0.45
+          "home": -0.25,
+          "away": 0.6
         },
         "long_form": {
-          "home": 0.05,
-          "away": 0.35
+          "home": 0.1,
+          "away": 0.45
         },
         "injuries": {
-          "home": 0.1,
-          "away": -0.15
+          "home": 0.0,
+          "away": 0.0
         },
         "weather_adaptation": {
-          "home": 0.05,
-          "away": -0.05
-        },
-        "off_field": {
-          "home": 0.2,
+          "home": 0.1,
           "away": -0.1
         },
+        "off_field": {
+          "home": -0.15,
+          "away": 0.15
+        },
         "tactical_similarity": {
-          "home": -0.3,
-          "away": 0.3
+          "home": -0.25,
+          "away": 0.25
         }
       },
       "v2_strategic": {
         "favorite": "away",
-        "low_block_capacity": 0.65,
-        "draw_value_weaker": 0.05,
+        "low_block_capacity": 0.72,
+        "draw_value_weaker": 0.45,
         "need_to_win": {
-          "home": 1.0,
-          "away": 0.25
+          "home": 0.85,
+          "away": 0.1
         },
         "first_goal_prob": {
-          "home": 0.28,
-          "away": 0.58,
-          "none": 0.14
+          "home": 0.3,
+          "away": 0.6,
+          "none": 0.1
         },
-        "collapse_risk_weaker": 0.35,
+        "collapse_risk_weaker": 0.3,
         "is_group_debut": false,
-        "transition_threat_weaker": 0.45,
-        "set_piece_threat_weaker": 0.38,
-        "notes": "Germany are already qualified but still carry the stronger form and squad depth against an Ecuador side that needs a win."
+        "transition_threat_weaker": 0.55,
+        "set_piece_threat_weaker": 0.45,
+        "notes": "Germany are the stronger side but Ecuador's compactness and urgency keep the upset path plausible."
       }
     },
     {
@@ -135,15 +135,15 @@
       "away_name": "Sweden",
       "v1_scores": {
         "fifa_ranking": {
-          "home": 0.25,
-          "away": -0.25
+          "home": 0.2,
+          "away": -0.2
         },
         "short_form": {
-          "home": 0.3,
-          "away": -0.1
+          "home": 0.45,
+          "away": -0.05
         },
         "long_form": {
-          "home": 0.25,
+          "home": 0.35,
           "away": -0.1
         },
         "injuries": {
@@ -151,36 +151,36 @@
           "away": 0.0
         },
         "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
           "home": 0.0,
           "away": 0.0
         },
-        "off_field": {
-          "home": 0.1,
-          "away": 0.05
-        },
         "tactical_similarity": {
-          "home": 0.15,
-          "away": 0.05
+          "home": 0.1,
+          "away": -0.1
         }
       },
       "v2_strategic": {
         "favorite": "home",
-        "low_block_capacity": 0.45,
-        "draw_value_weaker": 0.7,
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.65,
         "need_to_win": {
-          "home": 0.45,
-          "away": 0.65
+          "home": 0.35,
+          "away": 0.85
         },
         "first_goal_prob": {
-          "home": 0.42,
-          "away": 0.39,
-          "none": 0.19
+          "home": 0.45,
+          "away": 0.43,
+          "none": 0.12
         },
-        "collapse_risk_weaker": 0.48,
+        "collapse_risk_weaker": 0.35,
         "is_group_debut": false,
-        "transition_threat_weaker": 0.7,
-        "set_piece_threat_weaker": 0.62,
-        "notes": "Japan have looked more balanced, while Sweden remain dangerous through direct attacks and elite forwards."
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.7,
+        "notes": "Japan's form edge is real, but Sweden's set pieces and draw value make this close."
       }
     },
     {
@@ -199,48 +199,48 @@
           "away": 0.55
         },
         "short_form": {
-          "home": -0.7,
-          "away": 0.7
+          "home": -0.6,
+          "away": 0.5
         },
         "long_form": {
-          "home": -0.45,
-          "away": 0.45
+          "home": -0.15,
+          "away": 0.5
         },
         "injuries": {
-          "home": 0.05,
-          "away": -0.15
+          "home": 0.0,
+          "away": 0.0
         },
         "weather_adaptation": {
-          "home": 0.1,
-          "away": -0.05
+          "home": 0.2,
+          "away": -0.2
         },
         "off_field": {
-          "home": -0.25,
-          "away": 0.25
+          "home": -0.15,
+          "away": 0.15
         },
         "tactical_similarity": {
-          "home": -0.55,
-          "away": 0.55
+          "home": -0.35,
+          "away": 0.35
         }
       },
       "v2_strategic": {
         "favorite": "away",
-        "low_block_capacity": 0.35,
-        "draw_value_weaker": 0.05,
+        "low_block_capacity": 0.5,
+        "draw_value_weaker": 0.1,
         "need_to_win": {
-          "home": 0.15,
-          "away": 0.7
+          "home": 0.95,
+          "away": 0.35
         },
         "first_goal_prob": {
-          "home": 0.18,
-          "away": 0.7,
-          "none": 0.12
+          "home": 0.25,
+          "away": 0.65,
+          "none": 0.1
         },
-        "collapse_risk_weaker": 0.78,
+        "collapse_risk_weaker": 0.65,
         "is_group_debut": false,
-        "transition_threat_weaker": 0.25,
-        "set_piece_threat_weaker": 0.35,
-        "notes": "Netherlands have a clear quality and momentum edge against an eliminated Tunisia side with major defensive issues."
+        "transition_threat_weaker": 0.4,
+        "set_piece_threat_weaker": 0.45,
+        "notes": "Tunisia need a major turnaround, while the Netherlands have the talent and group-position incentive."
       }
     },
     {
@@ -255,52 +255,52 @@
       "away_name": "United States",
       "v1_scores": {
         "fifa_ranking": {
-          "home": -0.15,
-          "away": 0.15
+          "home": -0.25,
+          "away": 0.25
         },
         "short_form": {
           "home": -0.5,
-          "away": 0.5
+          "away": 0.65
         },
         "long_form": {
-          "home": -0.2,
-          "away": 0.25
+          "home": 0.05,
+          "away": 0.1
         },
         "injuries": {
           "home": 0.1,
-          "away": -0.15
+          "away": -0.1
         },
         "weather_adaptation": {
-          "home": -0.1,
-          "away": 0.35
+          "home": 0.0,
+          "away": 0.0
         },
         "off_field": {
-          "home": 0.05,
-          "away": -0.05
+          "home": -0.4,
+          "away": 0.4
         },
         "tactical_similarity": {
           "home": -0.2,
-          "away": 0.25
+          "away": 0.2
         }
       },
       "v2_strategic": {
         "favorite": "away",
-        "low_block_capacity": 0.5,
-        "draw_value_weaker": 0.15,
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.1,
         "need_to_win": {
-          "home": 0.2,
-          "away": 0.3
+          "home": 0.35,
+          "away": 0.25
         },
         "first_goal_prob": {
-          "home": 0.33,
-          "away": 0.5,
-          "none": 0.17
+          "home": 0.3,
+          "away": 0.6,
+          "none": 0.1
         },
-        "collapse_risk_weaker": 0.42,
+        "collapse_risk_weaker": 0.45,
         "is_group_debut": false,
         "transition_threat_weaker": 0.55,
-        "set_piece_threat_weaker": 0.4,
-        "notes": "USA have already topped the group and may rotate, but Türkiye enter eliminated and still searching for attacking rhythm."
+        "set_piece_threat_weaker": 0.55,
+        "notes": "The USA have home-country momentum and group control, while Türkiye's motivation is more uncertain."
       }
     },
     {
@@ -315,20 +315,20 @@
       "away_name": "Australia",
       "v1_scores": {
         "fifa_ranking": {
-          "home": -0.1,
-          "away": 0.1
+          "home": -0.15,
+          "away": 0.15
         },
         "short_form": {
-          "home": 0.0,
-          "away": 0.05
+          "home": -0.05,
+          "away": 0.1
         },
         "long_form": {
-          "home": 0.1,
-          "away": -0.1
+          "home": 0.05,
+          "away": 0.0
         },
         "injuries": {
-          "home": -0.25,
-          "away": 0.1
+          "home": -0.2,
+          "away": 0.2
         },
         "weather_adaptation": {
           "home": 0.0,
@@ -336,31 +336,31 @@
         },
         "off_field": {
           "home": -0.1,
-          "away": 0.15
+          "away": 0.1
         },
         "tactical_similarity": {
-          "home": 0.05,
-          "away": 0.05
+          "home": -0.15,
+          "away": 0.15
         }
       },
       "v2_strategic": {
         "favorite": "away",
-        "low_block_capacity": 0.62,
-        "draw_value_weaker": 0.05,
+        "low_block_capacity": 0.68,
+        "draw_value_weaker": 0.7,
         "need_to_win": {
-          "home": 0.95,
-          "away": 0.45
+          "home": 0.75,
+          "away": 0.4
         },
         "first_goal_prob": {
           "home": 0.37,
-          "away": 0.4,
-          "none": 0.23
+          "away": 0.43,
+          "none": 0.2
         },
         "collapse_risk_weaker": 0.3,
         "is_group_debut": false,
-        "transition_threat_weaker": 0.45,
+        "transition_threat_weaker": 0.5,
         "set_piece_threat_weaker": 0.55,
-        "notes": "Australia can manage the table situation better, while Paraguay likely need to force the game without their ideal setup."
+        "notes": "Australia's defensive structure and draw pathway give them a slight edge over a Paraguay side needing more."
       }
     }
   ]

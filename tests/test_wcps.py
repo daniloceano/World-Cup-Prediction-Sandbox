@@ -281,6 +281,25 @@ def test_schedule_records_backward_compatible_with_minimal_context():
     assert teams == [] and matches == []
 
 
+def test_recent_results_for_team():
+    from wcps import evaluation as ev
+
+    actuals = {
+        "wc-2026-06-13-BRA-MAR": {"home_goals": 1, "away_goals": 1},
+        "wc-2026-06-19-BRA-HAI": {"home_goals": 3, "away_goals": 0},
+        "wc-2026-06-24-SCO-BRA": {"home_goals": 0, "away_goals": 3},  # BRA away win
+    }
+    rows = ev.recent_results_for_team("BRA", actuals=actuals)
+    # newest first, from BRA's perspective
+    assert [r["date"] for r in rows] == ["2026-06-24", "2026-06-19", "2026-06-13"]
+    assert rows[0] == {"date": "2026-06-24", "opponent": "SCO", "gf": 3, "ga": 0,
+                       "outcome": "W", "venue": "A"}
+    assert rows[2]["outcome"] == "D"
+    # before_date filters to form going into a match
+    before = ev.recent_results_for_team("BRA", before_date="2026-06-19", actuals=actuals)
+    assert [r["date"] for r in before] == ["2026-06-13"]
+
+
 # --- evaluation -------------------------------------------------------------
 def test_evaluation_metrics():
     actual = {"home_goals": 1, "away_goals": 2}

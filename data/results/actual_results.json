@@ -355,6 +355,48 @@
       "away_goals": 0,
       "status": "final",
       "notes": "Final score confirmed from published match results."
+    },
+    {
+      "match_id": "wc-2026-06-24-SUI-CAN",
+      "home_goals": 2,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-24-SCO-BRA",
+      "home_goals": 0,
+      "away_goals": 3,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-24-MAR-HAI",
+      "home_goals": 4,
+      "away_goals": 2,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-24-BIH-QAT",
+      "home_goals": 3,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-24-RSA-KOR",
+      "home_goals": 1,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-24-CZE-MEX",
+      "home_goals": 0,
+      "away_goals": 3,
+      "status": "final",
+      "notes": ""
     }
   ]
 }

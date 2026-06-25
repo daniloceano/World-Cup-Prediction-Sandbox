@@ -179,6 +179,11 @@ if actual:
     st.markdown("**Historical comparison**")
     st.dataframe(pd.DataFrame(eval_rows).set_index("source"), use_container_width=True)
 
+# --- recent form (last results of each team) --------------------------------
+st.subheader("Recent form")
+st.caption("Last results of each team going into this match (newest first).")
+ui.recent_form_block(home, away, teams, cfg["display"]["use_flags"], before_date=date)
+
 # --- ensemble headline ------------------------------------------------------
 st.subheader("Ensemble summary")
 c = st.columns(4)
