@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-28",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-28-RSA-CAN",
+      "date": "2026-06-28",
+      "kickoff_utc": "2026-06-28T19:00:00Z",
+      "venue": "Los Angeles Stadium",
+      "group": "Round of 32",
+      "home_team": "RSA",
+      "away_team": "CAN",
+      "home_name": "South Africa",
+      "away_name": "Canada",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "short_form": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "long_form": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": -0.15,
+          "away": 0.15
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.68,
+        "draw_value_weaker": 0.65,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.35,
+          "away": 0.52,
+          "none": 0.13
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.5,
+        "set_piece_threat_weaker": 0.45,
+        "notes": "Canada rate as the slightly stronger side, but South Africa's compact defensive style and recent momentum make this a relatively balanced knockout match."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

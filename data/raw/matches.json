@@ -784,6 +784,18 @@
       "away_team": "ENG",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-28-RSA-CAN",
+      "date": "2026-06-28",
+      "kickoff": "19:00 UTC",
+      "venue": "Los Angeles Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "RSA",
+      "away_team": "CAN",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
