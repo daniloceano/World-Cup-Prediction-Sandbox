@@ -273,6 +273,30 @@ def test_schedule_records_from_context():
     assert {t["code"] for t in teams} == {"BRA", "CHI"}
 
 
+def test_split_context_by_date():
+    ctx = {
+        "round": "Matchday 2",
+        "matches": [
+            {"match_id": "a", "date": "2026-06-20"},
+            {"match_id": "b", "date": "2026-06-20"},
+            {"match_id": "c", "date": "2026-06-21"},
+            {"match_id": "d"},  # no date -> uses default
+        ],
+    }
+    groups = data_io.split_context_by_date(ctx, default_date="2026-06-19")
+    assert set(groups) == {"2026-06-19", "2026-06-20", "2026-06-21"}
+    assert [m["match_id"] for m in groups["2026-06-20"]] == ["a", "b"]
+    assert [m["match_id"] for m in groups["2026-06-19"]] == ["d"]
+
+
+def test_build_day_pdf_smoke():
+    from wcps import report
+
+    pdf = report.build_day_pdf(data_io.available_dates()[-1])
+    assert isinstance(pdf, (bytes, bytearray))
+    assert bytes(pdf[:5]) == b"%PDF-"
+
+
 def test_schedule_records_backward_compatible_with_minimal_context():
     # Old minimal context (no metadata) registers nothing, does not crash.
     teams, matches = data_io.schedule_records_from_context(

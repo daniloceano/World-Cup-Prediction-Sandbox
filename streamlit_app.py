@@ -77,7 +77,25 @@ predictions = payload.get("predictions", {})
 has_demo = any(m.get("is_demo") for m in matches)
 ui.demo_banner(display.get("show_demo_banner", True), has_demo)
 
-st.subheader(f"{len(matches)} match(es) on {selected_date}")
+head_l, head_r = st.columns([3, 1])
+head_l.subheader(f"{len(matches)} match(es) on {selected_date}")
+if predictions:
+    from wcps import report
+
+    @st.cache_data(show_spinner=False)
+    def _day_pdf(date: str, stamp: str) -> bytes:
+        return report.build_day_pdf(date)
+
+    with head_r:
+        st.write("")
+        st.download_button(
+            "📄 Export PDF",
+            data=_day_pdf(selected_date, payload.get("generated_at", "")),
+            file_name=f"wcps_predictions_{selected_date}.pdf",
+            mime="application/pdf",
+            use_container_width=True,
+            help="Detailed predictions for all matches of this day.",
+        )
 
 # --- match cards (responsive grid) -----------------------------------------
 cols_per_row = 2

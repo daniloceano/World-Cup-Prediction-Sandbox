@@ -1,0 +1,94 @@
+You are assisting a RECREATIONAL football match-simulation hobby project (no
+betting, no gambling, no odds). WITHOUT asking me for the date, do this:
+
+1. Determine the CURRENT ROUND of the FIFA World Cup 2026 yourself (e.g. group-
+   stage matchday 1/2/3, round of 32/16, quarter-finals, etc.), using today's
+   real date. A "round" spans several calendar days. If matches of the current
+   round have already started, include the WHOLE round (already played + still
+   to play); the simulator can compare predictions with real results later.
+   If you are between rounds, use the NEXT upcoming round.
+2. Define match days as windows in the America/Sao_Paulo (UTC-3) timezone running
+   from 06:00 to 06:00 the next day, so an after-midnight ("madrugada") kickoff
+   belongs to the day the window STARTED (its MATCH-DAY / slate date).
+3. List EVERY match of that round. For EACH one, assess pre-match CONTEXT as
+   scores I will feed into a Monte Carlo simulator, and return STRICT JSON ONLY
+   (no prose, no markdown fences). If you can browse, use the official schedule;
+   otherwise use best knowledge and note any uncertainty.
+
+match_id format: "wc-YYYY-MM-DD-<HOME>-<AWAY>", where HOME/AWAY are the UPPERCASE
+3-letter FIFA codes (e.g. wc-2026-06-21-ESP-KSA). YYYY-MM-DD is the MATCH-DAY
+(slate) date = the window-START date (a 01:00 kickoff uses the previous calendar
+day). Use this same slate date in each match's "date" field too.
+"home" = team listed first in the official FIFA schedule.
+
+For each match provide:
+
+A) Match metadata: match_id, date (the MATCH-DAY/slate date), kickoff_utc
+   (ISO-8601, e.g. "2026-06-21T19:00:00Z"), venue, group, home_team / away_team
+   = the 3-letter FIFA codes, and home_name / away_name = full names.
+
+B) v1_scores — seven criteria, each with "home" and "away" in [-1.0, 1.0],
+   where +1.0 = strong advantage to that team, 0.0 = neutral:
+   fifa_ranking, short_form (last ~5), long_form (last ~15), injuries,
+   weather_adaptation, off_field, tactical_similarity.
+
+C) v2_strategic:
+   - favorite: "home" | "away"
+   - low_block_capacity: 0..1
+   - draw_value_weaker: 0..1
+   - need_to_win: {home: 0..1, away: 0..1}
+   - first_goal_prob: {home: p, away: p, none: p}   (should sum to ~1)
+   - collapse_risk_weaker: 0..1
+   - is_group_debut: true | false
+   - transition_threat_weaker: 0..1
+   - set_piece_threat_weaker: 0..1
+   - notes: one short sentence of justification
+
+OUTPUT EXACTLY this JSON shape. "matches" holds EVERY match of the round, and may
+span several dates (each match carries its own slate "date"):
+{
+  "round": "<e.g. Group stage - Matchday 2>",
+  "date_range": {"start": "<YYYY-MM-DD>", "end": "<YYYY-MM-DD>"},
+  "generated_by": "ChatGPT round context prompt v1",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-21-ESP-KSA",
+      "date": "2026-06-21",
+      "kickoff_utc": "2026-06-21T19:00:00Z",
+      "venue": "Atlanta",
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "KSA",
+      "home_name": "Spain",
+      "away_name": "Saudi Arabia",
+      "v1_scores": {
+        "fifa_ranking":        {"home": 0.0, "away": 0.0},
+        "short_form":          {"home": 0.0, "away": 0.0},
+        "long_form":           {"home": 0.0, "away": 0.0},
+        "injuries":            {"home": 0.0, "away": 0.0},
+        "weather_adaptation":  {"home": 0.0, "away": 0.0},
+        "off_field":           {"home": 0.0, "away": 0.0},
+        "tactical_similarity": {"home": 0.0, "away": 0.0}
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.0,
+        "draw_value_weaker": 0.0,
+        "need_to_win": {"home": 0.0, "away": 0.0},
+        "first_goal_prob": {"home": 0.0, "away": 0.0, "none": 0.0},
+        "collapse_risk_weaker": 0.0,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.0,
+        "set_piece_threat_weaker": 0.0,
+        "notes": ""
+      }
+    }
+  ]
+}
+
+RULES
+- Output JSON only, valid and parseable, no markdown fences, no commentary.
+- Include EVERY match of the round, even across multiple dates.
+- Use best football judgement; if unsure, use values near 0 and say so in notes.
+- Keep all scores within the stated ranges; first_goal_prob should sum to ~1.

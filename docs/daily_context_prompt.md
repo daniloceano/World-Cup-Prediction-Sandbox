@@ -11,6 +11,10 @@ single source of truth so they never drift from this doc):
   to `data/context/YYYY-MM-DD.json` (or paste it in the app's **Daily Context**
   page) and generate predictions. Saving also auto-registers today's fixtures
   into the schedule.
+- **Round prompt — the whole round at once** → [`docs/prompt_a_round.txt`](prompt_a_round.txt).
+  Same JSON shape as Prompt A but covering *every* match of the current round
+  (across several days). Paste it in the **Daily Context** page: it is split into
+  per-date context files and predictions are generated for every date in one go.
 - **Prompt B — yesterday's results** → [`docs/prompt_b.txt`](prompt_b.txt).
   Returns the final scores of *all* of yesterday's World Cup matches, in the
   app's results schema. Merge it into `data/results/actual_results.json` so the

@@ -22,13 +22,13 @@ cfg = load_config()
 
 st.title("📝 Daily context")
 st.markdown(
-    "Paste the daily JSON from **Prompt A** in `docs/daily_context_prompt.md` "
-    "(ChatGPT auto-detects today's date and lists today's matches). Validate it, "
-    "save it to `data/context/YYYY-MM-DD.json`, then generate predictions — "
-    "saving also registers today's fixtures into the schedule automatically. "
-    "Original context files are preserved as an audit trail. "
-    "For yesterday's final scores, use **Prompt B** and add them on the History side "
-    "(`data/results/actual_results.json`)."
+    "Paste the JSON from **Prompt A** (`docs/prompt_a.txt`, today's matches) — or "
+    "from the **round prompt** (`docs/prompt_a_round.txt`, every match of the round "
+    "across several days). Validate it, then **Save & generate**: the context is "
+    "split into per-date `data/context/YYYY-MM-DD.json` files, the fixtures are "
+    "registered automatically, and predictions are generated for every date. "
+    "Context files are preserved as an audit trail. For final scores use **Prompt B** "
+    "on the History page."
 )
 
 dates = data_io.available_dates()
@@ -78,18 +78,16 @@ def _show_validation(ctx) -> bool:
     return result.ok
 
 
-def _save(ctx) -> None:
-    path = data_io.context_path(date)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as fh:
-        json.dump(ctx, fh, indent=2, ensure_ascii=False)
-    st.success(f"Saved to `{path}`.")
-    # Register fixtures/teams the context describes (Prompt A metadata), so the
-    # date shows up in the dashboard even before predictions are generated.
+def _save(ctx) -> list[str]:
+    # Split into per-date context files (supports the round prompt's multiple
+    # dates as well as a single day) and register the fixtures.
+    written = data_io.save_context_by_date(ctx, default_date=date)
+    st.success(f"Saved context for {len(written)} date(s): {', '.join(written)}.")
     n_teams, n_matches = data_io.sync_schedule_from_context(ctx)
     if n_matches or n_teams:
         st.info(f"Registered {n_matches} new fixture(s) and {n_teams} new team(s) "
                 "into the schedule.")
+    return written
 
 
 if validate_clicked or save_clicked or gen_clicked:
@@ -98,20 +96,25 @@ if validate_clicked or save_clicked or gen_clicked:
         st.error(err)
     else:
         ok = _show_validation(ctx)
-        if (save_clicked or gen_clicked) and ok:
-            _save(ctx)
+        written = _save(ctx) if (save_clicked or gen_clicked) and ok else []
         if gen_clicked and ok:
-            with st.spinner("Generating predictions…"):
-                payload = pipeline.generate_for_date(date)
-            st.success(f"Generated predictions for {payload['n_matches']} match(es).")
+            total = 0
+            with st.spinner(f"Generating predictions for {len(written)} date(s)…"):
+                for d in written:
+                    payload = pipeline.generate_for_date(d)
+                    total += payload["n_matches"]
+            st.success(f"Generated predictions for {total} match(es) "
+                       f"across {len(written)} date(s).")
             st.page_link("streamlit_app.py", label="→ Back to dashboard", icon="⚽")
 
 st.divider()
-with st.expander("📋 Where do I get the daily JSON?"):
+with st.expander("📋 Where do I get the JSON?"):
     st.markdown(
-        "Use the prompt template in **`docs/daily_context_prompt.md`** with ChatGPT each "
-        "morning. It asks for the seven v1 criteria scores and the v2 strategic fields per "
-        "match, in the exact JSON shape this page expects. See **`docs/data_schema.md`** "
-        "for the full field reference."
+        "- **Today only:** `docs/prompt_a.txt`\n"
+        "- **Whole round (all matches, several days):** `docs/prompt_a_round.txt`\n\n"
+        "Both ask ChatGPT for the seven v1 criteria scores and the v2 strategic fields "
+        "per match, in the exact JSON shape this page expects (the round prompt just "
+        "returns matches spanning multiple dates). See `docs/daily_context_prompt.md` "
+        "and `docs/data_schema.md` for the full reference."
     )
 ui.disclaimer_footer()

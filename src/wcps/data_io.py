@@ -165,6 +165,50 @@ def load_context(date: str) -> dict[str, Any] | None:
     return _read_json(p, None)
 
 
+def split_context_by_date(
+    ctx: dict[str, Any], default_date: str | None = None
+) -> dict[str, list[dict[str, Any]]]:
+    """Group a context's matches by each match's slate ``date``.
+
+    Supports the round prompt (matches spanning several dates) and the single-day
+    prompt alike. Matches without a ``date`` fall back to the doc's top-level
+    ``date`` or ``default_date``.
+    """
+    groups: dict[str, list[dict[str, Any]]] = {}
+    top = ctx.get("date") or default_date
+    for m in ctx.get("matches", []):
+        d = m.get("date") or top
+        if d:
+            groups.setdefault(d, []).append(m)
+    return groups
+
+
+def save_context_by_date(
+    ctx: dict[str, Any], default_date: str | None = None
+) -> list[str]:
+    """Write/merge a (possibly multi-date) context into per-date context files.
+
+    Each date's file is merged by ``match_id`` (new entries override). Returns the
+    sorted list of dates written. This is how the round prompt's single paste
+    becomes the per-date ``data/context/YYYY-MM-DD.json`` files the app expects.
+    """
+    groups = split_context_by_date(ctx, default_date)
+    written: list[str] = []
+    for date, entries in groups.items():
+        existing = load_context(date) or {"date": date, "matches": []}
+        by_id = {e.get("match_id"): e for e in existing.get("matches", [])}
+        for m in entries:
+            by_id[m.get("match_id")] = m
+        existing["date"] = date
+        existing["matches"] = [v for k, v in by_id.items() if k]
+        for meta_key in ("generated_by", "timezone", "round"):
+            if meta_key in ctx and meta_key not in existing:
+                existing[meta_key] = ctx[meta_key]
+        _write_json(context_path(date), existing)
+        written.append(date)
+    return sorted(written)
+
+
 def context_for_match(date: str, match_id: str) -> dict[str, Any] | None:
     """Return the per-match context block from a day's context file."""
     ctx = load_context(date)

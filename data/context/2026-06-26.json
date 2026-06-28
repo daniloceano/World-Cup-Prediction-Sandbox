@@ -1,0 +1,367 @@
+{
+  "date": "2026-06-26",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-26-NOR-FRA",
+      "date": "2026-06-26",
+      "kickoff_utc": "2026-06-26T19:00:00Z",
+      "venue": "Boston Stadium",
+      "group": "I",
+      "home_team": "NOR",
+      "away_team": "FRA",
+      "home_name": "Norway",
+      "away_name": "France",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "short_form": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "long_form": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "tactical_similarity": {
+          "home": -0.2,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.45,
+        "draw_value_weaker": 0.75,
+        "need_to_win": {
+          "home": 0.35,
+          "away": 0.65
+        },
+        "first_goal_prob": {
+          "home": 0.35,
+          "away": 0.57,
+          "none": 0.08
+        },
+        "collapse_risk_weaker": 0.22,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.7,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Both have qualified; France are deeper, while Norway can value a draw and counter quickly."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-26-SEN-IRQ",
+      "date": "2026-06-26",
+      "kickoff_utc": "2026-06-26T19:00:00Z",
+      "venue": "Toronto Stadium",
+      "group": "I",
+      "home_team": "SEN",
+      "away_team": "IRQ",
+      "home_name": "Senegal",
+      "away_name": "Iraq",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "short_form": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "long_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "injuries": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": -0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.15,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.95
+        },
+        "first_goal_prob": {
+          "home": 0.55,
+          "away": 0.35,
+          "none": 0.1
+        },
+        "collapse_risk_weaker": 0.45,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.35,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "Both need a win; Senegal have more individual quality but Iraq can keep it compact."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-26-CPV-KSA",
+      "date": "2026-06-26",
+      "kickoff_utc": "2026-06-27T00:00:00Z",
+      "venue": "Houston Stadium",
+      "group": "H",
+      "home_team": "CPV",
+      "away_team": "KSA",
+      "home_name": "Cabo Verde",
+      "away_name": "Saudi Arabia",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "long_form": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "tactical_similarity": {
+          "home": 0.15,
+          "away": -0.15
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.45,
+        "draw_value_weaker": 0.2,
+        "need_to_win": {
+          "home": 0.8,
+          "away": 0.9
+        },
+        "first_goal_prob": {
+          "home": 0.43,
+          "away": 0.43,
+          "none": 0.14
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Cabo Verde's tournament form is stronger, but Saudi Arabia have comparable ranking and heat adaptation."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-26-URU-ESP",
+      "date": "2026-06-26",
+      "kickoff_utc": "2026-06-27T00:00:00Z",
+      "venue": "Estadio Guadalajara",
+      "group": "H",
+      "home_team": "URU",
+      "away_team": "ESP",
+      "home_name": "Uruguay",
+      "away_name": "Spain",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "long_form": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "injuries": {
+          "home": -0.4,
+          "away": 0.4
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "tactical_similarity": {
+          "home": -0.2,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.35,
+        "draw_value_weaker": 0.45,
+        "need_to_win": {
+          "home": 0.8,
+          "away": 0.25
+        },
+        "first_goal_prob": {
+          "home": 0.33,
+          "away": 0.6,
+          "none": 0.07
+        },
+        "collapse_risk_weaker": 0.38,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.55,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "Spain are nearly secure and technically stronger, while Uruguay need a result despite injury concerns."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-26-EGY-IRN",
+      "date": "2026-06-26",
+      "kickoff_utc": "2026-06-27T03:00:00Z",
+      "venue": "Seattle Stadium",
+      "group": "G",
+      "home_team": "EGY",
+      "away_team": "IRN",
+      "home_name": "Egypt",
+      "away_name": "IR Iran",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "short_form": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "long_form": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": -0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.05,
+          "away": -0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.7,
+        "draw_value_weaker": 0.65,
+        "need_to_win": {
+          "home": 0.35,
+          "away": 0.75
+        },
+        "first_goal_prob": {
+          "home": 0.42,
+          "away": 0.43,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.18,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.6,
+        "notes": "Egypt lead the group and can manage risk, while Iran's compact structure keeps this close."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-26-NZL-BEL",
+      "date": "2026-06-26",
+      "kickoff_utc": "2026-06-27T03:00:00Z",
+      "venue": "BC Place Vancouver",
+      "group": "G",
+      "home_team": "NZL",
+      "away_team": "BEL",
+      "home_name": "New Zealand",
+      "away_name": "Belgium",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.65,
+          "away": 0.65
+        },
+        "short_form": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "long_form": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": -0.3,
+          "away": 0.3
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.1,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.85
+        },
+        "first_goal_prob": {
+          "home": 0.25,
+          "away": 0.67,
+          "none": 0.08
+        },
+        "collapse_risk_weaker": 0.5,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.4,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "Belgium have the higher ceiling, while New Zealand likely need a win and may be forced open."
+      }
+    }
+  ]
+}

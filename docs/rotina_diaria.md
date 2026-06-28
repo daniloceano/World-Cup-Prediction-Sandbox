@@ -65,6 +65,16 @@ O **único** arquivo que você edita à mão é `data/results/actual_results.jso
 
 ---
 
+## Extras
+
+- **Rodada inteira de uma vez:** em vez do Prompt A (só hoje), use
+  **`docs/prompt_a_round.txt`** — ele devolve o contexto de **todos os jogos da
+  rodada** (vários dias). Cole na página **Daily Context** e clique
+  **Save & generate**: o app separa por data e gera as previsões de todos os dias.
+- **Exportar PDF:** no **Dashboard**, escolha a data e clique em **📄 Export PDF**
+  para baixar as previsões detalhadas (3 modelos + ensemble, placares, forma
+  recente) de todos os jogos do dia.
+
 ## Observações úteis
 
 - **"Dia" = das 06:00 às 06:00** (horário de Brasília), então jogos de madrugada

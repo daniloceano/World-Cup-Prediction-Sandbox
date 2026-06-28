@@ -1,0 +1,367 @@
+{
+  "date": "2026-06-27",
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-27-PAN-ENG",
+      "date": "2026-06-27",
+      "kickoff_utc": "2026-06-27T21:00:00Z",
+      "venue": "New York/New Jersey Stadium",
+      "group": "L",
+      "home_team": "PAN",
+      "away_team": "ENG",
+      "home_name": "Panama",
+      "away_name": "England",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.6,
+          "away": 0.6
+        },
+        "short_form": {
+          "home": -0.5,
+          "away": 0.5
+        },
+        "long_form": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "injuries": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "off_field": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "tactical_similarity": {
+          "home": -0.5,
+          "away": 0.5
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.15,
+        "need_to_win": {
+          "home": 0.1,
+          "away": 0.75
+        },
+        "first_goal_prob": {
+          "home": 0.2,
+          "away": 0.72,
+          "none": 0.08
+        },
+        "collapse_risk_weaker": 0.55,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.25,
+        "set_piece_threat_weaker": 0.35,
+        "notes": "England are much stronger, while eliminated Panama may defend deep but carry off-field and confidence concerns."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-27-CRO-GHA",
+      "date": "2026-06-27",
+      "kickoff_utc": "2026-06-27T21:00:00Z",
+      "venue": "Philadelphia Stadium",
+      "group": "L",
+      "home_team": "CRO",
+      "away_team": "GHA",
+      "home_name": "Croatia",
+      "away_name": "Ghana",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "short_form": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "long_form": {
+          "home": 0.3,
+          "away": -0.3
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.1,
+          "away": -0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.7,
+        "need_to_win": {
+          "home": 0.9,
+          "away": 0.45
+        },
+        "first_goal_prob": {
+          "home": 0.43,
+          "away": 0.36,
+          "none": 0.21
+        },
+        "collapse_risk_weaker": 0.25,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.7,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Croatia have ranking and experience edges, but Ghana's athletic defensive block and transition threat make this close."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-27-COL-POR",
+      "date": "2026-06-27",
+      "kickoff_utc": "2026-06-27T23:30:00Z",
+      "venue": "Miami Stadium",
+      "group": "K",
+      "home_team": "COL",
+      "away_team": "POR",
+      "home_name": "Colombia",
+      "away_name": "Portugal",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.25,
+          "away": 0.25
+        },
+        "short_form": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "long_form": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": -0.1,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.85,
+        "need_to_win": {
+          "home": 0.25,
+          "away": 0.75
+        },
+        "first_goal_prob": {
+          "home": 0.39,
+          "away": 0.46,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.2,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.65,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "Portugal have the higher ceiling, while Colombia can manage the game because a draw is strategically valuable."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-27-COD-UZB",
+      "date": "2026-06-27",
+      "kickoff_utc": "2026-06-27T23:30:00Z",
+      "venue": "Atlanta Stadium",
+      "group": "K",
+      "home_team": "COD",
+      "away_team": "UZB",
+      "home_name": "Congo DR",
+      "away_name": "Uzbekistan",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "short_form": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "long_form": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "injuries": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "tactical_similarity": {
+          "home": 0.35,
+          "away": -0.35
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.45,
+        "draw_value_weaker": 0.05,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.54,
+          "away": 0.32,
+          "none": 0.14
+        },
+        "collapse_risk_weaker": 0.65,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.35,
+        "set_piece_threat_weaker": 0.4,
+        "notes": "Congo DR have shown more competitiveness, while Uzbekistan's defensive record creates a high collapse risk."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-27-ALG-AUT",
+      "date": "2026-06-27",
+      "kickoff_utc": "2026-06-28T02:00:00Z",
+      "venue": "Kansas City Stadium",
+      "group": "J",
+      "home_team": "ALG",
+      "away_team": "AUT",
+      "home_name": "Algeria",
+      "away_name": "Austria",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "short_form": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "long_form": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "off_field": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "tactical_similarity": {
+          "home": -0.2,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.6,
+        "draw_value_weaker": 0.35,
+        "need_to_win": {
+          "home": 0.85,
+          "away": 0.85
+        },
+        "first_goal_prob": {
+          "home": 0.38,
+          "away": 0.44,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.6,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "Austria are a slight structural favorite, but Algeria's transition game and climate comfort keep the matchup balanced."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-27-JOR-ARG",
+      "date": "2026-06-27",
+      "kickoff_utc": "2026-06-28T02:00:00Z",
+      "venue": "Dallas Stadium",
+      "group": "J",
+      "home_team": "JOR",
+      "away_team": "ARG",
+      "home_name": "Jordan",
+      "away_name": "Argentina",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.7,
+          "away": 0.7
+        },
+        "short_form": {
+          "home": -0.7,
+          "away": 0.7
+        },
+        "long_form": {
+          "home": -0.65,
+          "away": 0.65
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "tactical_similarity": {
+          "home": -0.6,
+          "away": 0.6
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.2,
+        "need_to_win": {
+          "home": 0.1,
+          "away": 0.15
+        },
+        "first_goal_prob": {
+          "home": 0.17,
+          "away": 0.75,
+          "none": 0.08
+        },
+        "collapse_risk_weaker": 0.6,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.35,
+        "set_piece_threat_weaker": 0.3,
+        "notes": "Argentina are dominant even with possible rotation, while eliminated Jordan mainly play for pride."
+      }
+    }
+  ]
+}
