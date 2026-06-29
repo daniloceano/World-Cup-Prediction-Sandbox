@@ -1,0 +1,187 @@
+{
+  "date": "2026-06-29",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-29-BRA-JPN",
+      "date": "2026-06-29",
+      "kickoff_utc": "2026-06-29T17:00:00Z",
+      "venue": "Houston",
+      "group": "Round of 32",
+      "home_team": "BRA",
+      "away_team": "JPN",
+      "home_name": "Brazil",
+      "away_name": "Japan",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.65,
+          "away": -0.65
+        },
+        "short_form": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "long_form": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "off_field": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "tactical_similarity": {
+          "home": 0.15,
+          "away": -0.15
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.5,
+        "draw_value_weaker": 0.78,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.95
+        },
+        "first_goal_prob": {
+          "home": 0.55,
+          "away": 0.34,
+          "none": 0.11
+        },
+        "collapse_risk_weaker": 0.38,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.68,
+        "set_piece_threat_weaker": 0.42,
+        "notes": "Brazil have the higher ceiling and individual edge, while Japan's best route is structure, transitions and extending the game."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-29-GER-PAR",
+      "date": "2026-06-29",
+      "kickoff_utc": "2026-06-29T20:30:00Z",
+      "venue": "Boston",
+      "group": "Round of 32",
+      "home_team": "GER",
+      "away_team": "PAR",
+      "home_name": "Germany",
+      "away_name": "Paraguay",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.6,
+          "away": -0.6
+        },
+        "short_form": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "long_form": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.18,
+          "away": -0.18
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.75,
+        "draw_value_weaker": 0.85,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.95
+        },
+        "first_goal_prob": {
+          "home": 0.58,
+          "away": 0.28,
+          "none": 0.14
+        },
+        "collapse_risk_weaker": 0.34,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.55,
+        "set_piece_threat_weaker": 0.62,
+        "notes": "Germany are stronger on talent and possession control, but Paraguay can keep it competitive with a compact block and set pieces."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-29-NED-MAR",
+      "date": "2026-06-29",
+      "kickoff_utc": "2026-06-30T01:00:00Z",
+      "venue": "Monterrey",
+      "group": "Round of 32",
+      "home_team": "NED",
+      "away_team": "MAR",
+      "home_name": "Netherlands",
+      "away_name": "Morocco",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "short_form": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "long_form": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": -0.25,
+          "away": 0.25
+        },
+        "off_field": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "tactical_similarity": {
+          "home": -0.1,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.72,
+        "draw_value_weaker": 0.7,
+        "need_to_win": {
+          "home": 0.95,
+          "away": 0.95
+        },
+        "first_goal_prob": {
+          "home": 0.43,
+          "away": 0.41,
+          "none": 0.16
+        },
+        "collapse_risk_weaker": 0.22,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.76,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Netherlands are a slight favorite, but Morocco's heat adaptation, support and transition game make the matchup close."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

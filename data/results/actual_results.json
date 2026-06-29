@@ -523,6 +523,13 @@
       "away_goals": 3,
       "status": "final",
       "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-28-RSA-CAN",
+      "home_goals": 0,
+      "away_goals": 1,
+      "status": "final",
+      "notes": "Confirmed final; Canada won on a stoppage-time Stephen Eustaquio goal; no extra time or penalties."
     }
   ]
 }

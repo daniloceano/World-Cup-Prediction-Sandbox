@@ -796,6 +796,42 @@
       "away_team": "CAN",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-29-BRA-JPN",
+      "date": "2026-06-29",
+      "kickoff": "17:00 UTC",
+      "venue": "Houston",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "BRA",
+      "away_team": "JPN",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-29-GER-PAR",
+      "date": "2026-06-29",
+      "kickoff": "20:30 UTC",
+      "venue": "Boston",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "GER",
+      "away_team": "PAR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-29-NED-MAR",
+      "date": "2026-06-29",
+      "kickoff": "01:00 UTC",
+      "venue": "Monterrey",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "NED",
+      "away_team": "MAR",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
