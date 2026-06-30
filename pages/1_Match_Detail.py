@@ -184,6 +184,16 @@ st.subheader("Recent form")
 st.caption("Last results of each team going into this match (newest first).")
 ui.recent_form_block(home, away, teams, cfg["display"]["use_flags"], before_date=date)
 
+# --- which model has been best for each team --------------------------------
+st.subheader("Model accuracy by team")
+st.caption(
+    "Winner hit-rate of each model — and the FIFA-ranking benchmark — across all "
+    "evaluated matches involving each team. Helps see which model reads each side best."
+)
+ui.team_model_accuracy_block(
+    home, away, teams, cfg["display"]["use_flags"], evaluation.build_history(cfg)
+)
+
 # --- ensemble headline ------------------------------------------------------
 st.subheader("Ensemble summary")
 c = st.columns(4)

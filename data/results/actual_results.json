@@ -530,6 +530,27 @@
       "away_goals": 1,
       "status": "final",
       "notes": "Confirmed final; Canada won on a stoppage-time Stephen Eustaquio goal; no extra time or penalties."
+    },
+    {
+      "match_id": "wc-2026-06-29-BRA-JPN",
+      "home_goals": 2,
+      "away_goals": 1,
+      "status": "final",
+      "notes": "Brazil won in regulation."
+    },
+    {
+      "match_id": "wc-2026-06-29-GER-PAR",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "notes": "Paraguay advanced 4-3 on penalties after a 1-1 draw; regulation score recorded."
+    },
+    {
+      "match_id": "wc-2026-06-29-NED-MAR",
+      "home_goals": 1,
+      "away_goals": 1,
+      "status": "final",
+      "notes": "Morocco advanced 3-2 on penalties after a 1-1 draw; regulation score recorded."
     }
   ]
 }

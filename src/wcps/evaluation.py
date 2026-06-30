@@ -333,6 +333,42 @@ def benchmark_summary(rows: list[dict[str, Any]]) -> dict[str, Any] | None:
     }
 
 
+def team_source_accuracy(
+    code: str, rows: list[dict[str, Any]]
+) -> dict[str, Any]:
+    """Per-model winner accuracy over every evaluated match involving a team.
+
+    Returns ``{"sources": {src: {n, accuracy}}, "benchmark": {n, accuracy}|None,
+    "n_matches": int}`` where accuracy is the outcome hit-rate restricted to
+    matches that featured ``code`` (home or away). The benchmark is the
+    FIFA-ranking baseline over the same team's matches that have a pick.
+    """
+    code = code.upper()
+    involved = [
+        r for r in rows
+        if r.get("evaluated") and code in (r.get("home_team"), r.get("away_team"))
+    ]
+    by_source: dict[str, list[bool]] = {}
+    for r in involved:
+        by_source.setdefault(r["source"], []).append(bool(r["outcome_correct"]))
+    sources = {
+        s: {"n": len(v), "accuracy": sum(v) / len(v)} for s, v in by_source.items()
+    }
+    by_match = {
+        r["match_id"]: bool(r.get("fifa_pick_correct"))
+        for r in involved if r.get("fifa_pick")
+    }
+    benchmark = (
+        {"n": len(by_match), "accuracy": sum(by_match.values()) / len(by_match)}
+        if by_match else None
+    )
+    return {
+        "sources": sources,
+        "benchmark": benchmark,
+        "n_matches": len({r["match_id"] for r in involved}),
+    }
+
+
 def summarize_by_source(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     """Aggregate metrics per source (model id / ensemble) over evaluated rows."""
     summary: dict[str, dict[str, Any]] = {}

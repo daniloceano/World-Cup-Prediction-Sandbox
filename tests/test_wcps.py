@@ -368,6 +368,29 @@ def test_benchmark_summary():
     assert ev.benchmark_summary([]) is None
 
 
+def test_team_source_accuracy():
+    from wcps import evaluation as ev
+
+    rows = [
+        {"match_id": "m1", "home_team": "BRA", "away_team": "MAR", "source": "standard",
+         "evaluated": True, "outcome_correct": True, "fifa_pick": "home",
+         "fifa_pick_correct": True},
+        {"match_id": "m1", "home_team": "BRA", "away_team": "MAR", "source": "ensemble",
+         "evaluated": True, "outcome_correct": False, "fifa_pick": "home",
+         "fifa_pick_correct": True},
+        {"match_id": "m2", "home_team": "ARG", "away_team": "BRA", "source": "standard",
+         "evaluated": True, "outcome_correct": False, "fifa_pick": "home",
+         "fifa_pick_correct": False},
+        {"match_id": "m3", "home_team": "FRA", "away_team": "GER", "source": "standard",
+         "evaluated": True, "outcome_correct": True, "fifa_pick": None},  # not BRA
+    ]
+    d = ev.team_source_accuracy("bra", rows)  # case-insensitive
+    assert d["n_matches"] == 2
+    assert d["sources"]["standard"] == {"n": 2, "accuracy": 0.5}
+    assert d["sources"]["ensemble"] == {"n": 1, "accuracy": 0.0}
+    assert d["benchmark"] == {"n": 2, "accuracy": 0.5}
+
+
 # --- evaluation -------------------------------------------------------------
 def test_evaluation_metrics():
     actual = {"home_goals": 1, "away_goals": 2}

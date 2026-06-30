@@ -238,6 +238,42 @@ def recent_form_block(
                 )
 
 
+def team_model_accuracy_block(
+    home: str,
+    away: str,
+    teams: dict[str, Any],
+    use_flags: bool,
+    rows: list[dict[str, Any]],
+) -> None:
+    """Per team: each model's (and the benchmark's) winner hit-rate so far."""
+    cols = st.columns(2)
+    for col, code in zip(cols, (home, away)):
+        with col:
+            st.markdown(f"**{team_label(code, teams, use_flags)}** — model hit-rate")
+            data = evaluation.team_source_accuracy(code, rows)
+            if not data["sources"]:
+                st.caption("No evaluated matches for this team yet.")
+                continue
+            table = [
+                {"Source": source_label(s), "Matches": d["n"], "Outcome acc.": d["accuracy"]}
+                for s, d in data["sources"].items()
+            ]
+            if data["benchmark"]:
+                b = data["benchmark"]
+                table.append({"Source": "Benchmark (FIFA rank)",
+                              "Matches": b["n"], "Outcome acc.": b["accuracy"]})
+            df = pd.DataFrame(table).sort_values("Outcome acc.", ascending=False)
+            st.dataframe(
+                df.style.format({"Outcome acc.": "{:.0%}"}),
+                hide_index=True, use_container_width=True,
+            )
+            best = max(data["sources"].items(), key=lambda kv: kv[1]["accuracy"])
+            st.caption(
+                f"Best model so far: **{source_label(best[0])}** "
+                f"({best[1]['accuracy']:.0%} over {best[1]['n']} match(es))."
+            )
+
+
 def result_only_card(
     match: dict[str, Any], teams: dict[str, Any], use_flags: bool
 ) -> None:
