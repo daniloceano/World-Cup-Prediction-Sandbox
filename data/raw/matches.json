@@ -832,6 +832,42 @@
       "away_team": "MAR",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-30-CIV-NOR",
+      "date": "2026-06-30",
+      "kickoff": "17:00 UTC",
+      "venue": "Dallas Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "CIV",
+      "away_team": "NOR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-30-FRA-SWE",
+      "date": "2026-06-30",
+      "kickoff": "21:00 UTC",
+      "venue": "New York New Jersey Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "FRA",
+      "away_team": "SWE",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-06-30-MEX-ECU",
+      "date": "2026-06-30",
+      "kickoff": "01:00 UTC",
+      "venue": "Mexico City Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "MEX",
+      "away_team": "ECU",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

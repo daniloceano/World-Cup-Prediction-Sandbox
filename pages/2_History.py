@@ -77,6 +77,23 @@ if summary:
 else:
     st.info("No matches with actual results yet — add results to see metrics.")
 
+# --- benchmark: best FIFA-ranked team --------------------------------------
+bench = evaluation.benchmark_summary(rows)
+if bench:
+    st.subheader("📐 Benchmark — backing the best FIFA-ranked team")
+    st.caption(
+        f"Baseline: always bet on the higher FIFA-ranked team to win (from the daily "
+        f"context; never predicts a draw). Compared on the **same {bench['n']} match(es)** "
+        f"that have both a ranking and a result — so it's an apples-to-apples winner-accuracy test."
+    )
+    base = bench["benchmark_accuracy"]
+    cols = st.columns(len(bench["by_source"]) + 1)
+    cols[0].metric("Best-ranked baseline", f"{base:.0%}", help=f"{bench['n']} matches")
+    for col, (src, acc) in zip(cols[1:], sorted(bench["by_source"].items())):
+        col.metric(ui.source_label(src), f"{acc:.0%}", delta=f"{(acc - base) * 100:+.1f} pp")
+    st.caption("Δ vs baseline in percentage points (green = the model beats just "
+               "backing the favourite by ranking).")
+
 # --- per-match evaluated detail --------------------------------------------
 if evaluated:
     st.subheader("Evaluated matches")

@@ -245,7 +245,12 @@ file is preserved unmodified as the audit record.
 
 ## 6. Evaluation summary (computed, not stored)
 
-`evaluation.summarize_by_source()` returns, per source (`v1`, `v2`, `ensemble`):
+`evaluation.benchmark_summary()` compares each source's winner-accuracy to a
+**FIFA-ranking baseline** (always back the higher-ranked team to win, from the
+context's `fifa_ranking`) over the same subset of matches that have a ranking and
+a result — shown on the History page.
+
+`evaluation.summarize_by_source()` returns, per source (`standard`, `conservative`, `aggressive`, `ensemble`):
 `n`, `outcome_accuracy`, `exact_score_accuracy`, `mean_brier`, `mean_log_loss`.
 Per-match rows also expose `outcome_correct`, `score_correct`, `brier`,
 `log_loss`, `prob_assigned_true` — a calibration-friendly structure for future

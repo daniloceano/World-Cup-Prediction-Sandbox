@@ -218,6 +218,40 @@ def recent_results_for_team(
     return rows[:limit]
 
 
+def fifa_ranking_pick(match: dict[str, Any]) -> str | None:
+    """Benchmark pick: the better FIFA-ranked team's outcome ('home'/'away').
+
+    Reads ``v1_scores.fifa_ranking`` from the match's daily context (the only
+    ranking signal stored). Returns ``None`` when there is no context/ranking or
+    the two sides are tied. The pick is mapped to *this match's* home/away even
+    if the context stored the fixture in the opposite order. This baseline never
+    predicts a draw — it always backs the higher-ranked side to win.
+    """
+    date, mid = match.get("date"), match.get("match_id")
+    entry = data_io.context_for_match(date, mid) if date and mid else None
+    if entry is None and date:
+        pair = {match.get("home_team"), match.get("away_team")}
+        for e in (data_io.load_context(date) or {}).get("matches", []):
+            if {e.get("home_team"), e.get("away_team")} == pair:
+                entry = e
+                break
+    if not entry:
+        return None
+    fr = (entry.get("v1_scores") or {}).get("fifa_ranking") or {}
+    try:
+        h, a = float(fr.get("home")), float(fr.get("away"))
+    except (TypeError, ValueError):
+        return None
+    if h == a:
+        return None
+    fav_code = entry.get("home_team") if h > a else entry.get("away_team")
+    if fav_code == match.get("home_team"):
+        return "home"
+    if fav_code == match.get("away_team"):
+        return "away"
+    return None
+
+
 def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     """Join every stored prediction with its actual result (if available).
 
@@ -225,7 +259,9 @@ def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
     model id and ``ensemble``. The result join is tolerant of differing
     ``match_id`` conventions, reversed home/away order, and a +/-1 day shift
     (see :func:`_match_actual`). Rows without an actual result are still returned
-    (with ``evaluated=False``) so the UI can show pending matches.
+    (with ``evaluated=False``) so the UI can show pending matches. Each row also
+    carries the FIFA-ranking benchmark pick for its match (``fifa_pick`` and,
+    when evaluated, ``fifa_pick_correct``).
     """
     actuals = data_io.load_actual_results()
     actual_index = _index_actuals(actuals)
@@ -241,6 +277,13 @@ def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
                 match.get("home_team"), match.get("away_team"), match.get("date") or date,
                 actuals, actual_index, match_id,
             )
+            # match-level benchmark + true outcome (shared by all sources)
+            fifa_pick = fifa_ranking_pick(match) if match else None
+            true_out = (
+                actual_outcome(actual["home_goals"], actual["away_goals"])
+                if actual is not None else None
+            )
+
             sources = dict(mp.get("models", {}))
             sources["ensemble"] = mp.get("ensemble", {})
             for source, pred in sources.items():
@@ -255,11 +298,39 @@ def build_history(config: dict[str, Any] | None = None) -> list[dict[str, Any]]:
                     "source": source,
                     "is_demo": match.get("is_demo", False),
                     "evaluated": actual is not None,
+                    "fifa_pick": fifa_pick,
                 }
                 if actual is not None:
                     row.update(evaluate_prediction(pred, actual))
+                    row["fifa_pick_correct"] = (
+                        (fifa_pick == true_out) if fifa_pick else None
+                    )
                 rows.append(row)
     return rows
+
+
+def benchmark_summary(rows: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """Compare each source's outcome accuracy to the FIFA-ranking benchmark.
+
+    Restricted to the **same subset** of matches: those that are evaluated AND
+    have a benchmark pick (i.e. a daily context with FIFA-ranking scores). Returns
+    ``None`` when no such matches exist. ``by_source`` holds each source's
+    win-accuracy over that subset, and ``benchmark_accuracy`` is how often the
+    higher-ranked team actually won.
+    """
+    applicable = [r for r in rows if r.get("evaluated") and r.get("fifa_pick")]
+    if not applicable:
+        return None
+    by_match = {r["match_id"]: bool(r.get("fifa_pick_correct")) for r in applicable}
+    n = len(by_match)
+    by_source: dict[str, list[bool]] = {}
+    for r in applicable:
+        by_source.setdefault(r["source"], []).append(bool(r["outcome_correct"]))
+    return {
+        "n": n,
+        "benchmark_accuracy": sum(by_match.values()) / n,
+        "by_source": {s: sum(v) / len(v) for s, v in by_source.items()},
+    }
 
 
 def summarize_by_source(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:

@@ -324,6 +324,50 @@ def test_recent_results_for_team():
     assert [r["date"] for r in before] == ["2026-06-13"]
 
 
+def test_fifa_ranking_pick(monkeypatch):
+    from wcps import data_io
+    from wcps import evaluation as ev
+
+    entry = {"home_team": "BRA", "away_team": "MAR",
+             "v1_scores": {"fifa_ranking": {"home": 0.6, "away": -0.6}}}
+    monkeypatch.setattr(data_io, "context_for_match", lambda d, m: entry)
+    # same orientation -> favourite (BRA) is home
+    assert ev.fifa_ranking_pick(
+        {"date": "d", "match_id": "x", "home_team": "BRA", "away_team": "MAR"}) == "home"
+    # reversed orientation -> favourite (BRA) is the match's away side
+    assert ev.fifa_ranking_pick(
+        {"date": "d", "match_id": "x", "home_team": "MAR", "away_team": "BRA"}) == "away"
+    # tie -> no pick
+    monkeypatch.setattr(data_io, "context_for_match", lambda d, m: {
+        "home_team": "A", "away_team": "B",
+        "v1_scores": {"fifa_ranking": {"home": 0.0, "away": 0.0}}})
+    assert ev.fifa_ranking_pick(
+        {"date": "d", "match_id": "x", "home_team": "A", "away_team": "B"}) is None
+
+
+def test_benchmark_summary():
+    from wcps import evaluation as ev
+
+    rows = [
+        {"match_id": "m1", "source": "standard", "evaluated": True,
+         "fifa_pick": "home", "fifa_pick_correct": True, "outcome_correct": True},
+        {"match_id": "m1", "source": "ensemble", "evaluated": True,
+         "fifa_pick": "home", "fifa_pick_correct": True, "outcome_correct": False},
+        {"match_id": "m2", "source": "standard", "evaluated": True,
+         "fifa_pick": "away", "fifa_pick_correct": False, "outcome_correct": True},
+        {"match_id": "m2", "source": "ensemble", "evaluated": True,
+         "fifa_pick": "away", "fifa_pick_correct": False, "outcome_correct": True},
+        {"match_id": "m3", "source": "standard", "evaluated": True,
+         "fifa_pick": None, "outcome_correct": True},  # excluded: no ranking
+    ]
+    b = ev.benchmark_summary(rows)
+    assert b["n"] == 2
+    assert b["benchmark_accuracy"] == 0.5
+    assert b["by_source"]["standard"] == 1.0
+    assert b["by_source"]["ensemble"] == 0.5
+    assert ev.benchmark_summary([]) is None
+
+
 # --- evaluation -------------------------------------------------------------
 def test_evaluation_metrics():
     actual = {"home_goals": 1, "away_goals": 2}

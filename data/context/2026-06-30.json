@@ -1,0 +1,187 @@
+{
+  "date": "2026-06-30",
+  "matches": [
+    {
+      "match_id": "wc-2026-06-30-CIV-NOR",
+      "date": "2026-06-30",
+      "kickoff_utc": "2026-06-30T17:00:00Z",
+      "venue": "Dallas Stadium",
+      "group": "Round of 32",
+      "home_team": "CIV",
+      "away_team": "NOR",
+      "home_name": "Côte d'Ivoire",
+      "away_name": "Norway",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.25,
+          "away": 0.25
+        },
+        "short_form": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "long_form": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "injuries": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.0,
+          "away": 0.0
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.55,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.36,
+          "away": 0.42,
+          "none": 0.22
+        },
+        "collapse_risk_weaker": 0.34,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.67,
+        "set_piece_threat_weaker": 0.62,
+        "notes": "Norway have the higher-ceiling stars, but Côte d'Ivoire's physicality and Norway's defensive injury keep this close."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-30-FRA-SWE",
+      "date": "2026-06-30",
+      "kickoff_utc": "2026-06-30T21:00:00Z",
+      "venue": "New York New Jersey Stadium",
+      "group": "Round of 32",
+      "home_team": "FRA",
+      "away_team": "SWE",
+      "home_name": "France",
+      "away_name": "Sweden",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.65,
+          "away": -0.65
+        },
+        "short_form": {
+          "home": 0.6,
+          "away": -0.6
+        },
+        "long_form": {
+          "home": 0.5,
+          "away": -0.5
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.35,
+          "away": -0.35
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.7,
+        "draw_value_weaker": 0.58,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.58,
+          "away": 0.25,
+          "none": 0.17
+        },
+        "collapse_risk_weaker": 0.45,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.55,
+        "set_piece_threat_weaker": 0.7,
+        "notes": "France enter with superior form and attacking depth, while Sweden's clearest upset path is compact defending and set pieces."
+      }
+    },
+    {
+      "match_id": "wc-2026-06-30-MEX-ECU",
+      "date": "2026-06-30",
+      "kickoff_utc": "2026-07-01T01:00:00Z",
+      "venue": "Mexico City Stadium",
+      "group": "Round of 32",
+      "home_team": "MEX",
+      "away_team": "ECU",
+      "home_name": "Mexico",
+      "away_name": "Ecuador",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.3,
+          "away": -0.3
+        },
+        "short_form": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "long_form": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.7,
+          "away": -0.7
+        },
+        "off_field": {
+          "home": 0.4,
+          "away": -0.4
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": -0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.55,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.53,
+          "away": 0.29,
+          "none": 0.18
+        },
+        "collapse_risk_weaker": 0.32,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.68,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Mexico have home altitude, crowd and group-stage momentum, while Ecuador remain dangerous in transitions after upsetting Germany."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}
