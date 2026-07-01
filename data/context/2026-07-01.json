@@ -1,0 +1,187 @@
+{
+  "date": "2026-07-01",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-01-ENG-COD",
+      "date": "2026-07-01",
+      "kickoff_utc": "2026-07-01T16:00:00Z",
+      "venue": "Atlanta Stadium",
+      "group": "Round of 32",
+      "home_team": "ENG",
+      "away_team": "COD",
+      "home_name": "England",
+      "away_name": "Congo DR",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.85,
+          "away": -0.85
+        },
+        "short_form": {
+          "home": 0.3,
+          "away": -0.3
+        },
+        "long_form": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "injuries": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "weather_adaptation": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": -0.1,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.82,
+        "draw_value_weaker": 0.87,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.62,
+          "away": 0.24,
+          "none": 0.14
+        },
+        "collapse_risk_weaker": 0.37,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.64,
+        "set_piece_threat_weaker": 0.56,
+        "notes": "England have a major depth and ranking edge, but Congo DR's compact block and transitions keep the underdog path credible."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-01-BEL-SEN",
+      "date": "2026-07-01",
+      "kickoff_utc": "2026-07-01T20:00:00Z",
+      "venue": "Seattle Stadium",
+      "group": "Round of 32",
+      "home_team": "BEL",
+      "away_team": "SEN",
+      "home_name": "Belgium",
+      "away_name": "Senegal",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "short_form": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "long_form": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "injuries": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.05,
+          "away": -0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.66,
+        "draw_value_weaker": 0.74,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.5,
+          "away": 0.34,
+          "none": 0.16
+        },
+        "collapse_risk_weaker": 0.45,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.76,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Belgium carry form and availability edges, while Senegal's pace and physicality make transitions the main upset route."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-01-USA-BIH",
+      "date": "2026-07-01",
+      "kickoff_utc": "2026-07-02T00:00:00Z",
+      "venue": "San Francisco Bay Area Stadium",
+      "group": "Round of 32",
+      "home_team": "USA",
+      "away_team": "BIH",
+      "home_name": "United States",
+      "away_name": "Bosnia and Herzegovina",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.65,
+          "away": -0.65
+        },
+        "short_form": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "long_form": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "weather_adaptation": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": -0.05,
+          "away": 0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.74,
+        "draw_value_weaker": 0.8,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.52,
+          "away": 0.31,
+          "none": 0.17
+        },
+        "collapse_risk_weaker": 0.43,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.54,
+        "set_piece_threat_weaker": 0.68,
+        "notes": "The USA are favored by ranking and home conditions, but Bosnia's low block and set pieces create a live underdog profile."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

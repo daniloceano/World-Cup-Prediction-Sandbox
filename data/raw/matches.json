@@ -868,6 +868,42 @@
       "away_team": "ECU",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-01-BEL-SEN",
+      "date": "2026-07-01",
+      "kickoff": "20:00 UTC",
+      "venue": "Seattle Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "BEL",
+      "away_team": "SEN",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-01-ENG-COD",
+      "date": "2026-07-01",
+      "kickoff": "16:00 UTC",
+      "venue": "Atlanta Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "ENG",
+      "away_team": "COD",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-01-USA-BIH",
+      "date": "2026-07-01",
+      "kickoff": "00:00 UTC",
+      "venue": "San Francisco Bay Area Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "USA",
+      "away_team": "BIH",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

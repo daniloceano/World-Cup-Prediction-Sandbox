@@ -551,6 +551,27 @@
       "away_goals": 1,
       "status": "final",
       "notes": "Morocco advanced 3-2 on penalties after a 1-1 draw; regulation score recorded."
+    },
+    {
+      "match_id": "wc-2026-06-30-CIV-NOR",
+      "home_goals": 1,
+      "away_goals": 2,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-30-FRA-SWE",
+      "home_goals": 3,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-06-30-MEX-ECU",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
     }
   ]
 }
