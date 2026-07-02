@@ -1,0 +1,187 @@
+{
+  "date": "2026-07-02",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-02-ESP-AUT",
+      "date": "2026-07-02",
+      "kickoff_utc": "2026-07-02T19:00:00Z",
+      "venue": "Los Angeles Stadium",
+      "group": "Round of 32",
+      "home_team": "ESP",
+      "away_team": "AUT",
+      "home_name": "Spain",
+      "away_name": "Austria",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.78,
+          "away": -0.78
+        },
+        "short_form": {
+          "home": 0.52,
+          "away": 0.18
+        },
+        "long_form": {
+          "home": 0.62,
+          "away": -0.18
+        },
+        "injuries": {
+          "home": -0.18,
+          "away": 0.12
+        },
+        "weather_adaptation": {
+          "home": 0.08,
+          "away": -0.04
+        },
+        "off_field": {
+          "home": 0.12,
+          "away": 0.02
+        },
+        "tactical_similarity": {
+          "home": 0.34,
+          "away": -0.12
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.84,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.52,
+          "away": 0.25,
+          "none": 0.23
+        },
+        "collapse_risk_weaker": 0.43,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.56,
+        "set_piece_threat_weaker": 0.64,
+        "notes": "Spain rate higher overall, but Austria's pressing and set pieces keep the upset path credible."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-02-POR-CRO",
+      "date": "2026-07-02",
+      "kickoff_utc": "2026-07-02T23:00:00Z",
+      "venue": "Toronto Stadium",
+      "group": "Round of 32",
+      "home_team": "POR",
+      "away_team": "CRO",
+      "home_name": "Portugal",
+      "away_name": "Croatia",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.5,
+          "away": -0.5
+        },
+        "short_form": {
+          "home": 0.32,
+          "away": 0.18
+        },
+        "long_form": {
+          "home": 0.42,
+          "away": 0.08
+        },
+        "injuries": {
+          "home": 0.02,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.02,
+          "away": 0.02
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": 0.07
+        },
+        "tactical_similarity": {
+          "home": 0.2,
+          "away": 0.14
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.73,
+        "draw_value_weaker": 0.87,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.45,
+          "away": 0.29,
+          "none": 0.26
+        },
+        "collapse_risk_weaker": 0.31,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.48,
+        "set_piece_threat_weaker": 0.62,
+        "notes": "Portugal have the stronger ceiling, while Croatia's experience makes a low-scoring knockout script plausible."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-02-SUI-ALG",
+      "date": "2026-07-02",
+      "kickoff_utc": "2026-07-03T03:00:00Z",
+      "venue": "BC Place Vancouver",
+      "group": "Round of 32",
+      "home_team": "SUI",
+      "away_team": "ALG",
+      "home_name": "Switzerland",
+      "away_name": "Algeria",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.36,
+          "away": -0.36
+        },
+        "short_form": {
+          "home": 0.42,
+          "away": 0.14
+        },
+        "long_form": {
+          "home": 0.28,
+          "away": 0.02
+        },
+        "injuries": {
+          "home": 0.02,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.08,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": 0.08,
+          "away": 0.1
+        },
+        "tactical_similarity": {
+          "home": 0.24,
+          "away": 0.08
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.85,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.42,
+          "away": 0.34,
+          "none": 0.24
+        },
+        "collapse_risk_weaker": 0.41,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.72,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Switzerland look more stable, but Algeria's transition threat gives the weaker side a live route."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

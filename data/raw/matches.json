@@ -904,6 +904,42 @@
       "away_team": "BIH",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-02-ESP-AUT",
+      "date": "2026-07-02",
+      "kickoff": "19:00 UTC",
+      "venue": "Los Angeles Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "ESP",
+      "away_team": "AUT",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-02-POR-CRO",
+      "date": "2026-07-02",
+      "kickoff": "23:00 UTC",
+      "venue": "Toronto Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "POR",
+      "away_team": "CRO",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-02-SUI-ALG",
+      "date": "2026-07-02",
+      "kickoff": "03:00 UTC",
+      "venue": "BC Place Vancouver",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "SUI",
+      "away_team": "ALG",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

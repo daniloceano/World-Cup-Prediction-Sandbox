@@ -572,6 +572,27 @@
       "away_goals": 0,
       "status": "final",
       "notes": ""
+    },
+    {
+      "match_id": "wc-2026-07-01-ENG-COD",
+      "home_goals": 2,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-07-01-BEL-SEN",
+      "home_goals": 2,
+      "away_goals": 2,
+      "status": "final",
+      "notes": "Regulation ended 2-2; Belgium advanced 3-2 after extra time."
+    },
+    {
+      "match_id": "wc-2026-07-01-USA-BIH",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
     }
   ]
 }
