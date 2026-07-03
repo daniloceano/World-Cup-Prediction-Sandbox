@@ -1,0 +1,187 @@
+{
+  "date": "2026-07-03",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-03-AUS-EGY",
+      "date": "2026-07-03",
+      "kickoff_utc": "2026-07-03T18:00:00Z",
+      "venue": "Dallas Stadium",
+      "group": "Round of 32",
+      "home_team": "AUS",
+      "away_team": "EGY",
+      "home_name": "Australia",
+      "away_name": "Egypt",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "short_form": {
+          "home": -0.15,
+          "away": 0.2
+        },
+        "long_form": {
+          "home": 0.05,
+          "away": 0.1
+        },
+        "injuries": {
+          "home": -0.3,
+          "away": -0.1
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": -0.05,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.72,
+        "draw_value_weaker": 0.65,
+        "need_to_win": {
+          "home": 0.85,
+          "away": 0.85
+        },
+        "first_goal_prob": {
+          "home": 0.35,
+          "away": 0.43,
+          "none": 0.22
+        },
+        "collapse_risk_weaker": 0.28,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Egypt's unbeaten group stage and Salah's possible involvement offset Australia's compact defensive base."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-03-ARG-CPV",
+      "date": "2026-07-03",
+      "kickoff_utc": "2026-07-03T22:00:00Z",
+      "venue": "Miami Stadium",
+      "group": "Round of 32",
+      "home_team": "ARG",
+      "away_team": "CPV",
+      "home_name": "Argentina",
+      "away_name": "Cabo Verde",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.85,
+          "away": -0.85
+        },
+        "short_form": {
+          "home": 0.75,
+          "away": 0.2
+        },
+        "long_form": {
+          "home": 0.8,
+          "away": -0.1
+        },
+        "injuries": {
+          "home": -0.05,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.25,
+          "away": 0.1
+        },
+        "tactical_similarity": {
+          "home": 0.55,
+          "away": -0.15
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.82,
+        "draw_value_weaker": 0.9,
+        "need_to_win": {
+          "home": 0.85,
+          "away": 0.85
+        },
+        "first_goal_prob": {
+          "home": 0.62,
+          "away": 0.18,
+          "none": 0.2
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.35,
+        "set_piece_threat_weaker": 0.45,
+        "notes": "Argentina's elite form makes them clear favorites, while Cabo Verde's organized low block keeps upset paths alive."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-03-COL-GHA",
+      "date": "2026-07-03",
+      "kickoff_utc": "2026-07-04T01:30:00Z",
+      "venue": "Kansas City Stadium",
+      "group": "Round of 32",
+      "home_team": "COL",
+      "away_team": "GHA",
+      "home_name": "Colombia",
+      "away_name": "Ghana",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.7,
+          "away": -0.7
+        },
+        "short_form": {
+          "home": 0.55,
+          "away": 0.05
+        },
+        "long_form": {
+          "home": 0.45,
+          "away": -0.15
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": -0.3
+        },
+        "weather_adaptation": {
+          "home": 0.1,
+          "away": 0.05
+        },
+        "off_field": {
+          "home": 0.25,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.35,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.58,
+        "draw_value_weaker": 0.82,
+        "need_to_win": {
+          "home": 0.85,
+          "away": 0.85
+        },
+        "first_goal_prob": {
+          "home": 0.55,
+          "away": 0.25,
+          "none": 0.2
+        },
+        "collapse_risk_weaker": 0.36,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.68,
+        "set_piece_threat_weaker": 0.48,
+        "notes": "Colombia's group-winning control is the baseline, but Ghana's athletic transitions remain the main danger."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

@@ -593,6 +593,27 @@
       "away_goals": 0,
       "status": "final",
       "notes": ""
+    },
+    {
+      "match_id": "wc-2026-07-02-ESP-AUT",
+      "home_goals": 3,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-07-02-POR-CRO",
+      "home_goals": 2,
+      "away_goals": 1,
+      "status": "final",
+      "notes": ""
+    },
+    {
+      "match_id": "wc-2026-07-02-SUI-ALG",
+      "home_goals": 2,
+      "away_goals": 0,
+      "status": "final",
+      "notes": ""
     }
   ]
 }

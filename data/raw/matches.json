@@ -940,6 +940,42 @@
       "away_team": "ALG",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-03-ARG-CPV",
+      "date": "2026-07-03",
+      "kickoff": "22:00 UTC",
+      "venue": "Miami Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "ARG",
+      "away_team": "CPV",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-03-AUS-EGY",
+      "date": "2026-07-03",
+      "kickoff": "18:00 UTC",
+      "venue": "Dallas Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "AUS",
+      "away_team": "EGY",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-03-COL-GHA",
+      "date": "2026-07-03",
+      "kickoff": "01:30 UTC",
+      "venue": "Kansas City Stadium",
+      "phase": "group",
+      "group": "Round of 32",
+      "home_team": "COL",
+      "away_team": "GHA",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
