@@ -1,0 +1,127 @@
+{
+  "date": "2026-07-04",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-04-CAN-MAR",
+      "date": "2026-07-04",
+      "kickoff_utc": "2026-07-04T17:00:00Z",
+      "venue": "Houston Stadium",
+      "group": "Round of 16",
+      "home_team": "CAN",
+      "away_team": "MAR",
+      "home_name": "Canada",
+      "away_name": "Morocco",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.45,
+          "away": 0.45
+        },
+        "short_form": {
+          "home": -0.3,
+          "away": 0.3
+        },
+        "long_form": {
+          "home": -0.4,
+          "away": 0.4
+        },
+        "injuries": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "weather_adaptation": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "off_field": {
+          "home": 0.2,
+          "away": -0.2
+        },
+        "tactical_similarity": {
+          "home": -0.25,
+          "away": 0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.45,
+        "draw_value_weaker": 0.65,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.34,
+          "away": 0.56,
+          "none": 0.1
+        },
+        "collapse_risk_weaker": 0.45,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.65,
+        "set_piece_threat_weaker": 0.45,
+        "notes": "Morocco are favored by ranking, tournament consistency and tactical control, while Canada retain transition upside and host momentum."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-04-PAR-FRA",
+      "date": "2026-07-04",
+      "kickoff_utc": "2026-07-04T21:00:00Z",
+      "venue": "Philadelphia Stadium",
+      "group": "Round of 16",
+      "home_team": "PAR",
+      "away_team": "FRA",
+      "home_name": "Paraguay",
+      "away_name": "France",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.7,
+          "away": 0.7
+        },
+        "short_form": {
+          "home": -0.55,
+          "away": 0.55
+        },
+        "long_form": {
+          "home": -0.65,
+          "away": 0.65
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "weather_adaptation": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": -0.35,
+          "away": 0.35
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.75,
+        "draw_value_weaker": 0.8,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.25,
+          "away": 0.65,
+          "none": 0.1
+        },
+        "collapse_risk_weaker": 0.55,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.6,
+        "notes": "France have the strongest form and attacking ceiling despite Tchouameni's absence, but Paraguay's deep block and heat adaptation keep upset paths alive."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

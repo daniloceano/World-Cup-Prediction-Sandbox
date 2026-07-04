@@ -108,3 +108,20 @@ def get_or_generate(date: str, config: dict[str, Any] | None = None) -> dict[str
     if existing:
         return existing
     return generate_for_date(date, config)
+
+
+def missing_prediction_dates() -> list[str]:
+    """Scheduled dates that have matches but no predictions file yet."""
+    return [d for d in data_io.available_dates() if not data_io.load_predictions(d)]
+
+
+def backfill_missing_predictions(config: dict[str, Any] | None = None) -> list[str]:
+    """Generate predictions for every scheduled date that doesn't have any yet.
+
+    Safe to call repeatedly: :func:`generate_for_date` never overwrites an
+    already-stored prediction source, it only fills in dates with none.
+    """
+    dates = missing_prediction_dates()
+    for date in dates:
+        generate_for_date(date, config)
+    return dates

@@ -9,7 +9,7 @@ import pandas as pd
 import streamlit as st
 
 from app import components as ui
-from wcps import data_io, evaluation
+from wcps import data_io, evaluation, pipeline
 from wcps.config import load_config
 
 st.set_page_config(page_title="WCPS · History", page_icon="📊", layout="wide")
@@ -25,7 +25,9 @@ st.caption(
 with st.expander("➕ Add actual results (paste Prompt B output)"):
     st.caption(
         "Paste the JSON returned by **Prompt B** (`docs/prompt_b.txt`). It is saved "
-        "to `data/results/actual_results.json` and scored below immediately."
+        "to `data/results/actual_results.json` and scored below immediately. Any "
+        "scheduled date that still has no predictions is backfilled automatically "
+        "so it can be evaluated."
     )
     results_text = st.text_area(
         "Results JSON", height=200,
@@ -43,7 +45,25 @@ with st.expander("➕ Add actual results (paste Prompt B output)"):
             for err in errors:
                 st.warning(err)
             if saved:
+                backfilled = pipeline.backfill_missing_predictions(cfg)
+                if backfilled:
+                    st.info(f"Generated predictions for {len(backfilled)} date(s) "
+                             f"that had none: {', '.join(backfilled)}.")
                 st.rerun()
+
+    missing = pipeline.missing_prediction_dates()
+    cols = st.columns([3, 1])
+    with cols[0]:
+        st.caption(
+            f"⚠️ {len(missing)} scheduled date(s) have no predictions yet: "
+            f"{', '.join(missing)}." if missing else
+            "✅ Every scheduled date has predictions."
+        )
+    with cols[1]:
+        if st.button("🔮 Generate missing predictions", disabled=not missing):
+            with st.spinner(f"Generating predictions for {len(missing)} date(s)…"):
+                pipeline.backfill_missing_predictions(cfg)
+            st.rerun()
 
 rows = evaluation.build_history(cfg)
 if not rows:

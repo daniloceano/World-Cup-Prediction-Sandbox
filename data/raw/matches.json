@@ -976,6 +976,30 @@
       "away_team": "GHA",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-04-CAN-MAR",
+      "date": "2026-07-04",
+      "kickoff": "17:00 UTC",
+      "venue": "Houston Stadium",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "CAN",
+      "away_team": "MAR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-04-PAR-FRA",
+      "date": "2026-07-04",
+      "kickoff": "21:00 UTC",
+      "venue": "Philadelphia Stadium",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "PAR",
+      "away_team": "FRA",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
