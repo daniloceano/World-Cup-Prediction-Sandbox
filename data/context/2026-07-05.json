@@ -1,0 +1,127 @@
+{
+  "date": "2026-07-05",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-05-BRA-NOR",
+      "date": "2026-07-05",
+      "kickoff_utc": "2026-07-05T20:00:00Z",
+      "venue": "New York/New Jersey Stadium",
+      "group": "Round of 16",
+      "home_team": "BRA",
+      "away_team": "NOR",
+      "home_name": "Brazil",
+      "away_name": "Norway",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "short_form": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "long_form": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": -0.1
+        },
+        "tactical_similarity": {
+          "home": 0.2,
+          "away": -0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.75,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.57,
+          "away": 0.33,
+          "none": 0.1
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.7,
+        "set_piece_threat_weaker": 0.55,
+        "notes": "Brazil are favored by depth and tournament pedigree, but Norway carry major transition and finishing threat through Haaland."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-05-MEX-ENG",
+      "date": "2026-07-05",
+      "kickoff_utc": "2026-07-06T00:00:00Z",
+      "venue": "Mexico City Stadium",
+      "group": "Round of 16",
+      "home_team": "MEX",
+      "away_team": "ENG",
+      "home_name": "Mexico",
+      "away_name": "England",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.35,
+          "away": 0.35
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "long_form": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "injuries": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": 0.65,
+          "away": -0.65
+        },
+        "off_field": {
+          "home": 0.45,
+          "away": -0.45
+        },
+        "tactical_similarity": {
+          "home": 0.15,
+          "away": -0.15
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.7,
+        "draw_value_weaker": 0.65,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.43,
+          "away": 0.47,
+          "none": 0.1
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.55,
+        "set_piece_threat_weaker": 0.5,
+        "notes": "England have the stronger squad profile, but Mexico's form, clean sheets, altitude adaptation and home advantage make this close."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

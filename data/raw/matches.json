@@ -1000,6 +1000,30 @@
       "away_team": "FRA",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-05-BRA-NOR",
+      "date": "2026-07-05",
+      "kickoff": "20:00 UTC",
+      "venue": "New York/New Jersey Stadium",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "BRA",
+      "away_team": "NOR",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-05-MEX-ENG",
+      "date": "2026-07-05",
+      "kickoff": "00:00 UTC",
+      "venue": "Mexico City Stadium",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "MEX",
+      "away_team": "ENG",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
