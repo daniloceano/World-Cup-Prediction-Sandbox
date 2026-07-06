@@ -628,6 +628,20 @@
       "away_goals": 1,
       "status": "final",
       "notes": ""
+    },
+    {
+      "match_id": "wc-2026-07-05-BRA-NOR",
+      "home_goals": 1,
+      "away_goals": 2,
+      "status": "final",
+      "notes": "Final score confirmed; no extra time or penalties noted."
+    },
+    {
+      "match_id": "wc-2026-07-05-MEX-ENG",
+      "home_goals": 2,
+      "away_goals": 3,
+      "status": "final",
+      "notes": "Final score confirmed; no extra time or penalties noted."
     }
   ]
 }

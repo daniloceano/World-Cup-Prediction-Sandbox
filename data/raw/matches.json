@@ -1024,6 +1024,30 @@
       "away_team": "ENG",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-06-POR-ESP",
+      "date": "2026-07-06",
+      "kickoff": "19:00 UTC",
+      "venue": "Dallas Stadium, Arlington",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "POR",
+      "away_team": "ESP",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-06-USA-BEL",
+      "date": "2026-07-06",
+      "kickoff": "00:00 UTC",
+      "venue": "Seattle Stadium, Seattle",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "USA",
+      "away_team": "BEL",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

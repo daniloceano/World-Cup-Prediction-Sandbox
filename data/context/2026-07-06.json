@@ -1,0 +1,127 @@
+{
+  "date": "2026-07-06",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-06-POR-ESP",
+      "date": "2026-07-06",
+      "kickoff_utc": "2026-07-06T19:00:00Z",
+      "venue": "Dallas Stadium, Arlington",
+      "group": "Round of 16",
+      "home_team": "POR",
+      "away_team": "ESP",
+      "home_name": "Portugal",
+      "away_name": "Spain",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "short_form": {
+          "home": -0.25,
+          "away": 0.25
+        },
+        "long_form": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "injuries": {
+          "home": 0.12,
+          "away": -0.12
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "off_field": {
+          "home": 0.0,
+          "away": 0.0
+        },
+        "tactical_similarity": {
+          "home": -0.1,
+          "away": 0.1
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.55,
+        "draw_value_weaker": 0.58,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.38,
+          "away": 0.47,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.24,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.72,
+        "set_piece_threat_weaker": 0.64,
+        "notes": "Spain's cleaner form and defensive control give them a slight edge, but Portugal's transition quality keeps the upset path live."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-06-USA-BEL",
+      "date": "2026-07-06",
+      "kickoff_utc": "2026-07-07T00:00:00Z",
+      "venue": "Seattle Stadium, Seattle",
+      "group": "Round of 16",
+      "home_team": "USA",
+      "away_team": "BEL",
+      "home_name": "United States",
+      "away_name": "Belgium",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "short_form": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "long_form": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "injuries": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "weather_adaptation": {
+          "home": 0.25,
+          "away": -0.25
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": -0.05,
+          "away": 0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.5,
+        "draw_value_weaker": 0.65,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.44,
+          "away": 0.39,
+          "none": 0.17
+        },
+        "collapse_risk_weaker": 0.3,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.65,
+        "set_piece_threat_weaker": 0.7,
+        "notes": "USA has home-field momentum and Balogun available, while Belgium carries greater ranking pedigree and set-piece danger."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}
