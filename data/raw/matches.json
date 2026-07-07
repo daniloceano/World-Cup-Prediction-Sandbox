@@ -1048,6 +1048,30 @@
       "away_team": "BEL",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-07-ARG-EGY",
+      "date": "2026-07-07",
+      "kickoff": "16:00 UTC",
+      "venue": "Atlanta Stadium",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "ARG",
+      "away_team": "EGY",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-07-SUI-COL",
+      "date": "2026-07-07",
+      "kickoff": "20:00 UTC",
+      "venue": "BC Place Vancouver",
+      "phase": "group",
+      "group": "Round of 16",
+      "home_team": "SUI",
+      "away_team": "COL",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

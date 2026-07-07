@@ -1,0 +1,127 @@
+{
+  "date": "2026-07-07",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-07-ARG-EGY",
+      "date": "2026-07-07",
+      "kickoff_utc": "2026-07-07T16:00:00Z",
+      "venue": "Atlanta Stadium",
+      "group": "Round of 16",
+      "home_team": "ARG",
+      "away_team": "EGY",
+      "home_name": "Argentina",
+      "away_name": "Egypt",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.9,
+          "away": -0.9
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": -0.35
+        },
+        "long_form": {
+          "home": 0.65,
+          "away": -0.65
+        },
+        "injuries": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "weather_adaptation": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "off_field": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": -0.25
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.72,
+        "draw_value_weaker": 0.8,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.58,
+          "away": 0.27,
+          "none": 0.15
+        },
+        "collapse_risk_weaker": 0.38,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.58,
+        "set_piece_threat_weaker": 0.48,
+        "notes": "Argentina are the ranking and depth favorite, but Egypt's low block and Salah-led transitions keep the upset path live."
+      }
+    },
+    {
+      "match_id": "wc-2026-07-07-SUI-COL",
+      "date": "2026-07-07",
+      "kickoff_utc": "2026-07-07T20:00:00Z",
+      "venue": "BC Place Vancouver",
+      "group": "Round of 16",
+      "home_team": "SUI",
+      "away_team": "COL",
+      "home_name": "Switzerland",
+      "away_name": "Colombia",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": -0.2,
+          "away": 0.2
+        },
+        "short_form": {
+          "home": -0.1,
+          "away": 0.1
+        },
+        "long_form": {
+          "home": -0.15,
+          "away": 0.15
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "weather_adaptation": {
+          "home": 0.05,
+          "away": -0.05
+        },
+        "off_field": {
+          "home": -0.05,
+          "away": 0.05
+        },
+        "tactical_similarity": {
+          "home": 0.05,
+          "away": -0.05
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.68,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.36,
+          "away": 0.42,
+          "none": 0.22
+        },
+        "collapse_risk_weaker": 0.25,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.45,
+        "set_piece_threat_weaker": 0.6,
+        "notes": "Colombia are a slight favorite on ranking and defensive form, while Switzerland's structure and set pieces make the tie close."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}
