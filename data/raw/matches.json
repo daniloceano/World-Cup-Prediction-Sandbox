@@ -1072,6 +1072,18 @@
       "away_team": "COL",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-09-FRA-MAR",
+      "date": "2026-07-09",
+      "kickoff": "20:00 UTC",
+      "venue": "Boston Stadium, Foxborough",
+      "phase": "group",
+      "group": "QF",
+      "home_team": "FRA",
+      "away_team": "MAR",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }

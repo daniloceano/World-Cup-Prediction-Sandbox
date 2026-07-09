@@ -656,6 +656,20 @@
       "away_goals": 4,
       "status": "final",
       "notes": "Belgium won in regulation; no ET or penalties."
+    },
+    {
+      "match_id": "wc-2026-07-07-ARG-EGY",
+      "home_goals": 3,
+      "away_goals": 2,
+      "status": "final",
+      "notes": "Argentina won in regulation time, completing a comeback with the winner in stoppage time."
+    },
+    {
+      "match_id": "wc-2026-07-07-SUI-COL",
+      "home_goals": 0,
+      "away_goals": 0,
+      "status": "final",
+      "notes": "0-0 after regulation and extra time; Switzerland advanced 4-3 on penalties."
     }
   ]
 }
