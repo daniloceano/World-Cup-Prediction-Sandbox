@@ -1,0 +1,67 @@
+{
+  "date": "2026-07-10",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-10-ESP-BEL",
+      "date": "2026-07-10",
+      "kickoff_utc": "2026-07-10T19:00:00Z",
+      "venue": "Los Angeles Stadium",
+      "group": "Quarter-final",
+      "home_team": "ESP",
+      "away_team": "BEL",
+      "home_name": "Spain",
+      "away_name": "Belgium",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.55,
+          "away": -0.55
+        },
+        "short_form": {
+          "home": 0.5,
+          "away": 0.25
+        },
+        "long_form": {
+          "home": 0.6,
+          "away": 0.1
+        },
+        "injuries": {
+          "home": 0.25,
+          "away": -0.55
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": -0.1
+        },
+        "off_field": {
+          "home": 0.1,
+          "away": 0.0
+        },
+        "tactical_similarity": {
+          "home": 0.35,
+          "away": -0.35
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.58,
+        "draw_value_weaker": 0.78,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.59,
+          "away": 0.27,
+          "none": 0.14
+        },
+        "collapse_risk_weaker": 0.42,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.74,
+        "set_piece_threat_weaker": 0.67,
+        "notes": "Spain's control and five clean sheets make them favorites, but Belgium's scoring surge and transition threat keep the upset path credible."
+      }
+    }
+  ],
+  "generated_by": "ChatGPT daily context prompt v2",
+  "timezone": "America/Sao_Paulo"
+}

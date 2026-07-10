@@ -1084,6 +1084,18 @@
       "away_team": "MAR",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-10-ESP-BEL",
+      "date": "2026-07-10",
+      "kickoff": "19:00 UTC",
+      "venue": "Los Angeles Stadium",
+      "phase": "group",
+      "group": "Quarter-final",
+      "home_team": "ESP",
+      "away_team": "BEL",
+      "is_demo": false,
+      "source": "daily_context"
     }
   ]
 }
