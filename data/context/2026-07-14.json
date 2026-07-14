@@ -1,0 +1,67 @@
+{
+  "date": "2026-07-14",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-14-FRA-ESP",
+      "date": "2026-07-14",
+      "kickoff_utc": "2026-07-14T16:00:00Z",
+      "venue": "AT&T Stadium, Dallas",
+      "group": "Semifinal 1",
+      "home_team": "FRA",
+      "away_team": "ESP",
+      "home_name": "France",
+      "away_name": "Spain",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.45,
+          "away": 0.55
+        },
+        "short_form": {
+          "home": 0.35,
+          "away": 0.6
+        },
+        "long_form": {
+          "home": 0.4,
+          "away": 0.55
+        },
+        "injuries": {
+          "home": 0.0,
+          "away": 0.05
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": 0.1
+        },
+        "off_field": {
+          "home": 0.2,
+          "away": 0.15
+        },
+        "tactical_similarity": {
+          "home": -0.2,
+          "away": 0.3
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.65,
+        "draw_value_weaker": 0.72,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.48,
+          "away": 0.52,
+          "none": 0.0
+        },
+        "collapse_risk_weaker": 0.38,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.58,
+        "set_piece_threat_weaker": 0.62,
+        "notes": "Spain's dominance through midfield and clean-sheet record make them slight favorites. France's attacking depth and tournament experience keep them competitive in knockout football."
+      }
+    }
+  ],
+  "generated_by": "Manual daily context for semifinal",
+  "timezone": "America/Sao_Paulo"
+}

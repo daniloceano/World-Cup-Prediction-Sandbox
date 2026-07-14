@@ -1096,6 +1096,54 @@
       "away_team": "BEL",
       "is_demo": false,
       "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-14-FRA-ESP",
+      "date": "2026-07-14",
+      "kickoff": "16:00 UTC",
+      "venue": "AT&T Stadium, Dallas",
+      "phase": "group",
+      "group": "Semifinal 1",
+      "home_team": "FRA",
+      "away_team": "ESP",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-15-ARG-ENG",
+      "date": "2026-07-15",
+      "kickoff": "16:00 UTC",
+      "venue": "MetLife Stadium, East Rutherford",
+      "phase": "group",
+      "group": "Semifinal 2",
+      "home_team": "ARG",
+      "away_team": "ENG",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-18-3RD-PLACE",
+      "date": "2026-07-18",
+      "kickoff": "16:00 UTC",
+      "venue": "TBD",
+      "phase": "knockout",
+      "group": "Third Place Playoff",
+      "home_team": "TBD",
+      "away_team": "TBD",
+      "is_demo": false,
+      "source": "schedule"
+    },
+    {
+      "match_id": "wc-2026-07-19-FINAL",
+      "date": "2026-07-19",
+      "kickoff": "16:00 UTC",
+      "venue": "MetLife Stadium, East Rutherford",
+      "phase": "knockout",
+      "group": "Final",
+      "home_team": "TBD",
+      "away_team": "TBD",
+      "is_demo": false,
+      "source": "schedule"
     }
   ]
 }
