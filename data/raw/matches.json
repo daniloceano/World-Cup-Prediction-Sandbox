@@ -1134,6 +1134,30 @@
       "source": "schedule"
     },
     {
+      "match_id": "wc-2026-07-18-ENG-FRA",
+      "date": "2026-07-18",
+      "kickoff": "16:00 UTC",
+      "venue": "Miami Stadium, Miami",
+      "phase": "group",
+      "group": "Third Place Playoff",
+      "home_team": "ENG",
+      "away_team": "FRA",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
+      "match_id": "wc-2026-07-19-ESP-ARG",
+      "date": "2026-07-19",
+      "kickoff": "16:00 UTC",
+      "venue": "MetLife Stadium, East Rutherford",
+      "phase": "group",
+      "group": "Final",
+      "home_team": "ESP",
+      "away_team": "ARG",
+      "is_demo": false,
+      "source": "daily_context"
+    },
+    {
       "match_id": "wc-2026-07-19-FINAL",
       "date": "2026-07-19",
       "kickoff": "16:00 UTC",

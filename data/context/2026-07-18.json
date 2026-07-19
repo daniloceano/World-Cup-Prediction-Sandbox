@@ -1,0 +1,67 @@
+{
+  "date": "2026-07-18",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-18-ENG-FRA",
+      "date": "2026-07-18",
+      "kickoff_utc": "2026-07-18T16:00:00Z",
+      "venue": "Miami Stadium, Miami",
+      "group": "Third Place Playoff",
+      "home_team": "ENG",
+      "away_team": "FRA",
+      "home_name": "England",
+      "away_name": "France",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.45,
+          "away": 0.55
+        },
+        "short_form": {
+          "home": 0.5,
+          "away": 0.4
+        },
+        "long_form": {
+          "home": 0.48,
+          "away": 0.42
+        },
+        "injuries": {
+          "home": 0.05,
+          "away": -0.1
+        },
+        "weather_adaptation": {
+          "home": 0.0,
+          "away": 0.15
+        },
+        "off_field": {
+          "home": 0.15,
+          "away": -0.15
+        },
+        "tactical_similarity": {
+          "home": 0.2,
+          "away": -0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "away",
+        "low_block_capacity": 0.68,
+        "draw_value_weaker": 0.70,
+        "need_to_win": {
+          "home": 0.8,
+          "away": 0.8
+        },
+        "first_goal_prob": {
+          "home": 0.50,
+          "away": 0.50,
+          "none": 0.0
+        },
+        "collapse_risk_weaker": 0.45,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.62,
+        "set_piece_threat_weaker": 0.60,
+        "notes": "Ambas eliminadas nas semifinais. England teve melhor campanha mas saiu na semi. France quer recuperar honra após derrota 0-2. Jogo é oportunidade de fechar Copa em terceiro lugar - motivação mista (alegria vs frustração)."
+      }
+    }
+  ],
+  "generated_by": "Manual daily context for third place playoff",
+  "timezone": "America/Sao_Paulo"
+}

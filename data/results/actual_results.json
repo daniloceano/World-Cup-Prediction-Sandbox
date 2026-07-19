@@ -683,7 +683,28 @@
       "home_goals": 2,
       "away_goals": 1,
       "status": "final",
-      "notes": "Spain advances to semifinal. Gols: Fabián Ruiz e Mikel Merino (Espanha); Charles De Ketelaere (Bélgica). Decisão em falha do goleiro Senne Lammens."
+      "notes": "Spain advances to semifinal. Gols: Fabián Ruiz e Mikel Merino (Espanha); Charles De Ketelaere (Bélgica). Decisão em falha do goleiro Senne Lammels."
+    },
+    {
+      "match_id": "wc-2026-07-14-FRA-ESP",
+      "home_goals": 0,
+      "away_goals": 2,
+      "status": "final",
+      "notes": "Spain advances to final. Gols: Mikel Oyarzabal (pênalti aos 62') e Pedro Porro (aos 78'). França não conseguiu finalizações em jogo controlado pela Espanha."
+    },
+    {
+      "match_id": "wc-2026-07-15-ARG-ENG",
+      "home_goals": 2,
+      "away_goals": 1,
+      "status": "final",
+      "notes": "Argentina advances to final. Gols: Enzo Fernández (85') e Lautaro Martínez (92'). Anthony Gordon marcou para a Inglaterra aos 55'."
+    },
+    {
+      "match_id": "wc-2026-07-18-ENG-FRA",
+      "home_goals": 6,
+      "away_goals": 4,
+      "status": "final",
+      "notes": "Third place match. Inglaterra conquista o terceiro lugar em jogo emocionante. Gols ING: Saka (3x), Rice, Konsa, Bellingham. Gols FRA: Mbappé (2x), Barcola, Dembélé."
     }
   ]
 }

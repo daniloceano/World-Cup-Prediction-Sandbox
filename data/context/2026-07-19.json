@@ -1,0 +1,67 @@
+{
+  "date": "2026-07-19",
+  "matches": [
+    {
+      "match_id": "wc-2026-07-19-ESP-ARG",
+      "date": "2026-07-19",
+      "kickoff_utc": "2026-07-19T16:00:00Z",
+      "venue": "MetLife Stadium, East Rutherford",
+      "group": "Final",
+      "home_team": "ESP",
+      "away_team": "ARG",
+      "home_name": "Spain",
+      "away_name": "Argentina",
+      "v1_scores": {
+        "fifa_ranking": {
+          "home": 0.5,
+          "away": 0.55
+        },
+        "short_form": {
+          "home": 0.6,
+          "away": 0.45
+        },
+        "long_form": {
+          "home": 0.55,
+          "away": 0.5
+        },
+        "injuries": {
+          "home": 0.1,
+          "away": 0.0
+        },
+        "weather_adaptation": {
+          "home": 0.15,
+          "away": 0.2
+        },
+        "off_field": {
+          "home": 0.2,
+          "away": 0.25
+        },
+        "tactical_similarity": {
+          "home": 0.25,
+          "away": 0.2
+        }
+      },
+      "v2_strategic": {
+        "favorite": "home",
+        "low_block_capacity": 0.62,
+        "draw_value_weaker": 0.75,
+        "need_to_win": {
+          "home": 1.0,
+          "away": 1.0
+        },
+        "first_goal_prob": {
+          "home": 0.52,
+          "away": 0.48,
+          "none": 0.0
+        },
+        "collapse_risk_weaker": 0.35,
+        "is_group_debut": false,
+        "transition_threat_weaker": 0.60,
+        "set_piece_threat_weaker": 0.65,
+        "notes": "España chegou à final com domínio total (2 vitórias 2-0 e 2-1), showdown clássico da Copa: controle espanhol vs transição argentina. Argentina mostra resiliência ofensiva mesmo sob pressão. Jogo muito equilibrado em uma final mundial."
+      }
+    }
+  ],
+  "generated_by": "Manual daily context for World Cup Final",
+  "timezone": "America/Sao_Paulo"
+}
